@@ -16,8 +16,8 @@ public class GameData
     {
         //Initial game data
         playerPosition.z = 0;
-        playerPosition.y = 27;
-        playerPosition.x = -3;
+        playerPosition.y = 0;
+        playerPosition.x = 0;
 
         PlayerHealth = 2;
         Slime1Speed = 20f;
