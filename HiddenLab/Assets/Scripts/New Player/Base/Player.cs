@@ -9,11 +9,21 @@ public class Player : MonoBehaviour , IHealth , IMovement
     public int _CurrentHealth{get; set;}
     #region  Movement Variables
     public Rigidbody2D SlimeRB {get; set;}
-    public SlimeControls slimecontrols {get; set;}
-    public InputAction MovementInput {get; set;}
-    public Vector2 MovementInputValue {get; set;} = Vector2.zero;
     public float _SlimeSpeed {get; set;}
     #endregion
+
+    #region State Machine Variables
+    public PlayerStateMachine playerStateMachine{get; set;}
+    public PlayerMoveState playerMoveState{get; set;}
+    #endregion
+
+    void Awake()
+    {
+        //Initialize the state machine and player states
+        playerStateMachine = new PlayerStateMachine();
+        playerMoveState = new PlayerMoveState(this, playerStateMachine);
+        
+    }
     void Start()
     {
         //Synce health with PlayerAttributes
@@ -22,26 +32,21 @@ public class Player : MonoBehaviour , IHealth , IMovement
         //Synce speed with PlayerAttributes
         _SlimeSpeed = playerAttributes.Slime1Speed;
         playerAttributes.OnSlime1SpeedChange += HandleSlime1SpeedChange;
-        //Start InputActins
-        if (slimecontrols == null)
-        {
-            slimecontrols = new SlimeControls();
-        }
-        //Enable InputActions
-        MovementInput = slimecontrols.Slime.MoveArrows;
-        slimecontrols.Slime.Enable();
 
         //Get RigidBody
         SlimeRB = this.GetComponent<Rigidbody2D>();
+
+        //Initialize State Machine;
+        playerStateMachine.Initialize(playerMoveState);
     }
 
     void Update()
     {
-        MovementInputValue = MovementInput.ReadValue<Vector2>();
+        playerStateMachine.currentPlayerState.UpdateState();
     }
     void FixedUpdate()
     {
-        MoveSlime();
+        playerStateMachine.currentPlayerState.FixedUpdateState();
     }
 
     #region Disable and Destroy Functions
@@ -55,7 +60,7 @@ public class Player : MonoBehaviour , IHealth , IMovement
         InitiateCleanup();
     }
     #endregion
-    
+
     #region Health Functions
     public void Damage()
     {
@@ -90,9 +95,9 @@ public class Player : MonoBehaviour , IHealth , IMovement
     #endregion
 
     #region  MovementFunctions
-    public void MoveSlime()
+    public void MoveSlime(Vector2 movementValue)
     {
-        SlimeRB.linearVelocity = MovementInputValue * _SlimeSpeed;
+        SlimeRB.linearVelocity = movementValue * _SlimeSpeed;
     }
 
     private void HandleSlime1SpeedChange(float newValue)
@@ -109,12 +114,7 @@ public class Player : MonoBehaviour , IHealth , IMovement
     }
     private void CleanupInputSystem()
     {
-        if (slimecontrols != null)
-        {
-            slimecontrols.Slime.Disable();
-            slimecontrols.Dispose();
-            slimecontrols = null;
-        }
+        
     }
     private void CleanUpPlayerAttributes()
     {
