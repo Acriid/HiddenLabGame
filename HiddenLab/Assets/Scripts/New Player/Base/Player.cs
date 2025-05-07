@@ -7,9 +7,11 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
 {
     //Player Attributes
     public PlayerAttributes playerAttributes;
+    private bool _isStreatched;
+    private float _impulseSpeed;
     //Implementation of the IHealth interface
     public int _CurrentHealth{get; set;}
-    private bool _isStreatched;
+    
     #region  Movement Variables
     public Rigidbody2D SlimeRB {get; set;}
     public float _SlimeSpeed {get; set;}
@@ -22,6 +24,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     public PlayerMoveState playerMoveState{get; set;}
     public PlayerSplitState playerSplitState{get; set;}
     public PlayerStretchState playerStretchState{get; set;}
+    public PlayerImpulseState playerImpulseState{get; set;}
     #endregion
     #region SlimeObjects
     private GameObject[] SlimeObjects;
@@ -42,6 +45,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         playerMoveState = new PlayerMoveState(this, playerStateMachine);
         playerSplitState = new PlayerSplitState(this, playerStateMachine);
         playerStretchState = new PlayerStretchState(this, playerStateMachine);
+        playerImpulseState = new PlayerImpulseState(this, playerStateMachine);
         
     }
     void Start()
@@ -89,7 +93,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         playerStateMachine.currentPlayerState.FixedUpdateState();
     }
     #endregion
-
     #region Disable and Destroy Functions
     //Disables the input system when the game is paused or the player is dead
     void OnDisable()
@@ -101,7 +104,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         InitiateCleanup();
     }
     #endregion
-
     #region Health Functions
     public void Damage()
     {
@@ -134,7 +136,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         _CurrentHealth = newValue;
     }
     #endregion
-
     #region MovementFunctions
     public void MoveSlime(Vector2 movementValue)
     {
@@ -153,7 +154,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         _Slime2Speed = newValue;
     }
     #endregion
-
     #region CleanUp of System
     private void InitiateCleanup()
     {
@@ -181,15 +181,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         playerAttributes.OnSlime1SpeedChange -= HandleSlime1SpeedChange;
         playerAttributes.OnSlime2SpeedChange -= HandleSlime2SpeedChange;
     }
-    #endregion
-    
+    #endregion  
     #region Trigger checks
     public void setInRange(bool value)
     {
         isInrange = value;
     }
     #endregion
-
     #region Split Action
     private void OnSplitAction(InputAction.CallbackContext ctx)
     {
@@ -227,7 +225,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             return;
         }
     }
-
     private void OnStretchAction(InputAction.CallbackContext ctx)
     {    
         if(!_isStreatched)
@@ -241,5 +238,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             _isStreatched = false;
         }
         
+    }
+    public void AddImpulse(Vector2 direction)
+    {
+       // SlimeRB.AddForce
     }
 }

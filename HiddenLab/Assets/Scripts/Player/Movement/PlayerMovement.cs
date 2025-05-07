@@ -85,7 +85,7 @@ public class Movement : MonoBehaviour, iDataPersistence
         movearrow.Enable();
         Split = slimeControls.Slime.Split;
         Split.Enable();
-        Streatch = slimeControls.Slime.Streatch;
+        Streatch = slimeControls.Slime.Stretch;
         Streatch.Enable();
 
         //Subscribe to events
