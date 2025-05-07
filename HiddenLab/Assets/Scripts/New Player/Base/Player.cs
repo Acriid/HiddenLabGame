@@ -9,6 +9,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     public PlayerAttributes playerAttributes;
     //Implementation of the IHealth interface
     public int _CurrentHealth{get; set;}
+    private bool _isStreatched;
     #region  Movement Variables
     public Rigidbody2D SlimeRB {get; set;}
     public float _SlimeSpeed {get; set;}
@@ -16,21 +17,23 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     public Rigidbody2D Slime2RB {get; set;}
     public float _Slime2Speed {get; set;}
     #endregion
-
     #region State Machine Variables
     public PlayerStateMachine playerStateMachine{get; set;}
     public PlayerMoveState playerMoveState{get; set;}
     public PlayerSplitState playerSplitState{get; set;}
+    public PlayerStretchState playerStretchState{get; set;}
     #endregion
-
     #region SlimeObjects
     private GameObject[] SlimeObjects;
     #endregion
     #region Trigger Checks
     public bool isInrange { get; set; }
     #endregion
+    #region Controls
     private SlimeControls slimeControls;
     private InputAction SplitAction;
+    private InputAction StretchAction;
+    #endregion
     #region Start/Awake
     void Awake()
     {
@@ -38,6 +41,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         playerStateMachine = new PlayerStateMachine();
         playerMoveState = new PlayerMoveState(this, playerStateMachine);
         playerSplitState = new PlayerSplitState(this, playerStateMachine);
+        playerStretchState = new PlayerStretchState(this, playerStateMachine);
         
     }
     void Start()
@@ -55,6 +59,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         slimeControls = new SlimeControls();
         slimeControls.Slime.Enable();
         SplitAction = slimeControls.Slime.Split;
+        StretchAction = slimeControls.Slime.Stretch;
+        StretchAction.performed += OnStretchAction;
         SplitAction.performed += OnSplitAction;
         
         //Get RigidBody
@@ -64,6 +70,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             if (slime.name == "Slime2")
             {
                 Slime2RB = slime.GetComponent<Rigidbody2D>();
+                Slime2RB.gameObject.SetActive(false);
             }
         }
         SlimeRB = this.GetComponent<Rigidbody2D>();
@@ -128,7 +135,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     }
     #endregion
 
-    #region  MovementFunctions
+    #region MovementFunctions
     public void MoveSlime(Vector2 movementValue)
     {
         SlimeRB.linearVelocity = movementValue * _SlimeSpeed;
@@ -209,4 +216,30 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         SplitAction.Enable();
     }
     #endregion
+    public void EnableSlime2(bool newvalue)
+    {
+        if(Slime2RB.gameObject.activeSelf != newvalue)
+        {
+            Slime2RB.gameObject.SetActive(newvalue);
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    private void OnStretchAction(InputAction.CallbackContext ctx)
+    {    
+        if(!_isStreatched)
+        {
+            playerStateMachine.ChangeState(playerStretchState);
+            _isStreatched = true;
+        }
+        else
+        {
+            playerStateMachine.ChangeState(playerMoveState);
+            _isStreatched = false;
+        }
+        
+    }
 }

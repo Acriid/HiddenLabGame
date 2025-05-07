@@ -33,7 +33,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Streatch",
+                    "name": "Stretch",
                     "type": "PassThrough",
                     "id": "fd4d78e9-fafc-448e-8be6-2211100cfbcc",
                     "expectedControlType": "Axis",
@@ -198,7 +198,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Streatch",
+                    "action": "Stretch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
