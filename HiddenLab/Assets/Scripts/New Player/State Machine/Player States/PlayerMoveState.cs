@@ -21,11 +21,15 @@ public class PlayerMoveState : PlayerState
         slimeControls.Slime.Enable();
         MoveArrows = slimeControls.Slime.MoveArrows;
         SplitAction = slimeControls.Slime.Split;
+
+
+        SplitAction.performed += OnSplitAction;
     }
 
     public override void ExitState()
     {
         base.ExitState();
+        CleanupInputSystem();
     }
 
     public override void UpdateState()
@@ -50,5 +54,11 @@ public class PlayerMoveState : PlayerState
             slimeControls.Dispose();
             slimeControls = null;
         }
+    }
+
+    private void OnSplitAction(InputAction.CallbackContext ctx)
+    {
+        player.playerStateMachine.ChangeState(player.playerSplitState);
+
     }
 }
