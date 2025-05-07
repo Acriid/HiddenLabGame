@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMoveState : PlayerState
+public class PlayerSplitState : PlayerState
 {
-
     private SlimeControls slimeControls;
     private InputAction MoveArrows;
-    private InputAction SplitAction;
     private Vector2 MoveArrowsValue;
-    public PlayerMoveState(Player player, PlayerStateMachine stateMachine) : base(player, stateMachine)
+    private InputAction MoveWasd;
+    private Vector2 MoveWasdValue;
+
+    public PlayerSplitState(Player player, PlayerStateMachine stateMachine) : base(player, stateMachine)
     {
         
     }
@@ -20,7 +21,7 @@ public class PlayerMoveState : PlayerState
         slimeControls = new SlimeControls();
         slimeControls.Slime.Enable();
         MoveArrows = slimeControls.Slime.MoveArrows;
-        SplitAction = slimeControls.Slime.Split;
+        MoveWasd = slimeControls.Slime.MoveWASD;
     }
 
     public override void ExitState()
@@ -32,23 +33,14 @@ public class PlayerMoveState : PlayerState
     {
         base.UpdateState();
         //Get movearrows value
-        
         MoveArrowsValue = MoveArrows.ReadValue<Vector2>();
+        MoveWasdValue = MoveWasd.ReadValue<Vector2>();
     }
     public override void FixedUpdateState()
     {
         base.FixedUpdateState();
         //Move the player
         player.MoveSlime(MoveArrowsValue);
-    }
-   
-    private void CleanupInputSystem()
-    {
-        if (slimeControls != null)
-        {
-            slimeControls.Slime.Disable();
-            slimeControls.Dispose();
-            slimeControls = null;
-        }
+        player.MoveSlime2(MoveWasdValue);
     }
 }

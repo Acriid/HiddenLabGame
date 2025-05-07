@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
+using System.Collections;
 
 public class Player : MonoBehaviour , IHealth , IMovement
 {
@@ -10,18 +10,26 @@ public class Player : MonoBehaviour , IHealth , IMovement
     #region  Movement Variables
     public Rigidbody2D SlimeRB {get; set;}
     public float _SlimeSpeed {get; set;}
+
+    public Rigidbody2D Slime2RB {get; set;}
+    public float _Slime2Speed {get; set;}
     #endregion
 
     #region State Machine Variables
     public PlayerStateMachine playerStateMachine{get; set;}
     public PlayerMoveState playerMoveState{get; set;}
+    public PlayerSplitState playerSplitState{get; set;}
     #endregion
 
+    #region 
+    private GameObject[] SlimeObjects;
+    #endregion
     void Awake()
     {
         //Initialize the state machine and player states
         playerStateMachine = new PlayerStateMachine();
         playerMoveState = new PlayerMoveState(this, playerStateMachine);
+        playerSplitState = new PlayerSplitState(this, playerStateMachine);
         
     }
     void Start()
@@ -32,8 +40,18 @@ public class Player : MonoBehaviour , IHealth , IMovement
         //Synce speed with PlayerAttributes
         _SlimeSpeed = playerAttributes.Slime1Speed;
         playerAttributes.OnSlime1SpeedChange += HandleSlime1SpeedChange;
+        _Slime2Speed = playerAttributes.Slime2Speed;
+        playerAttributes.OnSlime2SpeedChange += HandleSlime2SpeedChange;
 
         //Get RigidBody
+        SlimeObjects = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject slime in SlimeObjects)
+        {
+            if (slime.name == "Slime2")
+            {
+                Slime2RB = slime.GetComponent<Rigidbody2D>();
+            }
+        }
         SlimeRB = this.GetComponent<Rigidbody2D>();
 
         //Initialize State Machine;
@@ -99,10 +117,17 @@ public class Player : MonoBehaviour , IHealth , IMovement
     {
         SlimeRB.linearVelocity = movementValue * _SlimeSpeed;
     }
-
+    public void MoveSlime2(Vector2 movementValue)
+    {
+        Slime2RB.linearVelocity = movementValue * _Slime2Speed;
+    }
     private void HandleSlime1SpeedChange(float newValue)
     {
         _SlimeSpeed = newValue;
+    }
+    private void HandleSlime2SpeedChange(float newValue)
+    {
+        _Slime2Speed = newValue;
     }
     #endregion
 
@@ -120,6 +145,7 @@ public class Player : MonoBehaviour , IHealth , IMovement
     {
         playerAttributes.OnPlayerHealthChange -= HandleHealthChange;
         playerAttributes.OnSlime1SpeedChange -= HandleSlime1SpeedChange;
+        playerAttributes.OnSlime2SpeedChange -= HandleSlime2SpeedChange;
     }
     #endregion
 }
