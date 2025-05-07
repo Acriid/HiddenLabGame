@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using System.Collections;
 
-public class Player : MonoBehaviour , IHealth , IMovement
+
+public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
 {
     //Player Attributes
     public PlayerAttributes playerAttributes;
@@ -21,9 +23,15 @@ public class Player : MonoBehaviour , IHealth , IMovement
     public PlayerSplitState playerSplitState{get; set;}
     #endregion
 
-    #region 
+    #region SlimeObjects
     private GameObject[] SlimeObjects;
     #endregion
+    #region Trigger Checks
+    public bool isInrange { get; set; }
+    #endregion
+    private SlimeControls slimeControls;
+    private InputAction SplitAction;
+    #region Start/Awake
     void Awake()
     {
         //Initialize the state machine and player states
@@ -43,6 +51,12 @@ public class Player : MonoBehaviour , IHealth , IMovement
         _Slime2Speed = playerAttributes.Slime2Speed;
         playerAttributes.OnSlime2SpeedChange += HandleSlime2SpeedChange;
 
+        //Controls
+        slimeControls = new SlimeControls();
+        slimeControls.Slime.Enable();
+        SplitAction = slimeControls.Slime.Split;
+        SplitAction.performed += OnSplitAction;
+        
         //Get RigidBody
         SlimeObjects = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject slime in SlimeObjects)
@@ -57,7 +71,8 @@ public class Player : MonoBehaviour , IHealth , IMovement
         //Initialize State Machine;
         playerStateMachine.Initialize(playerMoveState);
     }
-
+    #endregion
+    #region Update/FixedUpdate
     void Update()
     {
         playerStateMachine.currentPlayerState.UpdateState();
@@ -66,6 +81,7 @@ public class Player : MonoBehaviour , IHealth , IMovement
     {
         playerStateMachine.currentPlayerState.FixedUpdateState();
     }
+    #endregion
 
     #region Disable and Destroy Functions
     //Disables the input system when the game is paused or the player is dead
@@ -139,13 +155,58 @@ public class Player : MonoBehaviour , IHealth , IMovement
     }
     private void CleanupInputSystem()
     {
-        
+        if(SplitAction != null)
+        {
+            SplitAction.Disable();
+            SplitAction.performed -= OnSplitAction;
+            SplitAction = null;
+        }
+        if (slimeControls != null)
+        {
+            slimeControls.Slime.Disable();
+            slimeControls.Dispose();
+            slimeControls = null;
+        }
     }
     private void CleanUpPlayerAttributes()
     {
         playerAttributes.OnPlayerHealthChange -= HandleHealthChange;
         playerAttributes.OnSlime1SpeedChange -= HandleSlime1SpeedChange;
         playerAttributes.OnSlime2SpeedChange -= HandleSlime2SpeedChange;
+    }
+    #endregion
+    
+    #region Trigger checks
+    public void setInRange(bool value)
+    {
+        isInrange = value;
+    }
+    #endregion
+
+    #region Split Action
+    private void OnSplitAction(InputAction.CallbackContext ctx)
+    {
+        // Disable the SplitAction to prevent multiple triggers
+        SplitAction.Disable();
+
+        // Switch to the other state
+        if (playerStateMachine.currentPlayerState == playerMoveState)
+        {
+            playerStateMachine.ChangeState(playerSplitState);
+        }
+        else if (playerStateMachine.currentPlayerState == playerSplitState)
+        {
+            playerStateMachine.ChangeState(playerMoveState);
+        }
+
+        // Use the Player class to start the coroutine
+        StartCoroutine(ReenableSplitAction());
+    }
+
+    private IEnumerator ReenableSplitAction()
+    {
+        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+        SplitAction.Enable();
     }
     #endregion
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,7 +7,6 @@ public class PlayerMoveState : PlayerState
 
     private SlimeControls slimeControls;
     private InputAction MoveArrows;
-    private InputAction SplitAction;
     private Vector2 MoveArrowsValue;
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine) : base(player, stateMachine)
     {
@@ -16,14 +16,14 @@ public class PlayerMoveState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
+        //Make Player Stand Still
+        player.MoveSlime(Vector2.zero);
+        player.MoveSlime2(Vector2.zero);
         //Initialize controls
         slimeControls = new SlimeControls();
         slimeControls.Slime.Enable();
         MoveArrows = slimeControls.Slime.MoveArrows;
-        SplitAction = slimeControls.Slime.Split;
 
-
-        SplitAction.performed += OnSplitAction;
     }
 
     public override void ExitState()
@@ -56,9 +56,4 @@ public class PlayerMoveState : PlayerState
         }
     }
 
-    private void OnSplitAction(InputAction.CallbackContext ctx)
-    {
-        player.playerStateMachine.ChangeState(player.playerSplitState);
-
-    }
 }
