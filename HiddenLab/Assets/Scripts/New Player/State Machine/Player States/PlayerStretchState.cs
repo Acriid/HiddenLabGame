@@ -14,7 +14,11 @@ public class PlayerStretchState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
+        Debug.Log("Entered stretch state");
         player.EnableSlime2(true);
+        player.MakeSlime2OnSlime1();
+        player.AddSpringJoint2D();
+        player.MakeSlime1Kinematic(true);
         //Make Player Stand Still
         player.MoveSlime(Vector2.zero);
         player.MoveSlime2(Vector2.zero);
@@ -28,7 +32,6 @@ public class PlayerStretchState : PlayerState
     public override void ExitState()
     {
         base.ExitState();
-        player.EnableSlime2(false);
         CleanupInputSystem();
 
     }

@@ -16,6 +16,7 @@ public class PlayerMoveState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
+        Debug.Log("Entered move state");
         //Make Player Stand Still
         player.MoveSlime(Vector2.zero);
         player.MoveSlime2(Vector2.zero);

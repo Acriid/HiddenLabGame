@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEngine.UIElements.Experimental;
 
 
 public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
@@ -9,6 +10,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     public PlayerAttributes playerAttributes;
     private bool _isStreatched;
     private float _impulseSpeed;
+    private bool _addedImpulse;
+    private SpringJoint2D slimeSJ;
     //Implementation of the IHealth interface
     public int _CurrentHealth{get; set;}
     
@@ -58,6 +61,11 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         playerAttributes.OnSlime1SpeedChange += HandleSlime1SpeedChange;
         _Slime2Speed = playerAttributes.Slime2Speed;
         playerAttributes.OnSlime2SpeedChange += HandleSlime2SpeedChange;
+        //Impulse
+        _impulseSpeed = playerAttributes.ImpulseSpeed;
+        _addedImpulse = playerAttributes.AddedImpulse;
+        playerAttributes.OnAddedImpulseChange += HandleAddedImpulseChange;
+        playerAttributes.OnImpulseSpeedChange += HandleImpulseSpeedChange;
 
         //Controls
         slimeControls = new SlimeControls();
@@ -79,6 +87,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         }
         SlimeRB = this.GetComponent<Rigidbody2D>();
 
+        //Slime HJ
+        slimeSJ = null;
         //Initialize State Machine;
         playerStateMachine.Initialize(playerMoveState);
     }
@@ -232,15 +242,93 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             playerStateMachine.ChangeState(playerStretchState);
             _isStreatched = true;
         }
+        else 
+        {
+            playerStateMachine.ChangeState(playerImpulseState);
+            _isStreatched = false;
+        }
+
+        
+    }
+    public void AddSpringJoint2D()
+    {
+        //Adds springjoint to slime1
+        if (slimeSJ == null)
+        {
+            slimeSJ = gameObject.AddComponent<SpringJoint2D>();
+            slimeSJ.autoConfigureDistance = false;
+            slimeSJ.autoConfigureConnectedAnchor = false;
+            slimeSJ.connectedBody = Slime2RB;
+            slimeSJ.distance = 0f; 
+            slimeSJ.dampingRatio = 0f; 
+            slimeSJ.frequency = 1f; 
+        }
+    }
+    public void AdjustBreakForce(float breakForce)
+    {
+        if (slimeSJ != null)
+        {
+            slimeSJ.breakForce = breakForce;
+        }
+    }
+    public void DestroySpringJoint2D()
+    {
+        if (slimeSJ != null)
+        {
+            Destroy(slimeSJ);
+            slimeSJ = null;
+        }
+    }
+    public void MakeSlime1Kinematic(bool boolvalue)
+    {
+        if(boolvalue == true)
+        {
+            SlimeRB.bodyType = RigidbodyType2D.Kinematic;
+        }
         else
         {
-            playerStateMachine.ChangeState(playerMoveState);
-            _isStreatched = false;
+            SlimeRB.bodyType = RigidbodyType2D.Dynamic;
         }
         
     }
-    public void AddImpulse(Vector2 direction)
+    public void MakeSlime2OnSlime1()
     {
-       // SlimeRB.AddForce
+        Slime2RB.transform.position = SlimeRB.transform.position;
+    }
+    public float GetSlimeDistance()
+    {
+        return Vector2.Distance(SlimeRB.transform.position, Slime2RB.transform.position);
+    }
+    public void Addimpulse(Vector2 direction)
+    {
+        SlimeRB.AddForce(direction * _impulseSpeed, ForceMode2D.Impulse);
+        playerAttributes.RequestAddedImpulseChange(true);
+        ChangeSlime1LinearDamping(0.25f);
+    }
+    public Vector2 directiontoSlime1()
+    {
+        Vector2 directionToSlime1 = SlimeRB.transform.position - Slime2RB.transform.position;
+        return directionToSlime1;
+    }
+
+    public void ChangeSlime1LinearDamping(float newValue)
+    {
+        SlimeRB.linearDamping = newValue;
+    }
+    private void HandleImpulseSpeedChange(float newValue)
+    {
+        _impulseSpeed = newValue;
+    }
+    private void HandleAddedImpulseChange(bool newValue)
+    {
+        _addedImpulse = newValue;
+    }
+    public void Slime2MoveDirection(Vector2 direction)
+    {
+        Slime2RB.linearVelocity = direction * 7.5f;
+    }
+    public Vector2 GetSlime1Velocity()
+    {
+        return SlimeRB.linearVelocity;
     }
 }

@@ -202,8 +202,6 @@ public class Movement : MonoBehaviour, iDataPersistence
             {
                 Slime2RB.linearVelocity = directionToSlime1 * 7.5f;
             }
-
-
         }
 
     }
