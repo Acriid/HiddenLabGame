@@ -7,7 +7,6 @@ public class KeepCameraOnObject : MonoBehaviour
     private InputAction cPress;
     public GameObject ObjectTofollow;
     private Transform CameraTransform;
-    private float currentTime = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
     {

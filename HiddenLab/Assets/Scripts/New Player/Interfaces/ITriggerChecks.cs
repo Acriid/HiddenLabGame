@@ -2,6 +2,6 @@ using UnityEngine;
 
 public interface ITriggerChecks 
 {
-    bool isInrange { get; set; }
-    void setInRange(bool value);
+    bool isInPickuprange { get; set; }
+    void setisInPickuprange(bool value);
 }

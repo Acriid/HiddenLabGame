@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SplitTriggerCheck : MonoBehaviour
+public class ItemTriggerCheck : MonoBehaviour
 {
    public GameObject SplitSlime;
    private Player player;
@@ -12,16 +12,16 @@ public class SplitTriggerCheck : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject == SplitSlime)
+        if(collision.CompareTag("Pickup"))
         {
-            player.setInRange(true);
+            player.setisInPickuprange(true);
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject == SplitSlime)
+        if(collision.CompareTag("Pickup"))
         {
-            player.setInRange(false);
+            player.setisInPickuprange(false);
         }
     }
 }

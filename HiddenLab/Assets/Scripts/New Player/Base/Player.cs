@@ -33,12 +33,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     private GameObject[] SlimeObjects;
     #endregion
     #region Trigger Checks
-    public bool isInrange { get; set; }
+    public bool isInPickuprange { get; set; }
     #endregion
     #region Controls
     private SlimeControls slimeControls;
     private InputAction SplitAction;
     private InputAction StretchAction;
+    private InputAction PickupAction;
     #endregion
     #region Start/Awake
     void Awake()
@@ -172,6 +173,18 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     }
     private void CleanupInputSystem()
     {
+        if(PickupAction != null)
+        {
+            PickupAction.Disable();
+            PickupAction.performed -= OnPickupAction;
+            PickupAction = null;
+        }
+        if(StretchAction != null)
+        {
+            StretchAction.Disable();
+            StretchAction.performed -= OnStretchAction;
+            StretchAction = null;
+        }
         if(SplitAction != null)
         {
             SplitAction.Disable();
@@ -193,9 +206,23 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     }
     #endregion  
     #region Trigger checks
-    public void setInRange(bool value)
+    public void setisInPickuprange(bool value)
     {
-        isInrange = value;
+        if(value)
+        {
+            //PickupAction
+            PickupAction = slimeControls.Slime.Pickup;
+            PickupAction.Enable();
+            PickupAction.performed += OnPickupAction;
+        }
+        else
+        {
+            //PickupAction
+            PickupAction.Disable();
+            PickupAction.performed -= OnPickupAction;
+            PickupAction = null;
+        }
+        isInPickuprange = value;
     }
     #endregion
     #region Split Action
@@ -235,6 +262,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             return;
         }
     }
+    #region Streatch Action
     private void OnStretchAction(InputAction.CallbackContext ctx)
     {    
         if(!_isStreatched)
@@ -247,9 +275,14 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             playerStateMachine.ChangeState(playerImpulseState);
             _isStreatched = false;
         }
-
+    }
+    #endregion
+    #region PickUp Acion
+    private void OnPickupAction(InputAction.CallbackContext ctx)
+    {
         
     }
+    #endregion
     public void AddSpringJoint2D()
     {
         //Adds springjoint to slime1
