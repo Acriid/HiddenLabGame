@@ -31,7 +31,7 @@ public class SlimeStreatch : MonoBehaviour
         }
         
         slimecontrols = new SlimeControls();
-        Streatch = slimecontrols.Slime.Streatch;
+        Streatch = slimecontrols.Slime.Stretch;
         Streatch.Enable();
         Streatch.performed += StreatchSlime;
         playerAttributes.OnIsSplitChange += HandleIsStreachedChange;

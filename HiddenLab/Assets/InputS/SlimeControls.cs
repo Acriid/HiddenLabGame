@@ -119,7 +119,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Streatch"",
+                    ""name"": ""Stretch"",
                     ""type"": ""PassThrough"",
                     ""id"": ""fd4d78e9-fafc-448e-8be6-2211100cfbcc"",
                     ""expectedControlType"": ""Axis"",
@@ -284,7 +284,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Streatch"",
+                    ""action"": ""Stretch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -569,7 +569,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         m_Slime_MoveWASD = m_Slime.FindAction("MoveWASD", throwIfNotFound: true);
         m_Slime_Split = m_Slime.FindAction("Split", throwIfNotFound: true);
         m_Slime_MoveArrows = m_Slime.FindAction("MoveArrows", throwIfNotFound: true);
-        m_Slime_Streatch = m_Slime.FindAction("Streatch", throwIfNotFound: true);
+        m_Slime_Stretch = m_Slime.FindAction("Stretch", throwIfNotFound: true);
         m_Slime_CameraMove = m_Slime.FindAction("CameraMove", throwIfNotFound: true);
         m_Slime_Pickup = m_Slime.FindAction("Pickup", throwIfNotFound: true);
         m_Slime_OpenMenu = m_Slime.FindAction("OpenMenu", throwIfNotFound: true);
@@ -665,7 +665,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_MoveWASD;
     private readonly InputAction m_Slime_Split;
     private readonly InputAction m_Slime_MoveArrows;
-    private readonly InputAction m_Slime_Streatch;
+    private readonly InputAction m_Slime_Stretch;
     private readonly InputAction m_Slime_CameraMove;
     private readonly InputAction m_Slime_Pickup;
     private readonly InputAction m_Slime_OpenMenu;
@@ -693,9 +693,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @MoveArrows => m_Wrapper.m_Slime_MoveArrows;
         /// <summary>
-        /// Provides access to the underlying input action "Slime/Streatch".
+        /// Provides access to the underlying input action "Slime/Stretch".
         /// </summary>
-        public InputAction @Streatch => m_Wrapper.m_Slime_Streatch;
+        public InputAction @Stretch => m_Wrapper.m_Slime_Stretch;
         /// <summary>
         /// Provides access to the underlying input action "Slime/CameraMove".
         /// </summary>
@@ -743,9 +743,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @MoveArrows.started += instance.OnMoveArrows;
             @MoveArrows.performed += instance.OnMoveArrows;
             @MoveArrows.canceled += instance.OnMoveArrows;
-            @Streatch.started += instance.OnStreatch;
-            @Streatch.performed += instance.OnStreatch;
-            @Streatch.canceled += instance.OnStreatch;
+            @Stretch.started += instance.OnStretch;
+            @Stretch.performed += instance.OnStretch;
+            @Stretch.canceled += instance.OnStretch;
             @CameraMove.started += instance.OnCameraMove;
             @CameraMove.performed += instance.OnCameraMove;
             @CameraMove.canceled += instance.OnCameraMove;
@@ -775,9 +775,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @MoveArrows.started -= instance.OnMoveArrows;
             @MoveArrows.performed -= instance.OnMoveArrows;
             @MoveArrows.canceled -= instance.OnMoveArrows;
-            @Streatch.started -= instance.OnStreatch;
-            @Streatch.performed -= instance.OnStreatch;
-            @Streatch.canceled -= instance.OnStreatch;
+            @Stretch.started -= instance.OnStretch;
+            @Stretch.performed -= instance.OnStretch;
+            @Stretch.canceled -= instance.OnStretch;
             @CameraMove.started -= instance.OnCameraMove;
             @CameraMove.performed -= instance.OnCameraMove;
             @CameraMove.canceled -= instance.OnCameraMove;
@@ -1000,12 +1000,12 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMoveArrows(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Streatch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Stretch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnStreatch(InputAction.CallbackContext context);
+        void OnStretch(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "CameraMove" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
