@@ -484,7 +484,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      table,caboard,chairs_0: -2150528504010866029
+      table,caboard,chairs_1: -3350506366556967189
+      table,caboard,chairs_10: -7752920249338477894
+      table,caboard,chairs_11: 5248375177733712082
+      table,caboard,chairs_12: 514660348742092691
+      table,caboard,chairs_13: -4140184047025696147
+      table,caboard,chairs_14: -1506631787567226559
+      table,caboard,chairs_2: 3207268472537340127
+      table,caboard,chairs_3: -5644841519784761341
+      table,caboard,chairs_4: 1201367157634889715
+      table,caboard,chairs_5: 854798334091519992
+      table,caboard,chairs_6: -578868778643925820
+      table,caboard,chairs_7: 6580020768850551338
+      table,caboard,chairs_8: -7424216957310091263
+      table,caboard,chairs_9: 5212879327153666516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      calamity slime,idle_0: 3969341028874274202
+      calamity slime,idle_1: -6642590362627374337
+      calamity slime,idle_2: 647267026101254799
+      calamity slime,idle_3: 1969923029006558860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

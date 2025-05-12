@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      poppy slime.idle_0: -7424920664954067324
+      poppy slime.idle_1: -1376842196368427557
+      poppy slime.idle_2: -6062101769617276673
+      poppy slime.idle_3: -1196612797038011476
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

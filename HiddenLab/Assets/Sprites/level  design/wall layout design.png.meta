@@ -234,7 +234,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wall layout design_0: -120489637588828977
+      wall layout design_1: -4117629779423311915
+      wall layout design_2: -7278693995423070139
+      wall layout design_3: -3485480116542787528
+      wall layout design_4: -1645296524547531380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
