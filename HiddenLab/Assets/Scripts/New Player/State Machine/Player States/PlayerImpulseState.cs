@@ -26,6 +26,7 @@ public class PlayerImpulseState : PlayerState
     public override void ExitState()
     {
         base.ExitState();
+        player.EnableSlime2(false);
     }
 
     public override void UpdateState()
@@ -37,13 +38,14 @@ public class PlayerImpulseState : PlayerState
     {
         float distance = player.GetSlimeDistance();
         Vector2 Slime1Velocity = player.GetSlime1Velocity();
+        Vector2 Slime2Velocity = player.GetSlime2Velocity();
         base.FixedUpdateState();
     
         if(distance > 1f )
         {
             player.Slime2MoveDirection(player.directiontoSlime1());
         }
-        else if(distance < 1f && Slime1Velocity.magnitude < 4.5f)
+        else if(distance < 1f && Slime1Velocity.magnitude < Slime2Velocity.magnitude)
         {
             player.playerStateMachine.ChangeState(player.playerMoveState);
         }

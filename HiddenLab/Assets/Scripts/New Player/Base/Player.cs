@@ -377,4 +377,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         return SlimeRB.linearVelocity;
     }
+    public Vector2 GetSlime2Velocity()
+    {
+        return Slime2RB.linearVelocity;
+    }
 }
