@@ -8,6 +8,8 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
     private Plane[] cameraPlanes;
     private float _cameraMovement;
     private Rigidbody2D cameraRB;
+    public float UpDownRange = 4f;
+    public float LeftRightRange = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void LoadData(GameData data)
     {
@@ -37,23 +39,48 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
     void FixedUpdate()
     {
         cameraPlanes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
-
+        //Variables
         Vector2 moveDirection = Vector2.zero;
+        bool inupRange = InUpRange();
+        bool indownRange = InDownRange();
+        bool inleftRange = InLeftRange();
+        bool inrightRange = InRightRange();
+        bool isInCamera = IsInCamera();
+        //Velocities
 
-        if (InUpRange())
+        if (inupRange)
             moveDirection.y = 1;
-        else if (InDownRange())
+        else if (indownRange)
             moveDirection.y = -1;
-        if (InLeftRange())
+        if (inleftRange)
             moveDirection.x = -1;
-        else if (InRightRange())
+        else if (inrightRange)
             moveDirection.x = 1;
-        cameraRB.linearVelocity = moveDirection * _cameraMovement;
+
+        cameraRB.linearVelocity = moveDirection.normalized * _cameraMovement;
+        if(isInCamera)
+        {
+            if(inupRange && cameraRB.linearVelocity.y > SlimeRB.linearVelocity.y)
+            {
+                cameraRB.linearVelocityY = moveDirection.y * SlimeRB.linearVelocityY;
+            }
+            if(indownRange && cameraRB.linearVelocity.y < SlimeRB.linearVelocity.y)
+            {
+                cameraRB.linearVelocityY = -moveDirection.y * SlimeRB.linearVelocityY;
+            }
+            if(inleftRange && cameraRB.linearVelocity.x < SlimeRB.linearVelocity.x)
+            {
+                cameraRB.linearVelocityX = -moveDirection.x * SlimeRB.linearVelocityX;
+            }
+            if(inrightRange && cameraRB.linearVelocity.x > SlimeRB.linearVelocity.x)
+            {
+                cameraRB.linearVelocityX = moveDirection.x * SlimeRB.linearVelocityX;
+            }
+        }
+        
     }
     bool IsInCamera()
     {
-
-        
         foreach(Plane plane in cameraPlanes)
         {
             if(plane.GetDistanceToPoint(SlimeRB.transform.position) <0f)
@@ -65,7 +92,7 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
     }
     bool InUpRange()
     {
-        if(cameraPlanes[3].GetDistanceToPoint(SlimeRB.transform.position) < 4f)
+        if(cameraPlanes[3].GetDistanceToPoint(SlimeRB.transform.position) < UpDownRange)
         {
             return true;
         }
@@ -73,7 +100,7 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
     }
     bool InLeftRange()
     {
-        if(cameraPlanes[0].GetDistanceToPoint(SlimeRB.transform.position) <10f)
+        if(cameraPlanes[0].GetDistanceToPoint(SlimeRB.transform.position) <LeftRightRange)
         {
             return true;
         }
@@ -81,7 +108,7 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
     }
     bool InRightRange()
     {
-        if(cameraPlanes[1].GetDistanceToPoint(SlimeRB.transform.position) <10f)
+        if(cameraPlanes[1].GetDistanceToPoint(SlimeRB.transform.position) <LeftRightRange)
         {
             return true;
         }
@@ -89,7 +116,7 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
     }
     bool InDownRange()
     {
-        if(cameraPlanes[2].GetDistanceToPoint(SlimeRB.transform.position) <4f)
+        if(cameraPlanes[2].GetDistanceToPoint(SlimeRB.transform.position) <UpDownRange)
         {
             return true;
         }

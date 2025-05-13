@@ -43,7 +43,7 @@ public class PlayerImpulseState : PlayerState
         {
             player.Slime2MoveDirection(player.directiontoSlime1());
         }
-        else if(distance < 1f && Slime1Velocity.x < 1f && Slime1Velocity.y < 1f)
+        else if(distance < 1f && Slime1Velocity.magnitude < 4.5f)
         {
             player.playerStateMachine.ChangeState(player.playerMoveState);
         }

@@ -210,6 +210,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         if(value)
         {
+            //Disable stretch actions
+            if(StretchAction != null)
+            {
+                StretchAction.Disable();
+                StretchAction.performed -= OnStretchAction;
+                StretchAction = null;
+            }
             //PickupAction
             PickupAction = slimeControls.Slime.Pickup;
             PickupAction.Enable();
@@ -217,6 +224,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         }
         else
         {
+            //Enable stretch actions
+            if(StretchAction == null)
+            {
+                StretchAction = slimeControls.Slime.Stretch;
+                StretchAction.performed += OnStretchAction;
+            }
             //PickupAction
             PickupAction.Disable();
             PickupAction.performed -= OnPickupAction;
