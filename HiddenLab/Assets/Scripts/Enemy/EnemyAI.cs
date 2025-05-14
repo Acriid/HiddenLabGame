@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
+//Do proper refrencing for this code
 public class EnemyAI : MonoBehaviour
 {
     public float radius;

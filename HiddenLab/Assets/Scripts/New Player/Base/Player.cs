@@ -285,7 +285,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         
     }
     #endregion
-    #region  Joints
+    #region Joints
     public void AddSpringJoint2D()
     {
         //Adds springjoint to slime1
