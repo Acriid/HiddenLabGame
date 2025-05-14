@@ -264,17 +264,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         SplitAction.Enable();
     }
     #endregion
-    public void EnableSlime2(bool newvalue)
-    {
-        if(Slime2RB.gameObject.activeSelf != newvalue)
-        {
-            Slime2RB.gameObject.SetActive(newvalue);
-        }
-        else
-        {
-            return;
-        }
-    }
     #region Streatch Action
     private void OnStretchAction(InputAction.CallbackContext ctx)
     {    
@@ -296,6 +285,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         
     }
     #endregion
+    #region  Joints
     public void AddSpringJoint2D()
     {
         //Adds springjoint to slime1
@@ -325,6 +315,19 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             slimeSJ = null;
         }
     }
+    #endregion
+    #region SlimeAttributeChanges
+    public void EnableSlime2(bool newvalue)
+    {
+        if(Slime2RB.gameObject.activeSelf != newvalue)
+        {
+            Slime2RB.gameObject.SetActive(newvalue);
+        }
+        else
+        {
+            return;
+        }
+    }
     public void MakeSlime1Kinematic(bool boolvalue)
     {
         if(boolvalue == true)
@@ -341,6 +344,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         Slime2RB.transform.position = SlimeRB.transform.position;
     }
+    #endregion
+    #region Impulse
     public float GetSlimeDistance()
     {
         return Vector2.Distance(SlimeRB.transform.position, Slime2RB.transform.position);
@@ -369,6 +374,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         _addedImpulse = newValue;
     }
+    #endregion
+    #region misc
     public void Slime2MoveDirection(Vector2 direction)
     {
         Slime2RB.linearVelocity = direction * 7.5f;
@@ -381,4 +388,17 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         return Slime2RB.linearVelocity;
     }
+    #endregion
+    #region Animation
+    private void AnimationTriggerEvent(AnimationTriggerType triggerType)
+    {
+        playerStateMachine.currentPlayerState.AnimationTriggerEvent(triggerType);
+    }
+    public enum AnimationTriggerType
+    {
+        PlayerIdle,
+        PlayerMovement,
+        PlayerMoveSound
+    }
+    #endregion
 }

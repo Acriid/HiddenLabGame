@@ -48,6 +48,10 @@ public class PlayerStretchState : PlayerState
         //Move the player
         player.MoveSlime2(MoveArrowsValue);
     }
+    public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
+    {
+        base.AnimationTriggerEvent(triggerType);
+    }
     private void CleanupInputSystem()
     {
         if (slimeControls != null)

@@ -50,5 +50,9 @@ public class PlayerImpulseState : PlayerState
             player.playerStateMachine.ChangeState(player.playerMoveState);
         }
     }
+    public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
+    {
+        base.AnimationTriggerEvent(triggerType);
+    }
 }
 
