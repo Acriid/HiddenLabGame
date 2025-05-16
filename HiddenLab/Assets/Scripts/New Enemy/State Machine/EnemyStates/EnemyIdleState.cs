@@ -14,7 +14,7 @@ public class EnemyIdleState : EnemyState
     public override void EnterState() 
     {
         base.EnterState();
-        Debug.Log("Entered idle state");
+        //Gets initial point
         targetPosition = GetRandomPoint();
         targetPosition.z = 0f;
     }
@@ -25,12 +25,16 @@ public class EnemyIdleState : EnemyState
     public override void UpdateState() 
     {
         base.UpdateState();
-
+        //Moves enemy and gets new point when needed
         enemy.MoveEnemy(targetPosition);
         if((enemy.transform.position - targetPosition).sqrMagnitude < 1.5f)
         {
             targetPosition = GetRandomPoint();
             targetPosition.z = 0f;
+        }
+        if(enemy.CanSeePlayer)
+        {
+            enemy.enemyStateMachine.ChangeState(enemy.enemyChaseState);
         }
 
     }
@@ -45,6 +49,11 @@ public class EnemyIdleState : EnemyState
 
     private Vector3 GetRandomPoint()
     {
-        return enemy.transform.position + (Vector3)Random.insideUnitCircle * enemy.IdleRadius;
+        //Return a random point in a unit circle
+        Vector3 randomPosition = enemy.transform.position + (Vector3)Random.insideUnitCircle * enemy.IdleRadius;
+        randomPosition.z = 0;
+        Vector2 targetdirection = (randomPosition-enemy.enemytransform.position).normalized;
+        enemy.enemytransform.up = targetdirection;
+        return randomPosition;
     }
 }

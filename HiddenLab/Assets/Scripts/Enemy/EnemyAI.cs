@@ -11,10 +11,8 @@ public class EnemyAI : MonoBehaviour
     [Range(0,360)]
     public float angle;
     public GameObject player;
-
     public LayerMask playerMask;
     public LayerMask obstacleMask;
-
     public bool canSeePlayer;
     private NavMeshAgent agent;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
