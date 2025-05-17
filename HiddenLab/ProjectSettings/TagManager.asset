@@ -41,17 +41,5 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Floor
-    uniqueID: 1514802709
-    locked: 0
-  - name: Wall
-    uniqueID: 76961349
-    locked: 0
-  - name: Door
-    uniqueID: 3744556565
-    locked: 0
-  - name: Items
-    uniqueID: 227427483
-    locked: 0
   m_RenderingLayers:
   - Default
