@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      caboard with slime_0: 5541254872079701565
+      caboard with slime_1: 7171476047445283050
+      caboard with slime_2: -6054660102782296741
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
