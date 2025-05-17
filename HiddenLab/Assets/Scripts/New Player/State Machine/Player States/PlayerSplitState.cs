@@ -53,10 +53,6 @@ public class PlayerSplitState : PlayerState
         player.MoveSlime(MoveArrowsValue);
         player.MoveSlime2(MoveWasdValue);
     }
-    public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
-    {
-        base.AnimationTriggerEvent(triggerType);
-    }
     private void CleanupInputSystem()
     {
         if (slimeControls != null)

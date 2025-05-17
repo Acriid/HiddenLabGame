@@ -8,9 +8,6 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
     private Plane[] cameraPlanes;
     private float _cameraMovement;
     private Rigidbody2D cameraRB;
-    public float UpDownRange = 4f;
-    public float LeftRightRange = 10f;
-    float waitTime = 0f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void LoadData(GameData data)
     {
@@ -37,124 +34,66 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
 
     }
     // Update is called once per frame
-    void Update()
-    {
-        waitTime += Time.deltaTime;
-    }
     void FixedUpdate()
     {
         cameraPlanes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
-        //Variables
+
         Vector2 moveDirection = Vector2.zero;
-        bool inupRange = InUpRange();
-        bool indownRange = InDownRange();
-        bool inleftRange = InLeftRange();
-        bool inrightRange = InRightRange();
-        bool isInCamera = IsInCamera();
 
-        //Set movedirection
-        if (inupRange)
-        {
+        if (InUpRange())
             moveDirection.y = 1;
-        }     
-        else if (indownRange)
-        {
+        else if (InDownRange())
             moveDirection.y = -1;
-        }
-        if (inleftRange)
-        {
+        if (InLeftRange())
             moveDirection.x = -1;
-        }  
-        else if (inrightRange)
-        {
+        else if (InRightRange())
             moveDirection.x = 1;
-        }
-
-        //Set velocity
-        cameraRB.linearVelocity = moveDirection.normalized * _cameraMovement;
-       
-
-        //Sync velocity with slimeRB
-        if(isInCamera && waitTime < 3f)
-        { 
-            if(inupRange && (cameraRB.linearVelocity.y > SlimeRB.linearVelocity.y))
-            {
-                cameraRB.linearVelocityY = moveDirection.y * SlimeRB.linearVelocityY;
-            }
-            else if(indownRange && (cameraRB.linearVelocity.y < SlimeRB.linearVelocity.y))
-            {
-                cameraRB.linearVelocityY = -moveDirection.y * SlimeRB.linearVelocityY;
-            }
-            if(inleftRange && (cameraRB.linearVelocity.x < SlimeRB.linearVelocity.x))
-            {
-                cameraRB.linearVelocityX = -moveDirection.x * SlimeRB.linearVelocityX;
-            }
-            else if(inrightRange && (cameraRB.linearVelocity.x > SlimeRB.linearVelocity.x))
-            {
-                cameraRB.linearVelocityX = moveDirection.x * SlimeRB.linearVelocityX;
-            }
-        }
-        if(!(inupRange || indownRange || inleftRange || inrightRange))
-        {
-            waitTime = 0f;
-        }
+        cameraRB.linearVelocity = moveDirection * _cameraMovement;
     }
     bool IsInCamera()
     {
-        bool result = true;
+
+        
         foreach(Plane plane in cameraPlanes)
         {
             if(plane.GetDistanceToPoint(SlimeRB.transform.position) <0f)
             {
-                result = false;
+                return false;
             }
         }
-        return result;
+        return true;
     }
     bool InUpRange()
     {
-        bool result = false;
-        if(cameraPlanes[3].GetDistanceToPoint(SlimeRB.transform.position) < UpDownRange)
+        if(cameraPlanes[3].GetDistanceToPoint(SlimeRB.transform.position) < 4f)
         {
-            result = true;
+            return true;
         }
-        return result;
+        return false;
     }
     bool InLeftRange()
     {
-        bool result = false;
-        if(cameraPlanes[0].GetDistanceToPoint(SlimeRB.transform.position) <LeftRightRange)
+        if(cameraPlanes[0].GetDistanceToPoint(SlimeRB.transform.position) <10f)
         {
-            result = true;
+            return true;
         }
-        return result;
+        return false;
     }
     bool InRightRange()
     {
-        bool result = false;
-        if(cameraPlanes[1].GetDistanceToPoint(SlimeRB.transform.position) <LeftRightRange)
+        if(cameraPlanes[1].GetDistanceToPoint(SlimeRB.transform.position) <10f)
         {
-            result = true;
+            return true;
         }
-        return result;
+        return false;
     }
     bool InDownRange()
     {
-        bool result = false;
-        if(cameraPlanes[2].GetDistanceToPoint(SlimeRB.transform.position) <UpDownRange)
+        if(cameraPlanes[2].GetDistanceToPoint(SlimeRB.transform.position) <4f)
         {
-            result = true;
+            return true;
         }
-        return result;
-    }
-    bool InCentre()
-    {
-        bool result = true;
-        if(InUpRange() || InDownRange() || InLeftRange() || InRightRange())
-        {
-            result = false;
-        }
-        return result;
+        return false;
     }
     void HandleCameraSpeedChange(float newValue)
     {

@@ -24,7 +24,6 @@ public class EnemyAttack : MonoBehaviour
             }
             else
             {
-                //TODO remove from here and add to player
                 //Activates the death menu
                 playerAttributes.RequestPlayerHealthChange(0);
                 canvus.SetActive(true);

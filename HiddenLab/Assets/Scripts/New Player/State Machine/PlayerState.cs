@@ -16,5 +16,4 @@ public class PlayerState
 
    public virtual void UpdateState() {}
    public virtual void FixedUpdateState() {}
-   public virtual void AnimationTriggerEvent(Player.AnimationTriggerType triggerType) {}
 }
