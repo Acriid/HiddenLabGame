@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 265e2ac4d4df32743a34dd1ae02eb398
+guid: 9613e7e8b691add4cb0e3d1a16c17faf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7424920664954067324
-    second: poppy slime.idle_0
+      213: 1552018386250305428
+    second: barrels_0
   - first:
-      213: -1376842196368427557
-    second: poppy slime.idle_1
+      213: 4787827351846855272
+    second: barrels_1
   - first:
-      213: -6062101769617276673
-    second: poppy slime.idle_2
-  - first:
-      213: -1196612797038011476
-    second: poppy slime.idle_3
+      213: -1051576060183992645
+    second: barrels_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: poppy slime.idle_0
+      name: barrels_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 8
-        width: 102
-        height: 65
+        x: 10
+        y: 75
+        width: 28
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,19 +121,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 486a4ff7ef165f890800000000000000
-      internalID: -7424920664954067324
+      spriteID: 49f0355df70e98510800000000000000
+      internalID: 1552018386250305428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: poppy slime.idle_1
+      name: barrels_1
       rect:
         serializedVersion: 2
-        x: 117
-        y: 7
-        width: 104
+        x: 67
+        y: 70
+        width: 50
         height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -146,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd5f0b5315974ece0800000000000000
-      internalID: -1376842196368427557
+      spriteID: 8622bb80c97c17240800000000000000
+      internalID: 4787827351846855272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: poppy slime.idle_2
+      name: barrels_2
       rect:
         serializedVersion: 2
-        x: 231
-        y: 4
-        width: 114
-        height: 40
+        x: 7
+        y: 26
+        width: 41
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,30 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff002b51f861fdba0800000000000000
-      internalID: -6062101769617276673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: poppy slime.idle_3
-      rect:
-        serializedVersion: 2
-        x: 347
-        y: 0
-        width: 117
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cabdcd24007c46fe0800000000000000
-      internalID: -1196612797038011476
+      spriteID: bb6ad6e052d0861f0800000000000000
+      internalID: -1051576060183992645
       vertices: []
       indices: 
       edges: []
@@ -209,11 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      poppy slime.idle_0: -7424920664954067324
-      poppy slime.idle_1: -1376842196368427557
-      poppy slime.idle_2: -6062101769617276673
-      poppy slime.idle_3: -1196612797038011476
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
