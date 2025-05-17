@@ -46,7 +46,11 @@ public class PlayerMoveState : PlayerState
         //Move the player
         player.MoveSlime(MoveArrowsValue);
     }
-   
+
+    public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
+    {
+        base.AnimationTriggerEvent(triggerType);
+    }
     private void CleanupInputSystem()
     {
         if (slimeControls != null)
@@ -56,5 +60,4 @@ public class PlayerMoveState : PlayerState
             slimeControls = null;
         }
     }
-
 }
