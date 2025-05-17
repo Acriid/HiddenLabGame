@@ -159,11 +159,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1848
-        y: 624
+        y: 623
         width: 113
-        height: 58
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -180,12 +180,12 @@ TextureImporter:
       name: table,caboard,chairs_1
       rect:
         serializedVersion: 2
-        x: 2043
+        x: 2042
         y: 637
-        width: 101
-        height: 122
+        width: 102
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: table,caboard,chairs_2
       rect:
         serializedVersion: 2
-        x: 2315
+        x: 2314
         y: 608
-        width: 123
-        height: 92
+        width: 124
+        height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -224,12 +224,12 @@ TextureImporter:
       name: table,caboard,chairs_3
       rect:
         serializedVersion: 2
-        x: 166
+        x: 165
         y: 541
-        width: 172
+        width: 173
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -246,12 +246,12 @@ TextureImporter:
       name: table,caboard,chairs_4
       rect:
         serializedVersion: 2
-        x: 442
-        y: 439
-        width: 101
-        height: 151
+        x: 441
+        y: 438
+        width: 102
+        height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -268,12 +268,12 @@ TextureImporter:
       name: table,caboard,chairs_5
       rect:
         serializedVersion: 2
-        x: 551
+        x: 550
         y: 496
-        width: 101
-        height: 92
+        width: 103
+        height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,11 +291,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 738
-        y: 457
-        width: 179
-        height: 121
+        y: 456
+        width: 180
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,11 +313,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 161
-        y: 406
+        y: 405
         width: 43
-        height: 69
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -334,12 +334,12 @@ TextureImporter:
       name: table,caboard,chairs_8
       rect:
         serializedVersion: 2
-        x: 162
+        x: 161
         y: 329
-        width: 43
-        height: 69
+        width: 45
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -356,12 +356,12 @@ TextureImporter:
       name: table,caboard,chairs_9
       rect:
         serializedVersion: 2
-        x: 745
+        x: 744
         y: 250
-        width: 179
+        width: 181
         height: 121
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -379,11 +379,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1367
-        y: 178
-        width: 101
-        height: 171
+        y: 177
+        width: 102
+        height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -400,12 +400,12 @@ TextureImporter:
       name: table,caboard,chairs_11
       rect:
         serializedVersion: 2
-        x: 163
-        y: 246
-        width: 43
-        height: 69
+        x: 162
+        y: 245
+        width: 45
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -422,12 +422,12 @@ TextureImporter:
       name: table,caboard,chairs_12
       rect:
         serializedVersion: 2
-        x: 979
-        y: 97
-        width: 150
-        height: 62
+        x: 978
+        y: 96
+        width: 152
+        height: 63
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -445,11 +445,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1498
-        y: 25
-        width: 179
-        height: 121
+        y: 24
+        width: 180
+        height: 123
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -466,12 +466,12 @@ TextureImporter:
       name: table,caboard,chairs_14
       rect:
         serializedVersion: 2
-        x: 1715
+        x: 1714
         y: 90
-        width: 150
-        height: 70
+        width: 152
+        height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -488,7 +488,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b3f1142daf39a3346b396840c0cbea2e
     internalID: 0
     vertices: []
     indices: 
