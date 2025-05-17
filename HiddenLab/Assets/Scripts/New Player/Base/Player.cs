@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UIElements.Experimental;
+using Unity.Mathematics;
 
 
 public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
@@ -123,10 +124,11 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         {
             playerAttributes.RequestPlayerHealthChange(1);
         }
-        else if(_CurrentHealth == 1)
+        else if(_CurrentHealth < 2)
         {
             Death();
         }
+        ClenupSlimeActions();
     }
 
     public void Death()
@@ -139,12 +141,23 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         if (_CurrentHealth != 2)
         {
             playerAttributes.RequestPlayerHealthChange(2);
+            InitializeActions();
         }
+
     }
 
     private void HandleHealthChange(int newValue )
     {
         _CurrentHealth = newValue;
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.gameObject.CompareTag("Enemy"))
+        {
+            Vector2 direction = (collision.collider.gameObject.transform.position - SlimeRB.transform.position).normalized;
+            Damage();
+            EnemyImpulse(-direction);
+        }
     }
     #endregion
     #region MovementFunctions
@@ -165,11 +178,50 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         _Slime2Speed = newValue;
     }
     #endregion
-    #region CleanUp of System
+    #region CleanUp of System / Initialize Actions
     private void InitiateCleanup()
     {
         CleanupInputSystem();
         CleanUpPlayerAttributes();
+    }
+    private void InitializeActions()
+    {
+        if(PickupAction == null)
+        {
+            PickupAction.Enable();
+            PickupAction.performed += OnPickupAction;
+        }
+        if(StretchAction == null)
+        {
+            StretchAction.Enable();
+            StretchAction.performed += OnStretchAction;
+        }
+        if(SplitAction == null)
+        {
+            SplitAction.Enable();
+            SplitAction.performed += OnSplitAction;
+        }
+    }
+    private void ClenupSlimeActions()
+    {
+        if(PickupAction != null)
+        {
+            PickupAction.Disable();
+            PickupAction.performed -= OnPickupAction;
+            PickupAction = null;
+        }
+        if(StretchAction != null)
+        {
+            StretchAction.Disable();
+            StretchAction.performed -= OnStretchAction;
+            StretchAction = null;
+        }
+        if(SplitAction != null)
+        {
+            SplitAction.Disable();
+            SplitAction.performed -= OnSplitAction;
+            SplitAction = null;
+        }
     }
     private void CleanupInputSystem()
     {
@@ -210,6 +262,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         if(value)
         {
+            //Disable stretch actions
+            if(StretchAction != null)
+            {
+                StretchAction.Disable();
+                StretchAction.performed -= OnStretchAction;
+                StretchAction = null;
+            }
             //PickupAction
             PickupAction = slimeControls.Slime.Pickup;
             PickupAction.Enable();
@@ -217,6 +276,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         }
         else
         {
+            //Enable stretch actions
+            if(StretchAction == null)
+            {
+                StretchAction = slimeControls.Slime.Stretch;
+                StretchAction.performed += OnStretchAction;
+            }
             //PickupAction
             PickupAction.Disable();
             PickupAction.performed -= OnPickupAction;
@@ -251,17 +316,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         SplitAction.Enable();
     }
     #endregion
-    public void EnableSlime2(bool newvalue)
-    {
-        if(Slime2RB.gameObject.activeSelf != newvalue)
-        {
-            Slime2RB.gameObject.SetActive(newvalue);
-        }
-        else
-        {
-            return;
-        }
-    }
     #region Streatch Action
     private void OnStretchAction(InputAction.CallbackContext ctx)
     {    
@@ -283,6 +337,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         
     }
     #endregion
+    #region Joints
     public void AddSpringJoint2D()
     {
         //Adds springjoint to slime1
@@ -312,6 +367,19 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             slimeSJ = null;
         }
     }
+    #endregion
+    #region SlimeAttributeChanges
+    public void EnableSlime2(bool newvalue)
+    {
+        if(Slime2RB.gameObject.activeSelf != newvalue)
+        {
+            Slime2RB.gameObject.SetActive(newvalue);
+        }
+        else
+        {
+            return;
+        }
+    }
     public void MakeSlime1Kinematic(bool boolvalue)
     {
         if(boolvalue == true)
@@ -328,6 +396,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         Slime2RB.transform.position = SlimeRB.transform.position;
     }
+    #endregion
+    #region Impulse
     public float GetSlimeDistance()
     {
         return Vector2.Distance(SlimeRB.transform.position, Slime2RB.transform.position);
@@ -337,6 +407,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         SlimeRB.AddForce(direction * _impulseSpeed, ForceMode2D.Impulse);
         playerAttributes.RequestAddedImpulseChange(true);
         ChangeSlime1LinearDamping(0.25f);
+    }
+    public void EnemyImpulse(Vector2 direction)
+    {
+        SlimeRB.AddForce(direction * math.pow(_impulseSpeed,3), ForceMode2D.Impulse);
+        playerStateMachine.ChangeState(playerImpulseState);
+        ChangeSlime1LinearDamping(10f);
     }
     public Vector2 directiontoSlime1()
     {
@@ -356,6 +432,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         _addedImpulse = newValue;
     }
+    #endregion
+    #region misc
     public void Slime2MoveDirection(Vector2 direction)
     {
         Slime2RB.linearVelocity = direction * 7.5f;
@@ -364,4 +442,21 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         return SlimeRB.linearVelocity;
     }
+    public Vector2 GetSlime2Velocity()
+    {
+        return Slime2RB.linearVelocity;
+    }
+    #endregion
+    #region Animation
+    private void AnimationTriggerEvent(AnimationTriggerType triggerType)
+    {
+        playerStateMachine.currentPlayerState.AnimationTriggerEvent(triggerType);
+    }
+    public enum AnimationTriggerType
+    {
+        PlayerIdle,
+        PlayerMovement,
+        PlayerMoveSound
+    }
+    #endregion
 }
