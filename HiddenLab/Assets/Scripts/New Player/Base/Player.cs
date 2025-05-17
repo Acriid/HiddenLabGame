@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UIElements.Experimental;
+using Unity.Mathematics;
 
 
 public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
@@ -123,10 +124,11 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         {
             playerAttributes.RequestPlayerHealthChange(1);
         }
-        else if(_CurrentHealth == 1)
+        else if(_CurrentHealth < 2)
         {
             Death();
         }
+        ClenupSlimeActions();
     }
 
     public void Death()
@@ -139,12 +141,23 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         if (_CurrentHealth != 2)
         {
             playerAttributes.RequestPlayerHealthChange(2);
+            InitializeActions();
         }
+
     }
 
     private void HandleHealthChange(int newValue )
     {
         _CurrentHealth = newValue;
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.gameObject.CompareTag("Enemy"))
+        {
+            Vector2 direction = (collision.collider.gameObject.transform.position - SlimeRB.transform.position).normalized;
+            Damage();
+            EnemyImpulse(-direction);
+        }
     }
     #endregion
     #region MovementFunctions
@@ -165,11 +178,50 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         _Slime2Speed = newValue;
     }
     #endregion
-    #region CleanUp of System
+    #region CleanUp of System / Initialize Actions
     private void InitiateCleanup()
     {
         CleanupInputSystem();
         CleanUpPlayerAttributes();
+    }
+    private void InitializeActions()
+    {
+        if(PickupAction == null)
+        {
+            PickupAction.Enable();
+            PickupAction.performed += OnPickupAction;
+        }
+        if(StretchAction == null)
+        {
+            StretchAction.Enable();
+            StretchAction.performed += OnStretchAction;
+        }
+        if(SplitAction == null)
+        {
+            SplitAction.Enable();
+            SplitAction.performed += OnSplitAction;
+        }
+    }
+    private void ClenupSlimeActions()
+    {
+        if(PickupAction != null)
+        {
+            PickupAction.Disable();
+            PickupAction.performed -= OnPickupAction;
+            PickupAction = null;
+        }
+        if(StretchAction != null)
+        {
+            StretchAction.Disable();
+            StretchAction.performed -= OnStretchAction;
+            StretchAction = null;
+        }
+        if(SplitAction != null)
+        {
+            SplitAction.Disable();
+            SplitAction.performed -= OnSplitAction;
+            SplitAction = null;
+        }
     }
     private void CleanupInputSystem()
     {
@@ -355,6 +407,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         SlimeRB.AddForce(direction * _impulseSpeed, ForceMode2D.Impulse);
         playerAttributes.RequestAddedImpulseChange(true);
         ChangeSlime1LinearDamping(0.25f);
+    }
+    public void EnemyImpulse(Vector2 direction)
+    {
+        SlimeRB.AddForce(direction * math.pow(_impulseSpeed,3), ForceMode2D.Impulse);
+        playerStateMachine.ChangeState(playerImpulseState);
+        ChangeSlime1LinearDamping(10f);
     }
     public Vector2 directiontoSlime1()
     {

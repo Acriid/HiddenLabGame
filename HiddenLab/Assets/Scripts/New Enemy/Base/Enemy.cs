@@ -3,15 +3,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour , IEnemyMovement , ITriggerCheck
+public class Enemy : MonoBehaviour , IEnemyMovement , IEnemyTriggerCheck , IAttack
 {
 
+    public float AttackTimer {get; set;} = 5f;
+    public float AttackRange {get; set;} 
     public Transform enemytransform;
     public GameObject[] player;
     public bool CanSeePlayer {get; set;}
     //
     public NavMeshAgent enemyagent {get; set;}
-    public float enemySpeed {get; set;}
+    public float enemySpeed {get; set;} = 10f;
     public float IdleRadius = 5f;
     #region StateMachine Variables
     public EnemyStateMachine enemyStateMachine {get; set;}
@@ -32,7 +34,7 @@ public class Enemy : MonoBehaviour , IEnemyMovement , ITriggerCheck
         enemytransform = GetComponent<Transform>();
         //Set navmesh
         enemyagent = GetComponent<NavMeshAgent>();
-        enemySpeed = 10f;
+        enemyagent.speed = enemySpeed;
         enemyagent.updateRotation = false;
         enemyagent.updateUpAxis = false;
         //Initial state
@@ -53,7 +55,6 @@ public class Enemy : MonoBehaviour , IEnemyMovement , ITriggerCheck
     {
         enemyagent.SetDestination(position);
     }
-
     public void setCanSeePlayer(bool newValue)
     {
         CanSeePlayer = newValue;
@@ -67,5 +68,19 @@ public class Enemy : MonoBehaviour , IEnemyMovement , ITriggerCheck
         EnemyIdle,
         EnemMovement,
         EnemyChase
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if(collision.collider.gameObject.CompareTag("Player"))
+        {
+            StartCoroutine(AttackWait(AttackTimer));
+        }
+    }
+    public IEnumerator AttackWait(float waitTime)
+    {
+        enemyagent.speed = 0f;
+        yield return new WaitForSeconds(waitTime);
+        enemyagent.speed = enemySpeed;
     }
 }

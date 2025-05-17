@@ -60,5 +60,4 @@ public class PlayerMoveState : PlayerState
             slimeControls = null;
         }
     }
-
 }

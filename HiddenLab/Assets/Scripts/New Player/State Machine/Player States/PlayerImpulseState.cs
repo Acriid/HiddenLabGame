@@ -12,7 +12,6 @@ public class PlayerImpulseState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("Entered impulse state");
         if(player.GetSlimeDistance() > 1f)
         {
             player.MakeSlime1Kinematic(false);
