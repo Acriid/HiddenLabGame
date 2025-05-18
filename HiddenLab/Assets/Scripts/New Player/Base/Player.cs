@@ -3,15 +3,19 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using UnityEngine.UIElements.Experimental;
 using Unity.Mathematics;
+using Unity.VisualScripting;
+using System.IO;
 
 
 public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
 {
+    #region Player Attributes
     //Player Attributes
     public PlayerAttributes playerAttributes;
     private bool _isStreatched;
     private float _impulseSpeed;
     private bool _addedImpulse;
+    #endregion
     private SpringJoint2D slimeSJ;
     //Implementation of the IHealth interface
     public int _CurrentHealth{get; set;}
@@ -35,12 +39,14 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     #endregion
     #region Trigger Checks
     public bool isInPickuprange { get; set; }
+    public bool isInFilerange { get; set; }
     #endregion
     #region Controls
     private SlimeControls slimeControls;
     private InputAction SplitAction;
     private InputAction StretchAction;
     private InputAction PickupAction;
+    private InputAction FileAction;
     #endregion
     #region Start/Awake
     void Awake()
@@ -89,7 +95,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         }
         SlimeRB = this.GetComponent<Rigidbody2D>();
 
-        //Slime HJ
+        
+
+        //Slime SJ
         slimeSJ = null;
         //Initialize State Machine;
         playerStateMachine.Initialize(playerMoveState);
@@ -256,14 +264,56 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         playerAttributes.OnSlime1SpeedChange -= HandleSlime1SpeedChange;
         playerAttributes.OnSlime2SpeedChange -= HandleSlime2SpeedChange;
     }
-    #endregion  
+    #endregion
     #region Trigger checks
-    public void setisInPickuprange(bool value)
+    public void setisInFilerange(bool value)
     {
-        if(value)
+        if (value)
         {
             //Disable stretch actions
-            if(StretchAction != null)
+            if (StretchAction != null)
+            {
+                StretchAction.Disable();
+                StretchAction.performed -= OnStretchAction;
+                StretchAction = null;
+            }
+            if (PickupAction != null)
+            {
+                PickupAction.Disable();
+                PickupAction.performed -= OnPickupAction;
+                PickupAction = null;
+            }
+            //PickupAction
+            FileAction = slimeControls.Slime.Pickup;
+            FileAction.Enable();
+            FileAction.performed += onFileAction;
+        }
+        else
+        {
+            //Disable stretch actions
+            if (StretchAction == null)
+            {
+                StretchAction.Enable();
+                StretchAction.performed += OnStretchAction;
+            }
+            if (PickupAction == null)
+            {
+                PickupAction.Enable();
+                PickupAction.performed += OnPickupAction;
+            }
+            //PickupAction
+            FileAction.Disable();
+            FileAction.performed -= onFileAction;
+            FileAction = null;
+        }
+        isInFilerange = value;
+    }
+    public void setisInPickuprange(bool value)
+    {
+        if (value)
+        {
+            //Disable stretch actions
+            if (StretchAction != null)
             {
                 StretchAction.Disable();
                 StretchAction.performed -= OnStretchAction;
@@ -277,7 +327,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         else
         {
             //Enable stretch actions
-            if(StretchAction == null)
+            if (StretchAction == null)
             {
                 StretchAction = slimeControls.Slime.Stretch;
                 StretchAction.performed += OnStretchAction;
@@ -334,7 +384,44 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     #region PickUp Acion
     private void OnPickupAction(InputAction.CallbackContext ctx)
     {
-        
+        HingeJoint2D specificHJtoadd = null;
+        HingeJoint2D[] slimeHJs = this.GetComponents<HingeJoint2D>();
+        if (slimeHJs.Length != 0)
+        {
+            foreach (HingeJoint2D specificHJ in slimeHJs)
+            {
+                Destroy(specificHJ);
+            }
+        }
+        foreach (GameObject pickup in ItemTriggerCheck.pickupitems)
+        {
+            this.AddComponent<HingeJoint2D>();
+            slimeHJs = this.GetComponents<HingeJoint2D>();
+            foreach (HingeJoint2D specificHJ in slimeHJs)
+            {
+                if (specificHJ.connectedBody == null)
+                {
+                    specificHJtoadd = specificHJ;
+                    break;
+                }
+            }
+            specificHJtoadd.connectedBody = pickup.GetComponent<Rigidbody2D>();
+            specificHJtoadd.enableCollision = true;
+        }
+    }
+    #endregion
+    #region File Action
+    public void onFileAction(InputAction.CallbackContext ctx)
+    {
+        Canvas filecanvas = ShowFile.file.GetComponent<Canvas>();
+        if (filecanvas.enabled)
+        {
+            filecanvas.enabled = false;
+        }
+        else
+        {
+            filecanvas.enabled = true;
+        }
     }
     #endregion
     #region Joints
@@ -347,9 +434,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             slimeSJ.autoConfigureDistance = false;
             slimeSJ.autoConfigureConnectedAnchor = false;
             slimeSJ.connectedBody = Slime2RB;
-            slimeSJ.distance = 0f; 
-            slimeSJ.dampingRatio = 0f; 
-            slimeSJ.frequency = 1f; 
+            slimeSJ.distance = 0f;
+            slimeSJ.dampingRatio = 0f;
+            slimeSJ.frequency = 1f;
         }
     }
     public void AdjustBreakForce(float breakForce)

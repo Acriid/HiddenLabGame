@@ -153,6 +153,15 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""File"",
+                    ""type"": ""Button"",
+                    ""id"": ""be2aa6b1-7720-4ec8-9110-ef43d369b341"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -318,6 +327,17 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""OpenMenu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""622e6b20-593e-4b01-b92c-8cdaede2a502"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""File"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -573,6 +593,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         m_Slime_CameraMove = m_Slime.FindAction("CameraMove", throwIfNotFound: true);
         m_Slime_Pickup = m_Slime.FindAction("Pickup", throwIfNotFound: true);
         m_Slime_OpenMenu = m_Slime.FindAction("OpenMenu", throwIfNotFound: true);
+        m_Slime_File = m_Slime.FindAction("File", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MoveWASD = m_UI.FindAction("MoveWASD", throwIfNotFound: true);
@@ -669,6 +690,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_CameraMove;
     private readonly InputAction m_Slime_Pickup;
     private readonly InputAction m_Slime_OpenMenu;
+    private readonly InputAction m_Slime_File;
     /// <summary>
     /// Provides access to input actions defined in input action map "Slime".
     /// </summary>
@@ -708,6 +730,10 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Slime/OpenMenu".
         /// </summary>
         public InputAction @OpenMenu => m_Wrapper.m_Slime_OpenMenu;
+        /// <summary>
+        /// Provides access to the underlying input action "Slime/File".
+        /// </summary>
+        public InputAction @File => m_Wrapper.m_Slime_File;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -755,6 +781,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @OpenMenu.started += instance.OnOpenMenu;
             @OpenMenu.performed += instance.OnOpenMenu;
             @OpenMenu.canceled += instance.OnOpenMenu;
+            @File.started += instance.OnFile;
+            @File.performed += instance.OnFile;
+            @File.canceled += instance.OnFile;
         }
 
         /// <summary>
@@ -787,6 +816,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @OpenMenu.started -= instance.OnOpenMenu;
             @OpenMenu.performed -= instance.OnOpenMenu;
             @OpenMenu.canceled -= instance.OnOpenMenu;
+            @File.started -= instance.OnFile;
+            @File.performed -= instance.OnFile;
+            @File.canceled -= instance.OnFile;
         }
 
         /// <summary>
@@ -1027,6 +1059,13 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnOpenMenu(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "File" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFile(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
