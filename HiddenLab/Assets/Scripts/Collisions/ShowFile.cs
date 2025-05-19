@@ -3,19 +3,32 @@ using UnityEngine;
 public class ShowFile : MonoBehaviour
 {
 
-    public Player player;
+    Canvas[] canvasses;
+    Canvas specificCanvas;
+    void Awake()
+    {
+        canvasses = this.GetComponentsInChildren<Canvas>();
+        foreach (Canvas canvas in canvasses)
+        {
+            if (canvas.name == "Button")
+            {
+                specificCanvas = canvas;
+                break;
+            }
+        }
+    }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            player.setisInFilerange(true);
+            specificCanvas.enabled = true;
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            player.setisInFilerange(false);
+            specificCanvas.enabled = false;
         }
     }
 }
