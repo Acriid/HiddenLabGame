@@ -7,6 +7,6 @@ public class NewGame : MonoBehaviour
     {
         //Deletes save to make a new savefile
         DataPersistanceManager.instance.DeleteSave();
-        SceneManager.LoadScene("DemoLevel");
+        SceneManager.LoadScene("Level 1");
     }
 }

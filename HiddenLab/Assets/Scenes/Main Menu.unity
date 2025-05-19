@@ -533,7 +533,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.9314118, g: 0.93207544, b: 0.6876254, a: 0.33333334}
     m_HighlightedColor: {r: 0.79622644, g: 0.76768243, b: 0.76768243, a: 0.5019608}
-    m_PressedColor: {r: 0.6727366, g: 0.91764706, b: 0.54509807, a: 0.9137255}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.9137255}
     m_SelectedColor: {r: 0.6745098, g: 0.9176471, b: 0.54509807, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1402,18 +1402,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 4f4dbd48ce6758a4dbe25949b4d183aa, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: l
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 767936498}
         m_TargetAssemblyTypeName: NewGame, Assembly-CSharp
         m_MethodName: OnClick
