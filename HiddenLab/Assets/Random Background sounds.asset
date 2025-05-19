@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-5693547433082401490
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: loud-distant-banging-noise-216934_{-5693547433082401490}
+  m_AudioClip: {fileID: 8300000, guid: 4802e746d79b06d4db67260448e70084, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2828821179231462879
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: something falling_{-2828821179231462879}
+  m_AudioClip: {fileID: 8300000, guid: da7426093390d414698bfa48c9f6d8dd, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2683911271462320062
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: object-falling-81232_{-2683911271462320062}
+  m_AudioClip: {fileID: 8300000, guid: 6f545215280f7554bbd50668adf68b6f, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-2672818651385517176
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: alarm-siren-sound-effect-type-01-294194_{-2672818651385517176}
+  m_AudioClip: {fileID: 8300000, guid: e18dee5bdbbf3624a9328627cb16d729, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1908469849501799390
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: flickeringlight-90411_{1908469849501799390}
+  m_AudioClip: {fileID: 8300000, guid: ddccb203cb786844cac0336033acc83d, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Random Background sounds
+  m_Volume: -33
+  m_Pitch: -107
+  m_AutomaticTriggerTime: 7
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: 0, y: 0}
+  m_PitchRandomizationRange: {x: 0, y: 0}
+  m_AutomaticTriggerTimeRandomizationRange: {x: -6.2068787, y: 37.24137}
+  m_LoopCountRandomizationRange: {x: -0, y: 0}
+  m_Elements:
+  - {fileID: 1908469849501799390}
+  - {fileID: 8563593881991172301}
+  - {fileID: 9072473246638244893}
+  - {fileID: -5693547433082401490}
+  - {fileID: -2672818651385517176}
+  - {fileID: -2683911271462320062}
+  - {fileID: -2828821179231462879}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 2
+  m_TriggerMode: 1
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 2
+  m_VolumeRandomizationEnabled: 0
+  m_PitchRandomizationEnabled: 0
+  m_AutomaticTriggerTimeRandomizationEnabled: 1
+  m_LoopCountRandomizationEnabled: 1
+--- !u!1233149941 &8563593881991172301
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: falling-of-heavy-object-291096_{8563593881991172301}
+  m_AudioClip: {fileID: 8300000, guid: eb275d8fb66da5d4f8b383c48504a73b, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &9072473246638244893
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: fluorescent-lamp-flickering-17625_{9072473246638244893}
+  m_AudioClip: {fileID: 8300000, guid: 646966729140bfc46b6ff35c071fe3d4, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
