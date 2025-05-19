@@ -40,6 +40,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     #region Trigger Checks
     public bool isInPickuprange { get; set; }
     public bool isInFilerange { get; set; }
+    public bool isInSaverange { get; set; }
     #endregion
     #region Controls
     private SlimeControls slimeControls;
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     private InputAction StretchAction;
     private InputAction PickupAction;
     private InputAction FileAction;
+    private InputAction SaveAction;
     #endregion
     #region Start/Awake
     void Awake()
@@ -277,12 +279,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
                 StretchAction.performed -= OnStretchAction;
                 StretchAction = null;
             }
-            if (PickupAction != null)
-            {
-                PickupAction.Disable();
-                PickupAction.performed -= OnPickupAction;
-                PickupAction = null;
-            }
             //PickupAction
             FileAction = slimeControls.Slime.Pickup;
             FileAction.Enable();
@@ -295,11 +291,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             {
                 StretchAction.Enable();
                 StretchAction.performed += OnStretchAction;
-            }
-            if (PickupAction == null)
-            {
-                PickupAction.Enable();
-                PickupAction.performed += OnPickupAction;
             }
             //PickupAction
             FileAction.Disable();
@@ -338,6 +329,35 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             PickupAction = null;
         }
         isInPickuprange = value;
+    }
+    public void setisInSaverange(bool value)
+    {
+        if (value)
+        {
+            //Disable stretch actions
+            if (StretchAction != null)
+            {
+                StretchAction.Disable();
+                StretchAction.performed -= OnStretchAction;
+                StretchAction = null;
+            }
+            SaveAction = slimeControls.Slime.Save;
+            SaveAction.Enable();
+            SaveAction.performed += onSaveAction;
+        }
+        else
+        {
+            //Enable stretch actions
+            if (StretchAction == null)
+            {
+                StretchAction = slimeControls.Slime.Stretch;
+                StretchAction.performed += OnStretchAction;
+            }
+            SaveAction = slimeControls.Slime.Save;
+            SaveAction.Enable();
+            SaveAction.performed += onSaveAction;
+        }
+        isInSaverange = value;
     }
     #endregion
     #region Split Action
@@ -422,6 +442,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         {
             filecanvas.enabled = true;
         }
+    }
+    #endregion
+    #region Save Action
+    public void onSaveAction(InputAction.CallbackContext ctx)
+    {
+        
     }
     #endregion
     #region Joints

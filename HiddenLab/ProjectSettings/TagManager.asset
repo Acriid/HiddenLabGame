@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - File
+  - Enemy
+  - Pickup
+  - SavePoint
   layers:
   - Default
   - TransparentFX

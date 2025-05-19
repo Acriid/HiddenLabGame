@@ -162,6 +162,15 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Save"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e1046f1-7765-4c7d-ba9d-6a06e79226a2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -338,6 +347,17 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""File"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1448ce50-0d2f-45dc-b87a-10e1e06911d8"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Save"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -594,6 +614,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         m_Slime_Pickup = m_Slime.FindAction("Pickup", throwIfNotFound: true);
         m_Slime_OpenMenu = m_Slime.FindAction("OpenMenu", throwIfNotFound: true);
         m_Slime_File = m_Slime.FindAction("File", throwIfNotFound: true);
+        m_Slime_Save = m_Slime.FindAction("Save", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MoveWASD = m_UI.FindAction("MoveWASD", throwIfNotFound: true);
@@ -691,6 +712,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_Pickup;
     private readonly InputAction m_Slime_OpenMenu;
     private readonly InputAction m_Slime_File;
+    private readonly InputAction m_Slime_Save;
     /// <summary>
     /// Provides access to input actions defined in input action map "Slime".
     /// </summary>
@@ -734,6 +756,10 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Slime/File".
         /// </summary>
         public InputAction @File => m_Wrapper.m_Slime_File;
+        /// <summary>
+        /// Provides access to the underlying input action "Slime/Save".
+        /// </summary>
+        public InputAction @Save => m_Wrapper.m_Slime_Save;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -784,6 +810,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @File.started += instance.OnFile;
             @File.performed += instance.OnFile;
             @File.canceled += instance.OnFile;
+            @Save.started += instance.OnSave;
+            @Save.performed += instance.OnSave;
+            @Save.canceled += instance.OnSave;
         }
 
         /// <summary>
@@ -819,6 +848,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @File.started -= instance.OnFile;
             @File.performed -= instance.OnFile;
             @File.canceled -= instance.OnFile;
+            @Save.started -= instance.OnSave;
+            @Save.performed -= instance.OnSave;
+            @Save.canceled -= instance.OnSave;
         }
 
         /// <summary>
@@ -1066,6 +1098,13 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnFile(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Save" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSave(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

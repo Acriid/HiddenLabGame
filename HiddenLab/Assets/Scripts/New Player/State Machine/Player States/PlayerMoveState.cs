@@ -37,8 +37,11 @@ public class PlayerMoveState : PlayerState
     {
         base.UpdateState();
         //Get movearrows value
+        if (MoveArrows != null)
+        {
+            MoveArrowsValue = MoveArrows.ReadValue<Vector2>();
+        }
         
-        MoveArrowsValue = MoveArrows.ReadValue<Vector2>();
     }
     public override void FixedUpdateState()
     {

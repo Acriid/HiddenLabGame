@@ -76,6 +76,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Save",
+                    "type": "Button",
+                    "id": "3e1046f1-7765-4c7d-ba9d-6a06e79226a2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -252,6 +261,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "File",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1448ce50-0d2f-45dc-b87a-10e1e06911d8",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Save",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
