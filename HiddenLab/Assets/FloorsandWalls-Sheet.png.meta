@@ -334,7 +334,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FloorsandWalls-Sheet_0: -6809511486095460475
+      FloorsandWalls-Sheet_1: -8494691801321282558
+      FloorsandWalls-Sheet_2: 2266983758516312027
+      FloorsandWalls-Sheet_3: -1202491407363212041
+      FloorsandWalls-Sheet_4: -8327322141824061722
+      FloorsandWalls-Sheet_5: 5590553311914164327
+      FloorsandWalls-Sheet_6: 2496452884794276767
+      FloorsandWalls-Sheet_7: 3647088532967715758
+      FloorsandWalls-Sheet_8: -1414561004832711236
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
