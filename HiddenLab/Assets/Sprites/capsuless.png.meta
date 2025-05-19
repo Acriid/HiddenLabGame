@@ -1,25 +1,34 @@
 fileFormatVersion: 2
-guid: 61c97f5aa27b6e0499eff43b3840f944
+guid: 66ee92185241f644196ba0e450594374
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2566123534081635784
-    second: LAB items_0
+      213: 1014926724616402909
+    second: capsuless_0
   - first:
-      213: -2975213964957215521
-    second: LAB items_1
+      213: -2545969713436232886
+    second: capsuless_1
   - first:
-      213: 4023264155070843542
-    second: LAB items_2
+      213: 8212318962639631137
+    second: capsuless_2
   - first:
-      213: 6799664170759113680
-    second: LAB items_3
+      213: -3980076961317642486
+    second: capsuless_3
   - first:
-      213: 8378523357078528296
-    second: LAB items_4
+      213: 8018072206911938375
+    second: capsuless_4
   - first:
-      213: -6382395051594835984
-    second: LAB items_5
+      213: 7789471094782351508
+    second: capsuless_5
+  - first:
+      213: -9222330859905656908
+    second: capsuless_6
+  - first:
+      213: 4513199242077179153
+    second: capsuless_7
+  - first:
+      213: 8082972459892747855
+    second: capsuless_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -66,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,13 +137,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LAB items_0
+      name: capsuless_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 175
-        width: 98
-        height: 58
+        x: 986
+        y: 424
+        width: 468
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83a4b4ddd3c436cd0800000000000000
-      internalID: -2566123534081635784
+      spriteID: dd7bfcd8a7eb51e00800000000000000
+      internalID: 1014926724616402909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB items_1
+      name: capsuless_1
       rect:
         serializedVersion: 2
-        x: 111
-        y: 183
-        width: 98
-        height: 50
+        x: 1889
+        y: 653
+        width: 154
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fd491f789aae5b6d0800000000000000
-      internalID: -2975213964957215521
+      spriteID: a43fab5e806eaacd0800000000000000
+      internalID: -2545969713436232886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB items_2
+      name: capsuless_2
       rect:
         serializedVersion: 2
-        x: 175
-        y: 79
-        width: 81
-        height: 130
+        x: 2164
+        y: 656
+        width: 93
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69a4f80de6185d730800000000000000
-      internalID: 4023264155070843542
+      spriteID: 123f656f59408f170800000000000000
+      internalID: 8212318962639631137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB items_3
+      name: capsuless_3
       rect:
         serializedVersion: 2
-        x: 31
-        y: 103
-        width: 74
-        height: 58
+        x: 2257
+        y: 660
+        width: 142
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,20 +218,86 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0db4c0289824d5e50800000000000000
-      internalID: 6799664170759113680
+      spriteID: a0f12fd471de3c8c0800000000000000
+      internalID: -3980076961317642486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB items_4
+      name: capsuless_4
       rect:
         serializedVersion: 2
-        x: 23
-        y: 23
+        x: 1414
+        y: 227
+        width: 59
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f1b6cc03ae54f60800000000000000
+      internalID: 8018072206911938375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: capsuless_5
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 89
+        width: 105
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498dca8b0b2c91c60800000000000000
+      internalID: 7789471094782351508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: capsuless_6
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 95
+        width: 85
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b75336e1f2b30080800000000000000
+      internalID: -9222330859905656908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: capsuless_7
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 88
         width: 114
-        height: 74
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +306,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 821aaf81a9e764470800000000000000
-      internalID: 8378523357078528296
+      spriteID: 11d82987cca12ae30800000000000000
+      internalID: 4513199242077179153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LAB items_5
+      name: capsuless_8
       rect:
         serializedVersion: 2
-        x: 167
-        y: 0
-        width: 66
-        height: 65
+        x: 1383
+        y: 98
+        width: 59
+        height: 77
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,8 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f79a75148d2d67a0800000000000000
-      internalID: -6382395051594835984
+      spriteID: f4e2c2970ac7c2070800000000000000
+      internalID: 8082972459892747855
       vertices: []
       indices: 
       edges: []
@@ -273,12 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LAB items_0: -2566123534081635784
-      LAB items_1: -2975213964957215521
-      LAB items_2: 4023264155070843542
-      LAB items_3: 6799664170759113680
-      LAB items_4: 8378523357078528296
-      LAB items_5: -6382395051594835984
+      capsuless_0: 1014926724616402909
+      capsuless_1: -2545969713436232886
+      capsuless_2: 8212318962639631137
+      capsuless_3: -3980076961317642486
+      capsuless_4: 8018072206911938375
+      capsuless_5: 7789471094782351508
+      capsuless_6: -9222330859905656908
+      capsuless_7: 4513199242077179153
+      capsuless_8: 8082972459892747855
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
