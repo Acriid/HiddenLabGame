@@ -463,14 +463,14 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     {
         if (fileobject != null)
         {
-            Canvas canvas = fileobject.GetComponentInChildren<Canvas>();
-            if (canvas.enabled == true)
+            Canvas[] canvas = fileobject.GetComponentsInChildren<Canvas>();
+            if (canvas[0].enabled == true)
             {
-                canvas.enabled = false;
+                canvas[0].enabled = false;
             }
             else
             {
-                canvas.enabled = true;
+                canvas[0].enabled = true;
             }
         }
         
