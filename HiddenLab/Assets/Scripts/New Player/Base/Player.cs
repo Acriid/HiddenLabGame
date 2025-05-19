@@ -9,6 +9,10 @@ using System.IO;
 
 public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
 {
+    #region Menus
+    public GameObject SaveMenu;
+    public GameObject OptionsMenu;
+    #endregion
     #region Player Attributes
     //Player Attributes
     public PlayerAttributes playerAttributes;
@@ -49,6 +53,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     private InputAction PickupAction;
     private InputAction FileAction;
     private InputAction SaveAction;
+    private InputAction OptionsAction;
     #endregion
     #region Start/Awake
     void Awake()
@@ -77,13 +82,16 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         playerAttributes.OnAddedImpulseChange += HandleAddedImpulseChange;
         playerAttributes.OnImpulseSpeedChange += HandleImpulseSpeedChange;
 
+
         //Controls
         slimeControls = new SlimeControls();
         slimeControls.Slime.Enable();
+        OptionsAction = slimeControls.Slime.OpenMenu;
         SplitAction = slimeControls.Slime.Split;
         StretchAction = slimeControls.Slime.Stretch;
         StretchAction.performed += OnStretchAction;
         SplitAction.performed += OnSplitAction;
+        OptionsAction.performed += OnOptionsAction;
         
         //Get RigidBody
         SlimeObjects = GameObject.FindGameObjectsWithTag("Player");
@@ -214,45 +222,34 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     }
     private void ClenupSlimeActions()
     {
-        if(PickupAction != null)
+        if (PickupAction != null)
         {
             PickupAction.Disable();
             PickupAction.performed -= OnPickupAction;
             PickupAction = null;
         }
-        if(StretchAction != null)
+        if (StretchAction != null)
         {
             StretchAction.Disable();
             StretchAction.performed -= OnStretchAction;
             StretchAction = null;
         }
-        if(SplitAction != null)
+        if (SplitAction != null)
         {
             SplitAction.Disable();
             SplitAction.performed -= OnSplitAction;
             SplitAction = null;
+        }
+        if (OptionsAction != null)
+        {
+            OptionsAction.Disable();
+            OptionsAction.performed -= OnOptionsAction;
+            OptionsAction = null;
         }
     }
     private void CleanupInputSystem()
     {
-        if(PickupAction != null)
-        {
-            PickupAction.Disable();
-            PickupAction.performed -= OnPickupAction;
-            PickupAction = null;
-        }
-        if(StretchAction != null)
-        {
-            StretchAction.Disable();
-            StretchAction.performed -= OnStretchAction;
-            StretchAction = null;
-        }
-        if(SplitAction != null)
-        {
-            SplitAction.Disable();
-            SplitAction.performed -= OnSplitAction;
-            SplitAction = null;
-        }
+        ClenupSlimeActions();
         if (slimeControls != null)
         {
             slimeControls.Slime.Disable();
@@ -447,7 +444,15 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     #region Save Action
     public void onSaveAction(InputAction.CallbackContext ctx)
     {
-        
+        SaveMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+    #endregion
+    #region Options Action
+    public void OnOptionsAction(InputAction.CallbackContext ctx)
+    {
+        OptionsMenu.SetActive(true);
+        Time.timeScale = 0;
     }
     #endregion
     #region Joints

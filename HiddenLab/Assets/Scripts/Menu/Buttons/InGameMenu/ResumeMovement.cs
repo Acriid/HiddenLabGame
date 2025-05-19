@@ -3,16 +3,16 @@ using UnityEngine;
 public class ResumeMovement : MonoBehaviour
 {
     [SerializeField] GameObject Slime;
-    private Movement slimeMovement;
+    private Player player;
     void OnEnable()
     {
-        slimeMovement = Slime.GetComponent<Movement>();
+        player = Slime.GetComponent<Player>();
     }
     void OnDisable()
     {
-        if(slimeMovement != null && !slimeMovement.enabled)
+        if(player != null && !player.enabled)
         {
-            slimeMovement.enabled = true;
+            player.enabled = true;
         }
     }
 }
