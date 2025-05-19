@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 966ae0bd597a0eb4db17b776ae969434
+guid: 80d2d4c70f1b0b14f9f7ffe2ce945d0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5541254872079701565
-    second: caboard with slime_0
-  - first:
-      213: 7171476047445283050
-    second: caboard with slime_1
-  - first:
-      213: -6054660102782296741
-    second: caboard with slime_2
+      213: 1066913249555555180
+    second: door opening an-sheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 6
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,31 +96,18 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: caboard with slime_0
+      name: door opening an-sheet_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 72
-        width: 21
-        height: 48
-      alignment: 0
+        x: 0
+        y: 0
+        width: 44
+        height: 26
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -134,52 +115,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d36963482fd76ec40800000000000000
-      internalID: 5541254872079701565
+      spriteID: c63aaed92ff6ece00800000000000000
+      internalID: 1066913249555555180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caboard with slime_1
+      name: door opening an-sheet_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 28
-        width: 23
-        height: 22
-      alignment: 0
+        x: 44
+        y: 0
+        width: 44
+        height: 26
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ae0d2331873368360800000000000000
-      internalID: 7171476047445283050
+      spriteID: 87e95188381bbea468c53d724d26cfd0
+      internalID: 2112810833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caboard with slime_2
+      name: door opening an-sheet_2
       rect:
         serializedVersion: 2
         x: 88
-        y: 23
-        width: 25
-        height: 35
-      alignment: 0
+        y: 0
+        width: 44
+        height: 26
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b5d5ee927b689fba0800000000000000
-      internalID: -6054660102782296741
+      spriteID: 668235562ec58fc449af32f7d6627e90
+      internalID: 1085348933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door opening an-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 44
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1ddac77300f1b40acf98b97747b141
+      internalID: -518100332
       vertices: []
       indices: 
       edges: []
@@ -188,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 19c78c7e474de474285afc2d5bca5e55
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +201,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      caboard with slime_0: 5541254872079701565
-      caboard with slime_1: 7171476047445283050
-      caboard with slime_2: -6054660102782296741
+      door opening an-sheet_0: 1066913249555555180
+      door opening an-sheet_1: 2112810833
+      door opening an-sheet_2: 1085348933
+      door opening an-sheet_3: -518100332
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

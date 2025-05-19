@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 966ae0bd597a0eb4db17b776ae969434
+guid: 05594441a8573e543a673bf0578939ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5541254872079701565
-    second: caboard with slime_0
+      213: -3777230606474640595
+    second: capsule bubble_0
   - first:
-      213: 7171476047445283050
-    second: caboard with slime_1
+      213: 7262122713824995547
+    second: capsule bubble_1
   - first:
-      213: -6054660102782296741
-    second: caboard with slime_2
+      213: 5098905747489827005
+    second: capsule bubble_2
+  - first:
+      213: 3798774833966116911
+    second: capsule bubble_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: caboard with slime_0
+      name: capsule bubble_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 72
-        width: 21
-        height: 48
+        x: 0
+        y: 0
+        width: 122
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d36963482fd76ec40800000000000000
-      internalID: 5541254872079701565
+      spriteID: d23885aa6c4949bc0800000000000000
+      internalID: -3777230606474640595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caboard with slime_1
+      name: capsule bubble_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 28
-        width: 23
-        height: 22
+        x: 122
+        y: 0
+        width: 122
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae0d2331873368360800000000000000
-      internalID: 7171476047445283050
+      spriteID: bd8a5d0c12e38c460800000000000000
+      internalID: 7262122713824995547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caboard with slime_2
+      name: capsule bubble_2
       rect:
         serializedVersion: 2
-        x: 88
-        y: 23
-        width: 25
-        height: 35
+        x: 244
+        y: 0
+        width: 122
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +168,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5d5ee927b689fba0800000000000000
-      internalID: -6054660102782296741
+      spriteID: db8245e13c3f2c640800000000000000
+      internalID: 5098905747489827005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: capsule bubble_3
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 0
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f207e30b595f7b430800000000000000
+      internalID: 3798774833966116911
       vertices: []
       indices: 
       edges: []
@@ -188,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 19c78c7e474de474285afc2d5bca5e55
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      caboard with slime_0: 5541254872079701565
-      caboard with slime_1: 7171476047445283050
-      caboard with slime_2: -6054660102782296741
+      capsule bubble_0: -3777230606474640595
+      capsule bubble_1: 7262122713824995547
+      capsule bubble_2: 5098905747489827005
+      capsule bubble_3: 3798774833966116911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

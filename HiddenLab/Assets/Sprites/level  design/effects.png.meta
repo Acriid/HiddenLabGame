@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 966ae0bd597a0eb4db17b776ae969434
+guid: 90be71ac1b8940b42873d765c65d317a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5541254872079701565
-    second: caboard with slime_0
+      213: 6609894105642088411
+    second: effects_0
   - first:
-      213: 7171476047445283050
-    second: caboard with slime_1
+      213: 1957107745717523172
+    second: effects_1
   - first:
-      213: -6054660102782296741
-    second: caboard with slime_2
+      213: -3914910146244942373
+    second: effects_2
+  - first:
+      213: -1166211891172804109
+    second: effects_3
+  - first:
+      213: 1274422669862156747
+    second: effects_4
+  - first:
+      213: 5546012167625906029
+    second: effects_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -57,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 12
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -81,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -102,30 +111,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: caboard with slime_0
+      name: effects_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 72
-        width: 21
-        height: 48
+        x: 0
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,52 +130,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d36963482fd76ec40800000000000000
-      internalID: 5541254872079701565
+      spriteID: bd7beb91baf0bbb50800000000000000
+      internalID: 6609894105642088411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caboard with slime_1
+      name: effects_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 28
-        width: 23
-        height: 22
+        x: 31
+        y: 31
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ae0d2331873368360800000000000000
-      internalID: 7171476047445283050
+      spriteID: d597d36a5e201734e80ddaf219b18909
+      internalID: 1957107745717523172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: caboard with slime_2
+      name: effects_2
       rect:
         serializedVersion: 2
-        x: 88
-        y: 23
-        width: 25
-        height: 35
+        x: 0
+        y: 0
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b5d5ee927b689fba0800000000000000
-      internalID: -6054660102782296741
+      spriteID: 1b5167b2e2f0f2241b77cd69bf20cb29
+      internalID: -3914910146244942373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effects_3
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e01b9d51c0cac4baaabf483f7a519b
+      internalID: -1166211891172804109
       vertices: []
       indices: 
       edges: []
@@ -188,7 +206,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 19c78c7e474de474285afc2d5bca5e55
+    spriteID: 7e1617165a8c8c94d86de1fc58ba6932
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +216,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      caboard with slime_0: 5541254872079701565
-      caboard with slime_1: 7171476047445283050
-      caboard with slime_2: -6054660102782296741
+      effects_0: 6609894105642088411
+      effects_1: 1957107745717523172
+      effects_2: -3914910146244942373
+      effects_3: -1166211891172804109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
