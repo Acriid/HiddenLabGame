@@ -21,8 +21,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     private bool _addedImpulse;
     #endregion
     private SpringJoint2D slimeSJ;
+    private GameObject fileobject = null;
     //Implementation of the IHealth interface
-    public int _CurrentHealth{get; set;}
+    public int _CurrentHealth { get; set; }
     
     #region  Movement Variables
     public Rigidbody2D SlimeRB {get; set;}
@@ -276,23 +277,28 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
                 StretchAction.performed -= OnStretchAction;
                 StretchAction = null;
             }
-            //PickupAction
-            FileAction = slimeControls.Slime.Pickup;
+            //FileAction
+            FileAction = slimeControls.Slime.File;
             FileAction.Enable();
             FileAction.performed += onFileAction;
         }
         else
         {
-            //Disable stretch actions
+            //Enable stretch actions
             if (StretchAction == null)
             {
+                StretchAction = slimeControls.Slime.Stretch;
                 StretchAction.Enable();
                 StretchAction.performed += OnStretchAction;
             }
-            //PickupAction
-            FileAction.Disable();
-            FileAction.performed -= onFileAction;
-            FileAction = null;
+            //FileAction
+            if (FileAction != null)
+            {
+                FileAction.Disable();
+                FileAction.performed -= onFileAction;
+                FileAction = null;               
+            }
+
         }
         isInFilerange = value;
     }
@@ -318,6 +324,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             if (StretchAction == null)
             {
                 StretchAction = slimeControls.Slime.Stretch;
+                StretchAction.Enable();
                 StretchAction.performed += OnStretchAction;
             }
             //PickupAction
@@ -348,11 +355,11 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             if (StretchAction == null)
             {
                 StretchAction = slimeControls.Slime.Stretch;
+                StretchAction.Enable();
                 StretchAction.performed += OnStretchAction;
             }
-            SaveAction = slimeControls.Slime.Save;
-            SaveAction.Enable();
-            SaveAction.performed += onSaveAction;
+            SaveAction.Disable();
+            SaveAction.performed -= onSaveAction;
         }
         isInSaverange = value;
     }
@@ -385,17 +392,27 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     #endregion
     #region Streatch Action
     private void OnStretchAction(InputAction.CallbackContext ctx)
-    {    
-        if(!_isStreatched)
-        {
-            playerStateMachine.ChangeState(playerStretchState);
-            _isStreatched = true;
-        }
-        else 
-        {
-            playerStateMachine.ChangeState(playerImpulseState);
-            _isStreatched = false;
-        }
+    {
+        CircleCollider2D[] circleCollider2D = this.GetComponentsInChildren<CircleCollider2D>();
+
+        if (!_isStreatched)
+            {
+                foreach (CircleCollider2D circle in circleCollider2D)
+                {
+                    circle.enabled = false;
+                }
+                playerStateMachine.ChangeState(playerStretchState);
+                _isStreatched = true;
+            }
+            else
+            {
+                foreach (CircleCollider2D circle in circleCollider2D)
+                {
+                    circle.enabled = true;
+                }
+                playerStateMachine.ChangeState(playerImpulseState);
+                _isStreatched = false;
+            }
     }
     #endregion
     #region PickUp Acion
@@ -428,17 +445,35 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     }
     #endregion
     #region File Action
-    public void onFileAction(InputAction.CallbackContext ctx)
+    public void SetFileObject(GameObject gameObject,bool value)
     {
-        Canvas filecanvas = ShowFile.file.GetComponent<Canvas>();
-        if (filecanvas.enabled)
+        Canvas canvas = gameObject.GetComponentInChildren<Canvas>();
+        if (!value)
         {
-            filecanvas.enabled = false;
+            canvas.enabled = false;
+            fileobject = null;
         }
         else
         {
-            filecanvas.enabled = true;
+            fileobject = gameObject;
         }
+        
+    }
+    public void onFileAction(InputAction.CallbackContext ctx)
+    {
+        if (fileobject != null)
+        {
+            Canvas canvas = fileobject.GetComponentInChildren<Canvas>();
+            if (canvas.enabled == true)
+            {
+                canvas.enabled = false;
+            }
+            else
+            {
+                canvas.enabled = true;
+            }
+        }
+        
     }
     #endregion
     #region Save Action

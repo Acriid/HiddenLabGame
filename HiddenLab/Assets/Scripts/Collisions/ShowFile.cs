@@ -3,23 +3,17 @@ using UnityEngine;
 public class ShowFile : MonoBehaviour
 {
 
-    private Player player;
-    public static GameObject file;
-    void Awake()
-    {
-        file = this.gameObject;
-        player = GetComponentInParent<Player>();
-    }
+    public Player player;
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("File"))
+        if (collision.CompareTag("Player"))
         {
             player.setisInFilerange(true);
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("File"))
+        if (collision.CompareTag("Player"))
         {
             player.setisInFilerange(false);
         }

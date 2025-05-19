@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Pickup
   - SavePoint
+  - Chasm
   layers:
   - Default
   - TransparentFX
