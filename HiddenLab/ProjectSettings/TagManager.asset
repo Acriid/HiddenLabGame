@@ -50,6 +50,9 @@ TagManager:
   - name: Door
     uniqueID: 3744556565
     locked: 0
+  - name: Cracks
+    uniqueID: 1008463921
+    locked: 0
   - name: Items
     uniqueID: 227427483
     locked: 0
