@@ -1022,7 +1022,7 @@ GameObject:
   - component: {fileID: 5482812430289081680}
   - component: {fileID: 640896299327597175}
   m_Layer: 0
-  m_Name: New Tile Palette
+  m_Name: Floors and Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
