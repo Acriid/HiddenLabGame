@@ -1,3 +1,5 @@
+using System;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -40,7 +42,8 @@ public class PlayerStretchState : PlayerState
     {
         base.UpdateState();
         //Get movearrows value
-        MoveArrowsValue = MoveArrows.ReadValue<Vector2>();        
+        MoveArrowsValue = MoveArrows.ReadValue<Vector2>();
+        
     }
     public override void FixedUpdateState()
     {

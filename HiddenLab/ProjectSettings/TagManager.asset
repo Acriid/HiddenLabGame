@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - File
+  - Enemy
+  - Pickup
+  - SavePoint
+  - Chasm
   layers:
   - Default
   - TransparentFX
@@ -49,6 +54,9 @@ TagManager:
     locked: 0
   - name: Door
     uniqueID: 3744556565
+    locked: 0
+  - name: Cracks
+    uniqueID: 1008463921
     locked: 0
   - name: Items
     uniqueID: 227427483

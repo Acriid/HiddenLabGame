@@ -5,7 +5,6 @@ public class StartClick : MonoBehaviour
 {
     public void OnClick()
     {
-
-        SceneManager.LoadScene("DemoLevel");
+        SceneManager.LoadScene("Level 1");
     }
 }
