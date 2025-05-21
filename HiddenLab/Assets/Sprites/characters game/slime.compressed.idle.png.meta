@@ -122,9 +122,9 @@ TextureImporter:
       name: slime.compressed.idle_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 56
+        width: 57
         height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: slime.compressed.idle_1
       rect:
         serializedVersion: 2
-        x: 58
+        x: 57
         y: 0
         width: 57
-        height: 22
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +168,8 @@ TextureImporter:
         serializedVersion: 2
         x: 114
         y: 0
-        width: 114
-        height: 21
+        width: 57
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,11 +184,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: slime.compressed.idle_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 57
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530c99e9178cd9e4bbb1686a8c7745f1
+      internalID: 464153847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: be2899eacc686594c82858aca4da218e
     internalID: 0
     vertices: []
     indices: 
@@ -201,6 +223,7 @@ TextureImporter:
       slime.compressed.idle_0: 2701216597272184893
       slime.compressed.idle_1: -8707918403173729209
       slime.compressed.idle_2: 2620466494079437218
+      slime.compressed.idle_3: 464153847
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
