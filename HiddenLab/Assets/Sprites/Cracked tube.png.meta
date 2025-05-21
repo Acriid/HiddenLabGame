@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aba4206e7fa88c747a9bb0bc6f42bf85
+guid: 91fc5b26d99a6964598b28ce88911420
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3723789574094998485
-    second: glass wall_0
+      213: -8162776581610848154
+    second: Cracked tube_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: glass wall_0
+      name: Cracked tube_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 17
-        height: 32
+        x: 79
+        y: 183
+        width: 658
+        height: 841
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b24b3c1ac11725cc0800000000000000
-      internalID: -3723789574094998485
+      spriteID: 660453082fdf7be80800000000000000
+      internalID: -8162776581610848154
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      glass wall_0: -3723789574094998485
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
