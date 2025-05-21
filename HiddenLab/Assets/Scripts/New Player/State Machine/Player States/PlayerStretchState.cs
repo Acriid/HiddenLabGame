@@ -7,10 +7,15 @@ public class PlayerStretchState : PlayerState
 {
     private SlimeControls slimeControls;
     private InputAction MoveArrows;
+    private InputAction StretchAction;
     private Vector2 MoveArrowsValue;
+    bool isStil;
+    bool isOntop;
+    bool isPressed;
+    float zValue;
     public PlayerStretchState(Player player, PlayerStateMachine stateMachine) : base(player, stateMachine)
     {
-        
+
     }
 
     public override void EnterState()
@@ -25,16 +30,16 @@ public class PlayerStretchState : PlayerState
         player.MoveSlime(Vector2.zero);
         player.MoveSlime2(Vector2.zero);
         //Initialize controls
-        slimeControls = new SlimeControls();
-        slimeControls.Slime.Enable();
+        slimeControls = player.slimeControls;
         MoveArrows = slimeControls.Slime.MoveArrows;
+        StretchAction = slimeControls.Slime.Stretch;
 
     }
 
     public override void ExitState()
     {
         base.ExitState();
-        CleanupInputSystem();
+        //CleanupInputSystem();
 
     }
 
@@ -43,6 +48,11 @@ public class PlayerStretchState : PlayerState
         base.UpdateState();
         //Get movearrows value
         MoveArrowsValue = MoveArrows.ReadValue<Vector2>();
+        isStil = Mathf.Approximately(player.GetSlime1Velocity().magnitude, 0f);
+        isOntop = player.GetSlimeDistance() < 1f;
+        zValue = StretchAction.ReadValue<float>();
+        isPressed = zValue != 0f;
+
         
     }
     public override void FixedUpdateState()
@@ -50,6 +60,11 @@ public class PlayerStretchState : PlayerState
         base.FixedUpdateState();
         //Move the player
         player.MoveSlime2(MoveArrowsValue);
+ 
+        if (!isPressed)
+        {
+            player.playerStateMachine.ChangeState(player.playerMoveState);
+        }
     }
     public override void AnimationTriggerEvent(Player.AnimationTriggerType triggerType)
     {

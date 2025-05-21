@@ -48,7 +48,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     public bool isInSaverange { get; set; }
     #endregion
     #region Controls
-    private SlimeControls slimeControls;
+    public SlimeControls slimeControls;
     private InputAction SplitAction;
     private InputAction StretchAction;
     private InputAction PickupAction;
@@ -89,8 +89,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         slimeControls.Slime.Enable();
         OptionsAction = slimeControls.Slime.OpenMenu;
         SplitAction = slimeControls.Slime.Split;
-        StretchAction = slimeControls.Slime.Stretch;
-        StretchAction.performed += OnStretchAction;
+        EnableStretchAction();
         SplitAction.performed += OnSplitAction;
         OptionsAction.performed += OnOptionsAction;
         
@@ -210,11 +209,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             PickupAction.Enable();
             PickupAction.performed += OnPickupAction;
         }
-        if(StretchAction == null)
-        {
-            StretchAction.Enable();
-            StretchAction.performed += OnStretchAction;
-        }
+        EnableStretchAction();
         if(SplitAction == null)
         {
             SplitAction.Enable();
@@ -229,12 +224,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             PickupAction.performed -= OnPickupAction;
             PickupAction = null;
         }
-        if (StretchAction != null)
-        {
-            StretchAction.Disable();
-            StretchAction.performed -= OnStretchAction;
-            StretchAction = null;
-        }
+        DisableStretchAction();
         if (SplitAction != null)
         {
             SplitAction.Disable();
@@ -264,6 +254,26 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         playerAttributes.OnSlime1SpeedChange -= HandleSlime1SpeedChange;
         playerAttributes.OnSlime2SpeedChange -= HandleSlime2SpeedChange;
     }
+    private void EnableStretchAction()
+    {
+        if (StretchAction == null)
+        {
+            StretchAction = slimeControls.Slime.Stretch;
+            StretchAction.Enable();
+            StretchAction.performed += OnStretchAction;
+            StretchAction.canceled += OnStretchCancled;
+        }
+    }
+    private void DisableStretchAction()
+    {
+        if (StretchAction != null)
+        {
+            StretchAction.Disable();
+            StretchAction.performed -= OnStretchAction;
+            StretchAction.canceled -= OnStretchCancled;
+            StretchAction = null;
+        }
+    }
     #endregion
     #region Trigger checks
     public void setisInFilerange(bool value)
@@ -271,12 +281,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         if (value)
         {
             //Disable stretch actions
-            if (StretchAction != null)
-            {
-                StretchAction.Disable();
-                StretchAction.performed -= OnStretchAction;
-                StretchAction = null;
-            }
+            DisableStretchAction();
             //FileAction
             FileAction = slimeControls.Slime.File;
             FileAction.Enable();
@@ -285,18 +290,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         else
         {
             //Enable stretch actions
-            if (StretchAction == null)
-            {
-                StretchAction = slimeControls.Slime.Stretch;
-                StretchAction.Enable();
-                StretchAction.performed += OnStretchAction;
-            }
+            EnableStretchAction();
             //FileAction
             if (FileAction != null)
             {
                 FileAction.Disable();
                 FileAction.performed -= onFileAction;
-                FileAction = null;               
+                FileAction = null;
             }
 
         }
@@ -307,12 +307,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         if (value)
         {
             //Disable stretch actions
-            if (StretchAction != null)
-            {
-                StretchAction.Disable();
-                StretchAction.performed -= OnStretchAction;
-                StretchAction = null;
-            }
+            DisableStretchAction();
             //PickupAction
             PickupAction = slimeControls.Slime.Pickup;
             PickupAction.Enable();
@@ -321,12 +316,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         else
         {
             //Enable stretch actions
-            if (StretchAction == null)
-            {
-                StretchAction = slimeControls.Slime.Stretch;
-                StretchAction.Enable();
-                StretchAction.performed += OnStretchAction;
-            }
+            EnableStretchAction();
             //PickupAction
             PickupAction.Disable();
             PickupAction.performed -= OnPickupAction;
@@ -339,12 +329,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         if (value)
         {
             //Disable stretch actions
-            if (StretchAction != null)
-            {
-                StretchAction.Disable();
-                StretchAction.performed -= OnStretchAction;
-                StretchAction = null;
-            }
+            DisableStretchAction();
             SaveAction = slimeControls.Slime.Save;
             SaveAction.Enable();
             SaveAction.performed += onSaveAction;
@@ -352,12 +337,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         else
         {
             //Enable stretch actions
-            if (StretchAction == null)
-            {
-                StretchAction = slimeControls.Slime.Stretch;
-                StretchAction.Enable();
-                StretchAction.performed += OnStretchAction;
-            }
+            EnableStretchAction();
             SaveAction.Disable();
             SaveAction.performed -= onSaveAction;
         }
@@ -413,6 +393,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
                 playerStateMachine.ChangeState(playerImpulseState);
                 _isStreatched = false;
             }
+    }
+    private void OnStretchCancled(InputAction.CallbackContext ctx)
+    {
+        if (_isStreatched && playerStateMachine.currentPlayerState != playerImpulseState)
+        {
+            playerStateMachine.ChangeState(playerMoveState);
+        } 
     }
     #endregion
     #region PickUp Acion
