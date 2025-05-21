@@ -120,6 +120,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -334,7 +347,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      calamity slime trail.right1_0: 4621794527329619764
+      calamity slime trail.right1_1: -3698255652110991677
+      calamity slime trail.right1_2: -7814439376014369969
+      calamity slime trail.right1_3: 2008360085947172942
+      calamity slime trail.right1_4: 4378002840488621548
+      calamity slime trail.right1_5: -7898783697596189499
+      calamity slime trail.right1_6: -1973551647399529509
+      calamity slime trail.right1_7: -2229362968806656309
+      calamity slime trail.right1_8: 219647166352668905
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
