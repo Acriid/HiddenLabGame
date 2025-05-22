@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      toiletries_0: 3922621267104465927
+      toiletries_1: 8818374070236608825
+      toiletries_2: 3598209262388780287
+      toiletries_3: 8809380787739436742
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

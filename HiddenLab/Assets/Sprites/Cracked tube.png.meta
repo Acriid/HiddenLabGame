@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cracked tube_0: -8162776581610848154
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

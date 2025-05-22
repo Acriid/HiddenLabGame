@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: f01e0c0ee5e2dc7428c45ce3f5f1f463
+guid: 3b753706a4f9743479f53126424884b3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8125036003855909416
-    second: electronics_0
+      213: 5595324664380763283
+    second: box and other stuff_0
   - first:
-      213: 8510303524360190439
-    second: electronics_1
+      213: 7387811717638083754
+    second: box and other stuff_1
   - first:
-      213: -8696257547889720290
-    second: electronics_2
+      213: -7498944590239112205
+    second: box and other stuff_2
   - first:
-      213: -2985838032912411090
-    second: electronics_3
+      213: -368662237218857582
+    second: box and other stuff_3
   - first:
-      213: 2784548134852159388
-    second: electronics_4
+      213: -1484690181925761883
+    second: box and other stuff_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -125,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: electronics_0
+      name: box and other stuff_0
       rect:
         serializedVersion: 2
-        x: 159
-        y: 583
-        width: 306
-        height: 338
+        x: 39
+        y: 615
+        width: 466
+        height: 306
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ddb8e28dc21e3f80800000000000000
-      internalID: -8125036003855909416
+      spriteID: 39ca56f032696ad40800000000000000
+      internalID: 5595324664380763283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: electronics_1
+      name: box and other stuff_1
       rect:
         serializedVersion: 2
-        x: 583
-        y: 735
-        width: 314
-        height: 186
+        x: 567
+        y: 783
+        width: 378
+        height: 170
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +162,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e97e3447fbaa1670800000000000000
-      internalID: 8510303524360190439
+      spriteID: aa459496d97c68660800000000000000
+      internalID: 7387811717638083754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: electronics_2
+      name: box and other stuff_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 207
-        width: 226
-        height: 298
+        x: 175
+        y: 63
+        width: 266
+        height: 266
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,36 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1449beb5dfa05780800000000000000
-      internalID: -8696257547889720290
+      spriteID: 3f3e57450a56ee790800000000000000
+      internalID: -7498944590239112205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: electronics_3
-      rect:
-        serializedVersion: 2
-        x: 263
-        y: 207
-        width: 178
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e269763f02c2096d0800000000000000
-      internalID: -2985838032912411090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: electronics_4
+      name: box and other stuff_3
       rect:
         serializedVersion: 2
         x: 591
@@ -228,8 +206,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c97e6d586c3b4a620800000000000000
-      internalID: 2784548134852159388
+      spriteID: 29d187406af32eaf0800000000000000
+      internalID: -368662237218857582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: box and other stuff_4
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 47
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ac0ec05522556be0800000000000000
+      internalID: -1484690181925761883
       vertices: []
       indices: 
       edges: []
@@ -247,12 +247,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      electronics_0: -8125036003855909416
-      electronics_1: 8510303524360190439
-      electronics_2: -8696257547889720290
-      electronics_3: -2985838032912411090
-      electronics_4: 2784548134852159388
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
