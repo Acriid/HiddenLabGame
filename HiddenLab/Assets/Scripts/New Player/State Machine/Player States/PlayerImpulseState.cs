@@ -13,7 +13,8 @@ public class PlayerImpulseState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
-        if(player.GetSlimeDistance() > 1f)
+        Debug.Log("Entered Impulse State");
+        if (player.GetSlimeDistance() > 1f)
         {
             player.MakeSlime1Kinematic(false);
             player.AdjustBreakForce(0f);
@@ -45,7 +46,7 @@ public class PlayerImpulseState : PlayerState
         {
             player.Slime2MoveDirection(player.directiontoSlime1());
         }
-        else if(distance < 1f && Slime1Velocity.magnitude < Slime2Velocity.magnitude)
+        else if(distance < 1f && (Slime1Velocity.magnitude < Slime2Velocity.magnitude || Slime1Velocity.magnitude == Slime2Velocity.magnitude))
         {
             player.playerStateMachine.ChangeState(player.playerMoveState);
         }

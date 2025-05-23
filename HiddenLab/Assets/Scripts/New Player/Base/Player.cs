@@ -376,23 +376,23 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         CircleCollider2D[] circleCollider2D = this.GetComponentsInChildren<CircleCollider2D>();
 
         if (!_isStreatched)
+        {
+            foreach (CircleCollider2D circle in circleCollider2D)
             {
-                foreach (CircleCollider2D circle in circleCollider2D)
-                {
-                    circle.enabled = false;
-                }
-                playerStateMachine.ChangeState(playerStretchState);
-                _isStreatched = true;
+                circle.enabled = false;
             }
-            else
+            playerStateMachine.ChangeState(playerStretchState);
+            _isStreatched = true;
+        }
+        else
+        {
+            foreach (CircleCollider2D circle in circleCollider2D)
             {
-                foreach (CircleCollider2D circle in circleCollider2D)
-                {
-                    circle.enabled = true;
-                }
-                playerStateMachine.ChangeState(playerImpulseState);
-                _isStreatched = false;
+                circle.enabled = true;
             }
+            playerStateMachine.ChangeState(playerImpulseState);
+            _isStreatched = false;
+        }
     }
     private void OnStretchCancled(InputAction.CallbackContext ctx)
     {
@@ -400,6 +400,15 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         {
             playerStateMachine.ChangeState(playerMoveState);
         } 
+    }
+
+    private IEnumerator CheckForBug()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(0.2f);
+        }
+        
     }
     #endregion
     #region PickUp Acion

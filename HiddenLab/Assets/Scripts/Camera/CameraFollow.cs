@@ -75,7 +75,7 @@ public class CameraFollow : MonoBehaviour , iDataPersistence
        
 
         //Sync velocity with slimeRB
-        if(isInCamera && waitTime < 3f)
+        if(isInCamera && waitTime < 2f)
         { 
             if(inupRange && (cameraRB.linearVelocity.y > SlimeRB.linearVelocity.y))
             {
