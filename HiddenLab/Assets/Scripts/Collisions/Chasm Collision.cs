@@ -18,6 +18,10 @@ public class ChasmCollision : MonoBehaviour
             this.GetComponent<TilemapCollider2D>().enabled = true;
         }
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
     void OnTriggerExit2D(Collider2D collision)
     {
 

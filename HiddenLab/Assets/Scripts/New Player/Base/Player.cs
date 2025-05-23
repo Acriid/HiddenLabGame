@@ -261,7 +261,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             StretchAction = slimeControls.Slime.Stretch;
             StretchAction.Enable();
             StretchAction.performed += OnStretchAction;
-            StretchAction.canceled += OnStretchCancled;
         }
     }
     private void DisableStretchAction()
@@ -270,7 +269,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         {
             StretchAction.Disable();
             StretchAction.performed -= OnStretchAction;
-            StretchAction.canceled -= OnStretchCancled;
             StretchAction = null;
         }
     }
@@ -393,13 +391,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             playerStateMachine.ChangeState(playerImpulseState);
             _isStreatched = false;
         }
-    }
-    private void OnStretchCancled(InputAction.CallbackContext ctx)
-    {
-        if (_isStreatched && playerStateMachine.currentPlayerState != playerImpulseState)
-        {
-            playerStateMachine.ChangeState(playerMoveState);
-        } 
     }
 
     private IEnumerator CheckForBug()

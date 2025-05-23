@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 9001236618128419396}
   - component: {fileID: 6423851153017263180}
   m_Layer: 0
-  m_Name: capsules
+  m_Name: Basic Capsules
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
