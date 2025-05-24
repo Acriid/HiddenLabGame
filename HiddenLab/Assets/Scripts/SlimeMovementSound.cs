@@ -10,18 +10,26 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void Start()
     {
        audioSource = GetComponent<AudioSource>(); 
-        audioSource.Play();
+        
     }
 
     // Update is called once per frame
-    private void Sound()
+    void Update()
     {
         bool isMoving = Mathf.Abs(Input.GetAxis("Horizontal")) > 0 || Mathf.Abs(Input.GetAxis("Vertical")) > 0;
 
-        if (isMoving && !audioSource.isPlaying) // Check if the movement is detected and sound is not already playing
+        if (isMoving ) // Check if the movement is detected and sound is not already playing
         {
-            audioSource.clip = movementSound;
-            audioSource.Play();
+            if(!audioSource.isPlaying)
+            {
+                audioSource.clip = movementSound;
+                audioSource.Play();
+            }
+
+        }
+        else
+        {
+            audioSource.Stop(); // Stop the sound when movement stops
         }
 
     }
