@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      destroyed electronics_0: 8131417463352864610
+      destroyed electronics_1: -4750110721448025005
+      destroyed electronics_2: -1500670602813396161
+      destroyed electronics_3: 1780410770723194199
+      destroyed electronics_4: 1061424360036073570
+      destroyed electronics_5: -6739792762528182628
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bLoody toilet  1_0: 3716333493970695477
+      bLoody toilet  1_1: -5014834057879841574
+      bLoody toilet  1_2: 921669572432417387
+      bLoody toilet  1_3: 8911292511879899563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
