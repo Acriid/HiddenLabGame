@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: c08d5f36f48dbba4082121ba239e5861
+guid: 9fc6daeaf1aaf1343abd57ab96075d18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2638390803197812687
-    second: Flashlight_0
+      213: 3716333493970695477
+    second: bLoody toilet  1_0
+  - first:
+      213: -5014834057879841574
+    second: bLoody toilet  1_1
+  - first:
+      213: 921669572432417387
+    second: bLoody toilet  1_2
+  - first:
+      213: 8911292511879899563
+    second: bLoody toilet  1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Flashlight_0
+      name: bLoody toilet  1_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 111
-        width: 226
-        height: 130
+        x: 6
+        y: 71
+        width: 28
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 130acb41b8d826bd0800000000000000
-      internalID: -2638390803197812687
+      spriteID: 535720f6f91139330800000000000000
+      internalID: 3716333493970695477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bLoody toilet  1_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 71
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad49a8c7efab76ab0800000000000000
+      internalID: -5014834057879841574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bLoody toilet  1_2
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 72
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62de19c79d6acc00800000000000000
+      internalID: 921669572432417387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bLoody toilet  1_3
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 39
+        width: 45
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba9233453554bab70800000000000000
+      internalID: 8911292511879899563
       vertices: []
       indices: 
       edges: []
@@ -147,8 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Flashlight_0: -2638390803197812687
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

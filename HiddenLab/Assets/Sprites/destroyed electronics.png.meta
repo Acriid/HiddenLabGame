@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: f01e0c0ee5e2dc7428c45ce3f5f1f463
+guid: 81147a90157ec8842ae42f7563e0cc3b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8125036003855909416
-    second: electronics_0
+      213: 8131417463352864610
+    second: destroyed electronics_0
   - first:
-      213: 8510303524360190439
-    second: electronics_1
+      213: -4750110721448025005
+    second: destroyed electronics_1
   - first:
-      213: -8696257547889720290
-    second: electronics_2
+      213: -1500670602813396161
+    second: destroyed electronics_2
   - first:
-      213: -2985838032912411090
-    second: electronics_3
+      213: 1780410770723194199
+    second: destroyed electronics_3
   - first:
-      213: 2784548134852159388
-    second: electronics_4
+      213: 1061424360036073570
+    second: destroyed electronics_4
+  - first:
+      213: -6739792762528182628
+    second: destroyed electronics_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +52,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: electronics_0
+      name: destroyed electronics_0
       rect:
         serializedVersion: 2
-        x: 638
-        y: 2334
-        width: 1220
-        height: 1348
+        x: 639
+        y: 2335
+        width: 1218
+        height: 1346
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ddb8e28dc21e3f80800000000000000
-      internalID: -8125036003855909416
+      spriteID: 26f2e8fc91998d070800000000000000
+      internalID: 8131417463352864610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: electronics_1
+      name: destroyed electronics_1
       rect:
         serializedVersion: 2
-        x: 2334
-        y: 2942
-        width: 1252
-        height: 740
+        x: 2335
+        y: 2943
+        width: 1250
+        height: 738
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e97e3447fbaa1670800000000000000
-      internalID: 8510303524360190439
+      spriteID: 354e05c4777341eb0800000000000000
+      internalID: -4750110721448025005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: electronics_2
+      name: destroyed electronics_2
       rect:
         serializedVersion: 2
-        x: 126
-        y: 830
-        width: 900
-        height: 1188
+        x: 1423
+        y: 2035
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1449beb5dfa05780800000000000000
-      internalID: -8696257547889720290
+      spriteID: f3baf62a90c8c2be0800000000000000
+      internalID: -1500670602813396161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: electronics_3
+      name: destroyed electronics_3
       rect:
         serializedVersion: 2
-        x: 1054
-        y: 830
-        width: 708
-        height: 644
+        x: 2367
+        y: 1055
+        width: 1090
+        height: 1250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e269763f02c2096d0800000000000000
-      internalID: -2985838032912411090
+      spriteID: 7554c37b92a45b810800000000000000
+      internalID: 1780410770723194199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: electronics_4
+      name: destroyed electronics_4
       rect:
         serializedVersion: 2
-        x: 2366
-        y: 1054
-        width: 1092
-        height: 1252
+        x: 511
+        y: 1439
+        width: 1058
+        height: 386
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +231,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c97e6d586c3b4a620800000000000000
-      internalID: 2784548134852159388
+      spriteID: 26085efe4dfeabe00800000000000000
+      internalID: 1061424360036073570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: destroyed electronics_5
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 895
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e42c101327772a0800000000000000
+      internalID: -6739792762528182628
       vertices: []
       indices: 
       edges: []
@@ -238,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 97732a89f6cf4ea468567af3870b93b0
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -247,12 +272,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      electronics_0: -8125036003855909416
-      electronics_1: 8510303524360190439
-      electronics_2: -8696257547889720290
-      electronics_3: -2985838032912411090
-      electronics_4: 2784548134852159388
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

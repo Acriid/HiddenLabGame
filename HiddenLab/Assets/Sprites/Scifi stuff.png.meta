@@ -125,10 +125,10 @@ TextureImporter:
       name: Scifi stuff_0
       rect:
         serializedVersion: 2
-        x: 191
-        y: 591
-        width: 450
-        height: 362
+        x: 767
+        y: 2367
+        width: 1794
+        height: 1442
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Scifi stuff_1
       rect:
         serializedVersion: 2
-        x: 767
-        y: 623
-        width: 146
-        height: 298
+        x: 3071
+        y: 2495
+        width: 578
+        height: 1186
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: Scifi stuff_2
       rect:
         serializedVersion: 2
-        x: 63
-        y: 207
-        width: 330
-        height: 314
+        x: 255
+        y: 831
+        width: 1314
+        height: 1250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: Scifi stuff_3
       rect:
         serializedVersion: 2
-        x: 543
-        y: 247
-        width: 346
-        height: 258
+        x: 2175
+        y: 991
+        width: 1346
+        height: 1026
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,11 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Scifi stuff_0: 8385975097106093778
-      Scifi stuff_1: 5164825961369494789
-      Scifi stuff_2: -980689504999826159
-      Scifi stuff_3: 8457158739678181234
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
