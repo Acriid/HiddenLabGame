@@ -588,9 +588,14 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     }
     #endregion
     #region Animation
-    private void AnimationTriggerEvent(AnimationTriggerType triggerType)
+    public void AnimationTriggerEvent(AnimationTriggerType triggerType)
     {
         playerStateMachine.currentPlayerState.AnimationTriggerEvent(triggerType);
+        Debug.Log("Animation Done");
+    }
+    public void Tester()
+    {
+        Debug.Log("Animation Done");
     }
     public enum AnimationTriggerType
     {
