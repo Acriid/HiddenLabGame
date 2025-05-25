@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 81147a90157ec8842ae42f7563e0cc3b
+guid: 0d174c5c9b212db418401d08f06636e0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8131417463352864610
-    second: destroyed electronics_0
+      213: -1223608667592786650
+    second: toilet stuff_0
   - first:
-      213: -4750110721448025005
-    second: destroyed electronics_1
+      213: 8260399605272012711
+    second: toilet stuff_1
   - first:
-      213: -1500670602813396161
-    second: destroyed electronics_2
-  - first:
-      213: 1780410770723194199
-    second: destroyed electronics_3
-  - first:
-      213: 1061424360036073570
-    second: destroyed electronics_4
-  - first:
-      213: -6739792762528182628
-    second: destroyed electronics_5
+      213: -997453960652183525
+    second: toilet stuff_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -90,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: destroyed electronics_0
+      name: toilet stuff_0
       rect:
         serializedVersion: 2
-        x: 639
-        y: 2335
-        width: 1218
-        height: 1346
+        x: 239
+        y: 311
+        width: 338
+        height: 490
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26f2e8fc91998d070800000000000000
-      internalID: 8131417463352864610
+      spriteID: 62dfa08566ed40fe0800000000000000
+      internalID: -1223608667592786650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: destroyed electronics_1
+      name: toilet stuff_1
       rect:
         serializedVersion: 2
-        x: 2335
-        y: 2943
-        width: 1250
-        height: 738
+        x: 599
+        y: 695
+        width: 322
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 354e05c4777341eb0800000000000000
-      internalID: -4750110721448025005
+      spriteID: 7a7e30feca5d2a270800000000000000
+      internalID: 8260399605272012711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: destroyed electronics_2
+      name: toilet stuff_2
       rect:
         serializedVersion: 2
-        x: 1423
-        y: 2035
-        width: 6
-        height: 6
+        x: 551
+        y: 295
+        width: 170
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,74 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3baf62a90c8c2be0800000000000000
-      internalID: -1500670602813396161
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: destroyed electronics_3
-      rect:
-        serializedVersion: 2
-        x: 2367
-        y: 1055
-        width: 1090
-        height: 1250
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7554c37b92a45b810800000000000000
-      internalID: 1780410770723194199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: destroyed electronics_4
-      rect:
-        serializedVersion: 2
-        x: 511
-        y: 1439
-        width: 1058
-        height: 386
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 26085efe4dfeabe00800000000000000
-      internalID: 1061424360036073570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: destroyed electronics_5
-      rect:
-        serializedVersion: 2
-        x: 1567
-        y: 895
-        width: 34
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c9e42c101327772a0800000000000000
-      internalID: -6739792762528182628
+      spriteID: b18258358e45822f0800000000000000
+      internalID: -997453960652183525
       vertices: []
       indices: 
       edges: []
@@ -273,12 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      destroyed electronics_0: 8131417463352864610
-      destroyed electronics_1: -4750110721448025005
-      destroyed electronics_2: -1500670602813396161
-      destroyed electronics_3: 1780410770723194199
-      destroyed electronics_4: 1061424360036073570
-      destroyed electronics_5: -6739792762528182628
+      toilet stuff_0: -1223608667592786650
+      toilet stuff_1: 8260399605272012711
+      toilet stuff_2: -997453960652183525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
