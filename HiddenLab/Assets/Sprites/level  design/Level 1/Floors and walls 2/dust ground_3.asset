@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: electronics_2
+  m_Name: dust ground_3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -8696257547889720290, guid: f01e0c0ee5e2dc7428c45ce3f5f1f463, type: 3}
+  m_Sprite: {fileID: -1358325847, guid: 860d6972302891242ab8cb054fb45249, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
