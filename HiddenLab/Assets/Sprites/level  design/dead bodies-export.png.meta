@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dead bodies-export_0: 5120015008255424882
+      dead bodies-export_1: 4450159528153763330
+      dead bodies-export_2: 812951583531134835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

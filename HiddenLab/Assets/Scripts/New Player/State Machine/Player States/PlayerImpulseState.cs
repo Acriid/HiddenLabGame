@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class PlayerImpulseState : PlayerState
 {
+    float impulseclock = 0f;
     
     public PlayerImpulseState(Player player, PlayerStateMachine stateMachine) : base(player, stateMachine)
     {
@@ -14,11 +15,12 @@ public class PlayerImpulseState : PlayerState
     {
         base.EnterState();
         Debug.Log("Entered Impulse State");
+        impulseclock = 0f;
         if (player.GetSlimeDistance() > 1f)
         {
             player.MakeSlime1Kinematic(false);
             player.AdjustBreakForce(0f);
-            player.ChangeSlime1LinearDamping(0.5f);
+            player.ChangeSlime1LinearDamping(4f);
             player.Addimpulse(-player.directiontoSlime1());
             player.DestroySpringJoint2D();
         }
@@ -33,6 +35,7 @@ public class PlayerImpulseState : PlayerState
     public override void UpdateState()
     {
         base.UpdateState();
+        impulseclock += Time.deltaTime;
     }
 
     public override void FixedUpdateState()
@@ -46,7 +49,7 @@ public class PlayerImpulseState : PlayerState
         {
             player.Slime2MoveDirection(player.directiontoSlime1());
         }
-        else if(distance < 1f && (Slime1Velocity.magnitude < Slime2Velocity.magnitude || Slime1Velocity.magnitude == Slime2Velocity.magnitude))
+        else if(impulseclock > 1f && distance < 1f && Slime1Velocity.magnitude <= Slime2Velocity.magnitude)
         {
             player.playerStateMachine.ChangeState(player.playerMoveState);
         }
