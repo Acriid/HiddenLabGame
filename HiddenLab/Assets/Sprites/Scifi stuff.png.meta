@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,10 +125,10 @@ TextureImporter:
       name: Scifi stuff_0
       rect:
         serializedVersion: 2
-        x: 191
-        y: 591
-        width: 450
-        height: 362
+        x: 765
+        y: 2365
+        width: 1798
+        height: 1446
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Scifi stuff_1
       rect:
         serializedVersion: 2
-        x: 767
-        y: 623
-        width: 146
-        height: 298
+        x: 3069
+        y: 2493
+        width: 582
+        height: 1190
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,10 +169,10 @@ TextureImporter:
       name: Scifi stuff_2
       rect:
         serializedVersion: 2
-        x: 63
-        y: 207
-        width: 330
-        height: 314
+        x: 253
+        y: 829
+        width: 1318
+        height: 1254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +191,10 @@ TextureImporter:
       name: Scifi stuff_3
       rect:
         serializedVersion: 2
-        x: 543
-        y: 247
-        width: 346
-        height: 258
+        x: 2173
+        y: 989
+        width: 1350
+        height: 1030
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: aa63d257d043d55419f6a26c500c9217
     internalID: 0
     vertices: []
     indices: 
