@@ -20,16 +20,20 @@ public class MenuEventSystemHadler : MonoBehaviour
     [SerializeField] protected Selectable _firstSelected;
     //Keep Last Selected button
     protected Selectable _lastSelected;
+    [Header("Controls")]
     [SerializeField] protected InputActionReference _navigateReference;
+    [SerializeField] protected InputActionReference _clickAction;
 
     public virtual void OnEnable()
     {
         _navigateReference.action.performed += OnNavigate;
+        _clickAction.action.performed += OnClickAction;
         StartCoroutine(SelectAfterDelay());
     }
     public virtual void OnDisable()
     {
         _navigateReference.action.performed -= OnNavigate;
+        _clickAction.action.performed -= OnClickAction;
     }
     protected virtual void AddSelectionListners(Selectable selectable)
     {
@@ -72,7 +76,7 @@ public class MenuEventSystemHadler : MonoBehaviour
     }
     public void OnDeselect(BaseEventData eventData)
     {
-
+        //Stop animation if needed
     }
     protected virtual void OnNavigate(InputAction.CallbackContext ctx)
     {
@@ -80,5 +84,11 @@ public class MenuEventSystemHadler : MonoBehaviour
         {
             EventSystem.current.SetSelectedGameObject(_lastSelected.gameObject);
         }
+    }
+    protected virtual void OnClickAction(InputAction.CallbackContext ctx)
+    {
+        Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        button.onClick.Invoke();
+        
     }
 }
