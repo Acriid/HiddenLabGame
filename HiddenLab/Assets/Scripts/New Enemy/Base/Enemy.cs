@@ -5,13 +5,13 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour , IEnemyMovement , IEnemyTriggerCheck , IAttack
 {
-
+    #region Enemy Attack
     public float AttackTimer {get; set;} = 5f;
     public float AttackRange {get; set;} 
+    #endregion
     public Transform enemytransform;
     public GameObject[] player;
     public bool CanSeePlayer {get; set;}
-    //
     public NavMeshAgent enemyagent {get; set;}
     public float enemySpeed {get; set;} = 10f;
     public float IdleRadius = 5f;
@@ -20,9 +20,19 @@ public class Enemy : MonoBehaviour , IEnemyMovement , IEnemyTriggerCheck , IAtta
     public EnemyIdleState enemyIdleState {get; set;}
     public EnemyChaseState enemyChaseState {get; set;}
     #endregion
+    #region Scriptable Object Variables
+    [SerializeField] private EnemyIdleSOBase EnemyIdleBase;
+    [SerializeField] private EnemyChaseSOBase EnemyChaseBase;
+    public EnemyIdleSOBase EnemyIdleBaseInstance { get; set; }
+    public EnemyChaseSOBase EnemyChaseBaseInstance { get; set; }
+
+    #endregion
     #region Awake/Start
     void Awake()
     {
+        //Makes a new instant of the object to not add anything to the scene
+        EnemyIdleBaseInstance = Instantiate(EnemyIdleBase);
+        EnemyChaseBaseInstance = Instantiate(EnemyChaseBase);
         //Initialize Enemy States
         player = GameObject.FindGameObjectsWithTag("Player");
         enemyStateMachine = new EnemyStateMachine();
@@ -37,6 +47,9 @@ public class Enemy : MonoBehaviour , IEnemyMovement , IEnemyTriggerCheck , IAtta
         enemyagent.speed = enemySpeed;
         enemyagent.updateRotation = false;
         enemyagent.updateUpAxis = false;
+        //Initialize states
+        EnemyIdleBaseInstance.Initialize(gameObject, this);
+        EnemyChaseBaseInstance.Initialize(gameObject, this);
         //Initial state
         enemyStateMachine.Initialize(enemyIdleState);
     }

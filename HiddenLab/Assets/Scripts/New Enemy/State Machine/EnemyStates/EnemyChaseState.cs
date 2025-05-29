@@ -9,8 +9,6 @@ public class EnemyChaseState : EnemyState
     public override void EnterState() 
     {
         base.EnterState();
-        Debug.Log("In Chase State");
-
     }
 
     public override void ExitState() 
@@ -21,13 +19,7 @@ public class EnemyChaseState : EnemyState
 
     public override void UpdateState() 
     {
-        base.UpdateState();
-        if(enemy.CanSeePlayer == false)
-        {
-            enemy.enemyStateMachine.ChangeState(enemy.enemyIdleState);
-        }
-        enemy.MoveEnemy(enemy.player[1].transform.position);
-        
+        base.UpdateState();        
     }
     public override void FixedUpdateState() 
     {
