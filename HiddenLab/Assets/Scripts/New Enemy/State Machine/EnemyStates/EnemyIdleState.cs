@@ -11,25 +11,30 @@ public class EnemyIdleState : EnemyState
     }
 
 
-    public override void EnterState() 
+    public override void EnterState()
     {
         base.EnterState();
+        enemy.EnemyIdleBaseInstance.DoEnterLogic();
     }
-    public override void ExitState() 
+    public override void ExitState()
     {
         base.ExitState();
+        enemy.EnemyIdleBaseInstance.DoExitLogic();
     }
     public override void UpdateState()
     {
         base.UpdateState();
+        enemy.EnemyIdleBaseInstance.DoUpdateLogic();
     }
-    public override void FixedUpdateState() 
+    public override void FixedUpdateState()
     {
         base.FixedUpdateState();
+        enemy.EnemyIdleBaseInstance.DoFixedUpdateLogic();
     }
-    public override void AnimationTriggerEvent(Enemy.AnimationTriggerType triggerType) 
+    public override void AnimationTriggerEvent(Enemy.AnimationTriggerType triggerType)
     {
         base.AnimationTriggerEvent(triggerType);
+        enemy.EnemyIdleBaseInstance.DoAnimationTriggerEventLogic();
     }
 
 

@@ -6,7 +6,6 @@ public class EnemyDirectChase : EnemyChaseSOBase
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
-        Debug.Log("In Chase State");
     }
     public override void DoExitLogic()
     {
