@@ -14,6 +14,7 @@ public class PlayerImpulseState : PlayerState
     public override void EnterState()
     {
         base.EnterState();
+        player.playerAttributes.RequestAddedImpulseChange(true);
         Debug.Log("Entered Impulse State");
         impulseclock = 0f;
         if (player.GetSlimeDistance() > 1f)
@@ -30,6 +31,7 @@ public class PlayerImpulseState : PlayerState
     {
         base.ExitState();
         player.EnableSlime2(false);
+        player.playerAttributes.RequestAddedImpulseChange(false);
     }
 
     public override void UpdateState()
