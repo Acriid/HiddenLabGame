@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 using System.IO;
 
 
-public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
+public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDataPersistence
 {
     #region Menus
     public GameObject SaveMenu;
@@ -69,29 +69,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     }
     void Start()
     {
-        //Synce health with PlayerAttributes
-        _CurrentHealth = playerAttributes.PlayerHealth;
-        playerAttributes.OnPlayerHealthChange += HandleHealthChange;
-        //Synce speed with PlayerAttributes
-        _SlimeSpeed = playerAttributes.Slime1Speed;
-        playerAttributes.OnSlime1SpeedChange += HandleSlime1SpeedChange;
-        _Slime2Speed = playerAttributes.Slime2Speed;
-        playerAttributes.OnSlime2SpeedChange += HandleSlime2SpeedChange;
-        //Impulse
-        _impulseSpeed = playerAttributes.ImpulseSpeed;
-        _addedImpulse = playerAttributes.AddedImpulse;
-        playerAttributes.OnAddedImpulseChange += HandleAddedImpulseChange;
-        playerAttributes.OnImpulseSpeedChange += HandleImpulseSpeedChange;
-
+        StartCoroutine(QuickWait());
+        //PlayerAttributes
+        InitializePlayerAttributes();
 
         //Controls
-        slimeControls = new SlimeControls();
-        slimeControls.Slime.Enable();
-        OptionsAction = slimeControls.Slime.OpenMenu;
-        SplitAction = slimeControls.Slime.Split;
-        EnableStretchAction();
-        SplitAction.performed += OnSplitAction;
-        OptionsAction.performed += OnOptionsAction;
+        ActionsInitialize();
         
         //Get RigidBody
         SlimeObjects = GameObject.FindGameObjectsWithTag("Player");
@@ -111,6 +94,38 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         slimeSJ = null;
         //Initialize State Machine;
         playerStateMachine.Initialize(playerMoveState);
+    }
+    private void OnEnable()
+    {
+        StartCoroutine(QuickWait());
+        //PlayerAttributes
+        InitializePlayerAttributes();
+
+        //Controls
+        ActionsInitialize();
+        
+        //Get RigidBody
+        SlimeObjects = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject slime in SlimeObjects)
+        {
+            if (slime.name == "Slime2")
+            {
+                Slime2RB = slime.GetComponent<Rigidbody2D>();
+                Slime2RB.gameObject.SetActive(false);
+            }
+        }
+        SlimeRB = this.GetComponent<Rigidbody2D>();
+
+        
+
+        //Slime SJ
+        slimeSJ = null;
+        //Initialize State Machine;
+        playerStateMachine.Initialize(playerMoveState);
+    }
+    private IEnumerator QuickWait()
+    {
+        yield return new WaitForSeconds(0.5f);
     }
     #endregion
     #region Update/FixedUpdate
@@ -134,15 +149,25 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         InitiateCleanup();
     }
     #endregion
+    #region Save/load
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.playerPosition;
+    }
+    public void SaveData(ref GameData data)
+    {
+        data.playerPosition = this.transform.position; 
+    }
+    #endregion
     #region Health Functions
     public void Damage()
     {
         //Player can only take 2 hits total
-        if(_CurrentHealth == 2)
+        if (_CurrentHealth == 2)
         {
             playerAttributes.RequestPlayerHealthChange(1);
         }
-        else if(_CurrentHealth < 2)
+        else if (_CurrentHealth < 2)
         {
             Death();
         }
@@ -159,7 +184,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         if (_CurrentHealth != 2)
         {
             playerAttributes.RequestPlayerHealthChange(2);
-            InitializeActions();
+            ActionsInitialize();
         }
 
     }
@@ -199,22 +224,31 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
     #region CleanUp of System / Initialize Actions
     private void InitiateCleanup()
     {
-        CleanupInputSystem();
+        ClenupSlimeActions();
         CleanUpPlayerAttributes();
     }
-    private void InitializeActions()
+    private void ActionsInitialize()
     {
-        if(PickupAction == null)
+        if (slimeControls == null)
         {
-            PickupAction.Enable();
-            PickupAction.performed += OnPickupAction;
+            slimeControls = new SlimeControls();
+            slimeControls.Slime.Enable();
         }
-        EnableStretchAction();
-        if(SplitAction == null)
+        if (OptionsAction == null)
         {
+            OptionsAction = slimeControls.Slime.OpenMenu;
+            OptionsAction.Enable();
+            OptionsAction.performed += OnOptionsAction;
+        }
+        if (SplitAction == null)
+        {
+            SplitAction = slimeControls.Slime.Split;
             SplitAction.Enable();
             SplitAction.performed += OnSplitAction;
         }
+        EnableStretchAction();
+
+
     }
     private void ClenupSlimeActions()
     {
@@ -223,6 +257,18 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             PickupAction.Disable();
             PickupAction.performed -= OnPickupAction;
             PickupAction = null;
+        }
+        if (SaveAction != null)
+        {
+            SaveAction.Disable();
+            SaveAction.performed -= onSaveAction;
+            SaveAction = null;
+        }
+        if (FileAction != null)
+        {
+            FileAction.Disable();
+            FileAction.performed -= onFileAction;
+            FileAction = null;
         }
         DisableStretchAction();
         if (SplitAction != null)
@@ -237,10 +283,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             OptionsAction.performed -= OnOptionsAction;
             OptionsAction = null;
         }
-    }
-    private void CleanupInputSystem()
-    {
-        ClenupSlimeActions();
         if (slimeControls != null)
         {
             slimeControls.Slime.Disable();
@@ -248,12 +290,29 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             slimeControls = null;
         }
     }
+    private void InitializePlayerAttributes()
+    {
+        //Synce health with PlayerAttributes
+        _CurrentHealth = playerAttributes.PlayerHealth;
+        playerAttributes.OnPlayerHealthChange += HandleHealthChange;
+        //Synce speed with PlayerAttributes
+        _SlimeSpeed = playerAttributes.Slime1Speed;
+        playerAttributes.OnSlime1SpeedChange += HandleSlime1SpeedChange;
+        _Slime2Speed = playerAttributes.Slime2Speed;
+        playerAttributes.OnSlime2SpeedChange += HandleSlime2SpeedChange;
+        //Impulse
+        _impulseSpeed = playerAttributes.ImpulseSpeed;
+        _addedImpulse = playerAttributes.AddedImpulse;
+        playerAttributes.OnAddedImpulseChange += HandleAddedImpulseChange;
+        playerAttributes.OnImpulseSpeedChange += HandleImpulseSpeedChange;
+    }
     private void CleanUpPlayerAttributes()
     {
         playerAttributes.OnPlayerHealthChange -= HandleHealthChange;
         playerAttributes.OnSlime1SpeedChange -= HandleSlime1SpeedChange;
         playerAttributes.OnSlime2SpeedChange -= HandleSlime2SpeedChange;
     }
+    #region StretchAction enable/disable
     private void EnableStretchAction()
     {
         if (StretchAction == null)
@@ -273,6 +332,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         }
     }
     #endregion
+    #endregion
     #region Trigger checks
     public void setisInFilerange(bool value)
     {
@@ -281,9 +341,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             //Disable stretch actions
             DisableStretchAction();
             //FileAction
-            FileAction = slimeControls.Slime.File;
-            FileAction.Enable();
-            FileAction.performed += onFileAction;
+            if (FileAction == null)
+            {
+                FileAction = slimeControls.Slime.File;
+                FileAction.Enable();
+                FileAction.performed += onFileAction;
+            }
+
         }
         else
         {
@@ -307,18 +371,26 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
             //Disable stretch actions
             DisableStretchAction();
             //PickupAction
-            PickupAction = slimeControls.Slime.Pickup;
-            PickupAction.Enable();
-            PickupAction.performed += OnPickupAction;
+            if (PickupAction == null)
+            {
+                PickupAction = slimeControls.Slime.Pickup;
+                PickupAction.Enable();
+                PickupAction.performed += OnPickupAction;               
+            }
+
         }
         else
         {
             //Enable stretch actions
             EnableStretchAction();
             //PickupAction
-            PickupAction.Disable();
-            PickupAction.performed -= OnPickupAction;
-            PickupAction = null;
+            if (PickupAction != null)
+            {
+                PickupAction.Disable();
+                PickupAction.performed -= OnPickupAction;
+                PickupAction = null;                
+            }
+
         }
         isInPickuprange = value;
     }
@@ -328,16 +400,25 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks
         {
             //Disable stretch actions
             DisableStretchAction();
-            SaveAction = slimeControls.Slime.Save;
-            SaveAction.Enable();
-            SaveAction.performed += onSaveAction;
+            if (SaveAction == null)
+            {
+                SaveAction = slimeControls.Slime.Save;
+                SaveAction.Enable();
+                SaveAction.performed += onSaveAction;                
+            }
+
         }
         else
         {
             //Enable stretch actions
             EnableStretchAction();
-            SaveAction.Disable();
-            SaveAction.performed -= onSaveAction;
+            if (SaveAction != null)
+            {
+                SaveAction.Disable();
+                SaveAction.performed -= onSaveAction;
+                SaveAction = null;               
+            }
+
         }
         isInSaverange = value;
     }

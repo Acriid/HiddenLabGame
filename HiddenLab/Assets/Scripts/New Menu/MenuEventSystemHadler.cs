@@ -13,6 +13,8 @@ using UnityEngine.InputSystem;
 
 public class MenuEventSystemHadler : MonoBehaviour
 {
+    [Header("Player")]
+    public GameObject playerHolder;
     [Header("References")]
     //Selectable variables are variables that can be modified by choosing from a set of options
     public List<Selectable> Selectables = new List<Selectable>();
@@ -26,14 +28,20 @@ public class MenuEventSystemHadler : MonoBehaviour
 
     public virtual void OnEnable()
     {
+        Debug.Log("Opened Menu");
+        playerHolder.SetActive(false);
         _navigateReference.action.performed += OnNavigate;
         _clickAction.action.performed += OnClickAction;
         StartCoroutine(SelectAfterDelay());
+        Time.timeScale = 0;
     }
     public virtual void OnDisable()
     {
+        Debug.Log("Closed Menu");
+        playerHolder.SetActive(true);
         _navigateReference.action.performed -= OnNavigate;
         _clickAction.action.performed -= OnClickAction;
+        Time.timeScale = 1;
     }
     protected virtual void AddSelectionListners(Selectable selectable)
     {
@@ -63,8 +71,8 @@ public class MenuEventSystemHadler : MonoBehaviour
 
     protected virtual IEnumerator SelectAfterDelay()
     {
-        //waits a single frame
-        yield return null;
+        //waits 0.5s
+        yield return new WaitForSecondsRealtime(0.5f);
         //Selects first button that needs to be selected
         EventSystem.current.SetSelectedGameObject(_firstSelected.gameObject);
     }
