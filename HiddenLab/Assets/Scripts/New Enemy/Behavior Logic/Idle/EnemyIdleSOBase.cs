@@ -23,13 +23,7 @@ public class EnemyIdleSOBase : ScriptableObject
 
     public virtual void DoEnterLogic() { }
     public virtual void DoExitLogic() { }
-    public virtual void DoUpdateLogic()
-    {
-        if(enemy.CanSeePlayer)
-        {
-            enemy.enemyStateMachine.ChangeState(enemy.enemyChaseState);
-        }
-    }
+    public virtual void DoUpdateLogic() { }
     public virtual void DoFixedUpdateLogic() { }
     public virtual void DoAnimationTriggerEventLogic() { }
 }

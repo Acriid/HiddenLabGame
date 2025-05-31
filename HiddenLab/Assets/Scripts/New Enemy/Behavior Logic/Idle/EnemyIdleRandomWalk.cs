@@ -31,6 +31,10 @@ public class EnemyIdleRandomWalk : EnemyIdleSOBase
             targetPosition = GetRandomPoint();
             targetPosition.z = 0f;
         }
+        if(enemy.CanSeePlayer)
+        {
+            enemy.enemyStateMachine.ChangeState(enemy.enemyChaseState);
+        }
     }
     public override void DoFixedUpdateLogic()
     {

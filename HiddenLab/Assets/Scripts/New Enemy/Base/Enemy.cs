@@ -3,29 +3,32 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour , IEnemyMovement , IEnemyTriggerCheck , IAttack
+public class Enemy : MonoBehaviour, IEnemyMovement, IEnemyTriggerCheck, IAttack
 {
     #region Enemy Attack
-    public float AttackTimer {get; set;} = 5f;
-    public float AttackRange {get; set;} 
+    [SerializeField] public float AttackTimer { get; set; } = 5f;
+    public float AttackRange { get; set; }
+    #endregion
+    #region Yin and Yang
+    [SerializeField] public Vector2 BasePosition;
+    [SerializeField] public float ChaseTimer;
     #endregion
     public Transform enemytransform;
     public GameObject[] player;
-    public bool CanSeePlayer {get; set;}
-    public NavMeshAgent enemyagent {get; set;}
-    public float enemySpeed {get; set;} = 10f;
+    public bool CanSeePlayer { get; set; }
+    public NavMeshAgent enemyagent { get; set; }
+    public float enemySpeed { get; set; } = 10f;
     public float IdleRadius = 5f;
     #region StateMachine Variables
-    public EnemyStateMachine enemyStateMachine {get; set;}
-    public EnemyIdleState enemyIdleState {get; set;}
-    public EnemyChaseState enemyChaseState {get; set;}
+    public EnemyStateMachine enemyStateMachine { get; set; }
+    public EnemyIdleState enemyIdleState { get; set; }
+    public EnemyChaseState enemyChaseState { get; set; }
     #endregion
     #region Scriptable Object Variables
     [SerializeField] private EnemyIdleSOBase EnemyIdleBase;
     [SerializeField] private EnemyChaseSOBase EnemyChaseBase;
     public EnemyIdleSOBase EnemyIdleBaseInstance { get; set; }
     public EnemyChaseSOBase EnemyChaseBaseInstance { get; set; }
-
     #endregion
     #region Awake/Start
     void Awake()
@@ -36,8 +39,8 @@ public class Enemy : MonoBehaviour , IEnemyMovement , IEnemyTriggerCheck , IAtta
         //Initialize Enemy States
         player = GameObject.FindGameObjectsWithTag("Player");
         enemyStateMachine = new EnemyStateMachine();
-        enemyIdleState = new EnemyIdleState(this , enemyStateMachine);
-        enemyChaseState = new EnemyChaseState(this , enemyStateMachine);
+        enemyIdleState = new EnemyIdleState(this, enemyStateMachine);
+        enemyChaseState = new EnemyChaseState(this, enemyStateMachine);
     }
     void Start()
     {
@@ -84,8 +87,8 @@ public class Enemy : MonoBehaviour , IEnemyMovement , IEnemyTriggerCheck , IAtta
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
-        if(collision.collider.gameObject.CompareTag("Player"))
+
+        if (collision.collider.gameObject.CompareTag("Player"))
         {
             StartCoroutine(AttackWait(AttackTimer));
         }
@@ -94,6 +97,11 @@ public class Enemy : MonoBehaviour , IEnemyMovement , IEnemyTriggerCheck , IAtta
     {
         enemyagent.speed = 0f;
         yield return new WaitForSeconds(waitTime);
+        enemyagent.speed = enemySpeed;
+    }
+    public void SetEnemySpeed(float newValue)
+    {
+        enemySpeed = newValue;
         enemyagent.speed = enemySpeed;
     }
 }
