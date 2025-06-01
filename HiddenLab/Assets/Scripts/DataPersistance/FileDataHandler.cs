@@ -51,22 +51,24 @@ public class FileDataHandler
         string fullPath = Path.Combine(dataDirPath, dataFileName);
         try
         {
+            Debug.Log("Successfully saved");
             //Gets Makes the Directory
             Directory.CreateDirectory(Path.GetDirectoryName(fullPath));
             string dataToStore = JsonUtility.ToJson(data, true);
             //Write to file
-            using(FileStream stream = new FileStream(fullPath,FileMode.Create))
+            using (FileStream stream = new FileStream(fullPath, FileMode.Create))
             {
-                using(StreamWriter writer = new StreamWriter(stream))
+                using (StreamWriter writer = new StreamWriter(stream))
                 {
                     writer.Write(dataToStore);
                 }
             }
+
         }
         //Error Handling
         catch (Exception e)
         {
-            Debug.LogError("Something went wrong with the file" + fullPath +"\n" + e);
+            Debug.LogError("Something went wrong with the file" + fullPath + "\n" + e);
         }
     }
 
