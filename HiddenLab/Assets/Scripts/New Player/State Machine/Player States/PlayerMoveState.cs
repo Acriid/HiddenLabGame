@@ -21,10 +21,7 @@ public class PlayerMoveState : PlayerState
         player.MoveSlime(Vector2.zero);
         player.MoveSlime2(Vector2.zero);
         //Initialize controls
-        slimeControls = new SlimeControls();
-        slimeControls.Slime.Enable();
-        MoveArrows = slimeControls.Slime.MoveArrows;
-
+        InitializeInputSystem();
     }
 
     public override void ExitState()
@@ -54,6 +51,19 @@ public class PlayerMoveState : PlayerState
     {
         base.AnimationTriggerEvent(triggerType);
     }
+    private void InitializeInputSystem()
+    {
+        if (slimeControls == null)
+        {
+            slimeControls = new SlimeControls();
+            slimeControls.Slime.Enable();
+        }
+        if (MoveArrows == null)
+        {
+            MoveArrows = slimeControls.Slime.MoveArrows;
+            MoveArrows.Enable();
+        }
+    }
     private void CleanupInputSystem()
     {
         if (slimeControls != null)
@@ -61,6 +71,11 @@ public class PlayerMoveState : PlayerState
             slimeControls.Slime.Disable();
             slimeControls.Dispose();
             slimeControls = null;
+        }
+        if (MoveArrows != null)
+        {
+            MoveArrows.Disable();
+            MoveArrows = null;
         }
     }
 }
