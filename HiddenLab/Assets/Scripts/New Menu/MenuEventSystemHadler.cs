@@ -37,11 +37,25 @@ public class MenuEventSystemHadler : MonoBehaviour
     }
     public virtual void OnDisable()
     {
-        Debug.Log("Closed Menu");
-        playerHolder.SetActive(true);
-        _navigateReference.action.performed -= OnNavigate;
-        _clickAction.action.performed -= OnClickAction;
-        Time.timeScale = 1;
+        if (this != null)
+        {
+            Debug.Log("Closed Menu");
+            playerHolder.SetActive(true);
+            _navigateReference.action.performed -= OnNavigate;
+            _clickAction.action.performed -= OnClickAction;
+            Time.timeScale = 1;           
+        }
+    }
+    public virtual void OnDestroy()
+    {
+        if (this != null)
+        {
+            Debug.Log("Closed Menu");
+            playerHolder.SetActive(true);
+            _navigateReference.action.performed -= OnNavigate;
+            _clickAction.action.performed -= OnClickAction;
+            Time.timeScale = 1;           
+        }
     }
     protected virtual void AddSelectionListners(Selectable selectable)
     {
