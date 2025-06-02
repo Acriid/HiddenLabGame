@@ -17,28 +17,28 @@ public class movementSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
             }
         }
-        else if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
             }
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
             }
         }
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (!audioSource.isPlaying)
             {
