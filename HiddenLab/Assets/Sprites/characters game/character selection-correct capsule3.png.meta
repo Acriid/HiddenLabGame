@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7dd24d4a5dfd986409c1b740d70ae935
+guid: fee674818dc1ced448e66cc50619d407
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5416463912500112209
-    second: character selection_0
+      213: -3716688675787750088
+    second: character selection-correct capsule3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character selection_0
+      name: character selection-correct capsule3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 238
+        x: 158
+        y: 59
+        width: 88
+        height: 169
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,96 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa455bce4cad4d4b0800000000000000
-      internalID: -5416463912500112209
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character selection_1
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 238
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e59ddcccf1f7434ca8834b1910cb934
-      internalID: -713069660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character selection_2
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 256
-        height: 238
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12062323824f84f43862a314632bee5d
-      internalID: 627361900
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character selection_3
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 256
-        height: 238
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8946b4a00340eb04190ff2e4a928e054
-      internalID: 1651518015
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: character selection_4
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 256
-        height: 238
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e09986d2040fe4440851df5f715b598c
-      internalID: -170410255
+      spriteID: 83544fa575bab6cc0800000000000000
+      internalID: -3716688675787750088
       vertices: []
       indices: 
       edges: []
@@ -213,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 01eaf27bd088bda41831731d604ae7aa
+    spriteID: 64cf0a775abd6684c816f690fab04761
     internalID: 0
     vertices: []
     indices: 
@@ -223,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      character selection_0: -5416463912500112209
-      character selection_1: -713069660
-      character selection_2: 627361900
-      character selection_3: 1651518015
-      character selection_4: -170410255
+      character selection-correct capsule3_0: -3716688675787750088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
