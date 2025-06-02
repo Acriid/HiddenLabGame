@@ -6,35 +6,31 @@ public class EnemyChaseState : EnemyState
     {
 
     }
-    public override void EnterState() 
+    public override void EnterState()
     {
         base.EnterState();
-        Debug.Log("In Chase State");
-
+        enemy.EnemyChaseBaseInstance.DoEnterLogic();
     }
 
-    public override void ExitState() 
+    public override void ExitState()
     {
         base.ExitState();
-        Debug.Log("Left Chase State");
+        enemy.EnemyChaseBaseInstance.DoExitLogic();
     }
 
-    public override void UpdateState() 
+    public override void UpdateState()
     {
         base.UpdateState();
-        if(enemy.CanSeePlayer == false)
-        {
-            enemy.enemyStateMachine.ChangeState(enemy.enemyIdleState);
-        }
-        enemy.MoveEnemy(enemy.player[1].transform.position);
-        
+        enemy.EnemyChaseBaseInstance.DoUpdateLogic();       
     }
-    public override void FixedUpdateState() 
+    public override void FixedUpdateState()
     {
         base.FixedUpdateState();
+        enemy.EnemyChaseBaseInstance.DoFixedUpdateLogic();
     }
-    public override void AnimationTriggerEvent(Enemy.AnimationTriggerType triggerType) 
+    public override void AnimationTriggerEvent(Enemy.AnimationTriggerType triggerType)
     {
         base.AnimationTriggerEvent(triggerType);
+        enemy.EnemyChaseBaseInstance.DoAnimationTriggerEventLogic();
     }
 }

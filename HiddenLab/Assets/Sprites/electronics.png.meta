@@ -49,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,10 +128,10 @@ TextureImporter:
       name: electronics_0
       rect:
         serializedVersion: 2
-        x: 159
-        y: 583
-        width: 306
-        height: 338
+        x: 638
+        y: 2334
+        width: 1220
+        height: 1348
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: electronics_1
       rect:
         serializedVersion: 2
-        x: 583
-        y: 735
-        width: 314
-        height: 186
+        x: 2334
+        y: 2942
+        width: 1252
+        height: 740
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,10 +172,10 @@ TextureImporter:
       name: electronics_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 207
-        width: 226
-        height: 298
+        x: 126
+        y: 830
+        width: 900
+        height: 1188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: electronics_3
       rect:
         serializedVersion: 2
-        x: 263
-        y: 207
-        width: 178
-        height: 162
+        x: 1054
+        y: 830
+        width: 708
+        height: 644
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: electronics_4
       rect:
         serializedVersion: 2
-        x: 591
-        y: 263
-        width: 274
-        height: 314
+        x: 2366
+        y: 1054
+        width: 1092
+        height: 1252
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 97732a89f6cf4ea468567af3870b93b0
     internalID: 0
     vertices: []
     indices: 

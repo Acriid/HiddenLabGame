@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 31fd545e8a03c314f815863c26734dc3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 833837701359021057
+    second: character selection titel_0
+  - first:
+      213: 6393005925379030696
+    second: character selection titel_1
+  - first:
+      213: 7674443145175175422
+    second: character selection titel_2
+  - first:
+      213: 5310856739175913605
+    second: character selection titel_3
+  - first:
+      213: 5341553256814303774
+    second: character selection titel_4
+  - first:
+      213: 3548133604028606782
+    second: character selection titel_5
+  - first:
+      213: 3848712790055971001
+    second: character selection titel_6
+  - first:
+      213: -3983720623479672743
+    second: character selection titel_7
+  - first:
+      213: 1446186256683435409
+    second: character selection titel_8
+  - first:
+      213: -2372202224931845308
+    second: character selection titel_9
+  - first:
+      213: 7310965058743970103
+    second: character selection titel_10
+  - first:
+      213: -4716039216647864701
+    second: character selection titel_11
+  - first:
+      213: 3385212193583442040
+    second: character selection titel_12
+  - first:
+      213: -6273444982641803845
+    second: character selection titel_13
+  - first:
+      213: 205186083218290300
+    second: character selection titel_14
+  - first:
+      213: -1816685038780380314
+    second: character selection titel_15
+  - first:
+      213: 5690468989180402532
+    second: character selection titel_16
+  - first:
+      213: 1245422843307653628
+    second: character selection titel_17
+  - first:
+      213: 4804400538169837993
+    second: character selection titel_18
+  - first:
+      213: 4809708422256723823
+    second: character selection titel_19
+  - first:
+      213: -859175220479293816
+    second: character selection titel_20
+  - first:
+      213: -4223914042314119124
+    second: character selection titel_21
+  - first:
+      213: 5022985891541821965
+    second: character selection titel_22
+  - first:
+      213: -2248173506544472594
+    second: character selection titel_23
+  - first:
+      213: -6403742351201231122
+    second: character selection titel_24
+  - first:
+      213: -2457441841378030246
+    second: character selection titel_25
+  - first:
+      213: -5144313780904863583
+    second: character selection titel_26
+  - first:
+      213: 3195222252551798239
+    second: character selection titel_27
+  - first:
+      213: -396174143860902990
+    second: character selection titel_28
+  - first:
+      213: 3029757566867886667
+    second: character selection titel_29
+  - first:
+      213: 4128357128495643787
+    second: character selection titel_30
+  - first:
+      213: 6760427007555820004
+    second: character selection titel_31
+  - first:
+      213: 7655590473164966992
+    second: character selection titel_32
+  - first:
+      213: 1454121757723835251
+    second: character selection titel_33
+  - first:
+      213: 3403591287750344200
+    second: character selection titel_34
+  - first:
+      213: 6481165528171008890
+    second: character selection titel_35
+  - first:
+      213: -8619595983983998993
+    second: character selection titel_36
+  - first:
+      213: -1961350358833425969
+    second: character selection titel_37
+  - first:
+      213: -7098704521718040858
+    second: character selection titel_38
+  - first:
+      213: 8872892036863459999
+    second: character selection titel_39
+  - first:
+      213: -3085855940442998568
+    second: character selection titel_40
+  - first:
+      213: -962007219652264667
+    second: character selection titel_41
+  - first:
+      213: 3000638321929543990
+    second: character selection titel_42
+  - first:
+      213: 4810772895698157448
+    second: character selection titel_43
+  - first:
+      213: -350289624344588928
+    second: character selection titel_44
+  - first:
+      213: -5661103259022524540
+    second: character selection titel_45
+  - first:
+      213: -4610235078310518136
+    second: character selection titel_46
+  - first:
+      213: 6002784234066511104
+    second: character selection titel_47
+  - first:
+      213: 8699688485012554913
+    second: character selection titel_48
+  - first:
+      213: 3709693257890069798
+    second: character selection titel_49
+  - first:
+      213: 4261909734629292110
+    second: character selection titel_50
+  - first:
+      213: 8606381532054205274
+    second: character selection titel_51
+  - first:
+      213: -3307707569432856300
+    second: character selection titel_52
+  - first:
+      213: -8941750478100201237
+    second: character selection titel_53
+  - first:
+      213: 2554371141749096147
+    second: character selection titel_54
+  - first:
+      213: -3362021335340902559
+    second: character selection titel_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: character selection titel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 125
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c25d5b8f2629b00800000000000000
+      internalID: 833837701359021057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character selection titel_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 0
+        width: 125
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae3f2d740588b850800000000000000
+      internalID: 6393005925379030696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character selection titel_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 125
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef0191d2169118a60800000000000000
+      internalID: 7674443145175175422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character selection titel_3
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 125
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588d19fe014f3b940800000000000000
+      internalID: 5310856739175913605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character selection titel_4
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 125
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a5f35e262012a40800000000000000
+      internalID: 5341553256814303774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0ea7a78e070b0e2459b12d8d7837249e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      character selection titel_0: 833837701359021057
+      character selection titel_1: 6393005925379030696
+      character selection titel_2: 7674443145175175422
+      character selection titel_3: 5310856739175913605
+      character selection titel_4: 5341553256814303774
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Audio/click-sfx-323775.mp3.meta
 guid: a34c85adc8d498b41b5eae1be9648076
+========
+guid: 89509697e18a7ba41b5cfc5a0ed235c6
+>>>>>>>> main:HiddenLab/Assets/Audio/movement.mp3.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 8
