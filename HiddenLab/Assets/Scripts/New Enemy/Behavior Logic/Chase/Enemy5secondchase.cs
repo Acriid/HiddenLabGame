@@ -2,6 +2,7 @@ using System.Threading;
 using TMPro;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Chase-5s", menuName = "Enemy Logic/Chase Logic/5s")]
 public class Enemy5secondchase : EnemyChaseSOBase
 {
     private float timer = 5f;
@@ -31,7 +32,7 @@ public class Enemy5secondchase : EnemyChaseSOBase
         {
             enemy.CanSeePlayer = false;
         }
-        
+
 
 
         enemy.MoveEnemy(enemy.player[1].transform.position);

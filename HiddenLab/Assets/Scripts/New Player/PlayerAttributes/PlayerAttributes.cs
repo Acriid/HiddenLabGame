@@ -192,16 +192,16 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         }
     }
     public event Action<bool> OnInLightChange;
-    private bool _InLite;
-    public bool InLite
+    private bool _InLight;
+    public bool InLight
     {
-        get => _InLite;
+        get => _InLight;
         set
         {
-            if (_InLite != value)
+            if (_InLight != value)
             {
-                _InLite = value;
-                OnInLightChange?.Invoke(_InLite);
+                _InLight = value;
+                OnInLightChange?.Invoke(_InLight);
             }
         }
     }
@@ -296,10 +296,10 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestInLightChange(bool newValue)
     {
-        if (_InLite != newValue)
+        if (_InLight != newValue)
         {
-            _InLite = newValue;
-            OnInLightChange?.Invoke(_InLite);
+            _InLight = newValue;
+            OnInLightChange?.Invoke(_InLight);
         }
     }
 }
