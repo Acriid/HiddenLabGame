@@ -51,7 +51,10 @@ public class MenuEventSystemHadler : MonoBehaviour
         if (this != null)
         {
             Debug.Log("Closed Menu");
-            playerHolder.SetActive(true);
+            if (playerHolder != null)
+            {
+                playerHolder.SetActive(true);                
+            }
             _navigateReference.action.performed -= OnNavigate;
             _clickAction.action.performed -= OnClickAction;
             Time.timeScale = 1;           

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -205,6 +206,20 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
             }
         }
     }
+    public event Action<bool> OnFlashlightGet;
+    private bool _HasFlashlight;
+    public bool HasFlashlight
+    {
+        get => _HasFlashlight;
+        set
+        {
+            if (_HasFlashlight != value)
+            {
+                _HasFlashlight = value;
+                OnFlashlightGet?.Invoke(_HasFlashlight);
+            }
+        }
+    }
     //Request functions for if you want to change and read the same value
     public void RequestPlayerHealthChange(int newValue)
     {
@@ -301,5 +316,13 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
             _InLight = newValue;
             OnInLightChange?.Invoke(_InLight);
         }
+    }
+    public void RequestFlashLightGet(bool newValue)
+    {
+        if (_HasFlashlight != newValue)
+        {
+            _HasFlashlight = newValue;
+            OnFlashlightGet?.Invoke(_HasFlashlight);
+        }        
     }
 }

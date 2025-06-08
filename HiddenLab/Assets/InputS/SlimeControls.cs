@@ -856,7 +856,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5fbca930-0c80-4a3d-a11a-9809032dfbf5"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
