@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: b1fc6600fbff91e42a739ccc1587b5f4
+guid: 3084966f206e8004281c42e021113048
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9091904610946242982
-    second: chemicals_0
+      213: 6609894105642088411
+    second: effects_0
   - first:
-      213: -4978169138938302313
-    second: chemicals_1
+      213: 1957107745717523172
+    second: effects_1
   - first:
-      213: -7868194565568597337
-    second: chemicals_2
+      213: -3914910146244942373
+    second: effects_2
   - first:
-      213: -3537786829270171778
-    second: chemicals_3
+      213: -1166211891172804109
+    second: effects_3
+  - first:
+      213: 1274422669862156747
+    second: effects_4
+  - first:
+      213: 5546012167625906029
+    second: effects_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,96 +111,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chemicals_0
+      name: effects_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 167
-        width: 90
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a5620d46de013d180800000000000000
-      internalID: -9091904610946242982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chemicals_1
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 119
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79035c92b8df9eab0800000000000000
-      internalID: -4978169138938302313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chemicals_2
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 63
-        width: 50
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a2ff97eabe8ec290800000000000000
-      internalID: -7868194565568597337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chemicals_3
-      rect:
-        serializedVersion: 2
-        x: 135
+        x: 0
         y: 31
-        width: 82
-        height: 74
+        width: 31
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +130,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7fbb4e6f9147eec0800000000000000
-      internalID: -3537786829270171778
+      spriteID: bd7beb91baf0bbb50800000000000000
+      internalID: 6609894105642088411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effects_1
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 40
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e298a2202b092b10800000000000000
+      internalID: 1957107745717523172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effects_2
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 36
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd56f7dc6f17ba9c0800000000000000
+      internalID: -3914910146244942373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effects_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 34
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f9fecdb678c0dfe0800000000000000
+      internalID: -1166211891172804109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effects_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc9b6d28aa8afa110800000000000000
+      internalID: 1274422669862156747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: effects_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 2
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d671653bea467fc40800000000000000
+      internalID: 5546012167625906029
       vertices: []
       indices: 
       edges: []
@@ -213,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 338fc641ead266d449c11df9cd20fbc9
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chemicals_0: -9091904610946242982
-      chemicals_1: -4978169138938302313
-      chemicals_2: -7868194565568597337
-      chemicals_3: -3537786829270171778
+      effects_0: 6609894105642088411
+      effects_1: 1957107745717523172
+      effects_2: -3914910146244942373
+      effects_3: -1166211891172804109
+      effects_4: 1274422669862156747
+      effects_5: 5546012167625906029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

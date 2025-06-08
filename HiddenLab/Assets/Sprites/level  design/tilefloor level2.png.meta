@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: b1fc6600fbff91e42a739ccc1587b5f4
+guid: 776eef68f39279c4ea5941fd865862ed
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9091904610946242982
-    second: chemicals_0
-  - first:
-      213: -4978169138938302313
-    second: chemicals_1
-  - first:
-      213: -7868194565568597337
-    second: chemicals_2
-  - first:
-      213: -3537786829270171778
-    second: chemicals_3
+      213: 5724284522317804586
+    second: tilefloor level2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chemicals_0
+      name: tilefloor level2_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 167
-        width: 90
-        height: 74
+        x: 0
+        y: 32
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +115,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5620d46de013d180800000000000000
-      internalID: -9091904610946242982
+      spriteID: a24f40ac17eb07f40800000000000000
+      internalID: 5724284522317804586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_1
+      name: tilefloor level2_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 119
-        width: 98
-        height: 98
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 79035c92b8df9eab0800000000000000
-      internalID: -4978169138938302313
+      spriteID: 90ee47e39adf2b34ca9260d51c65b73b
+      internalID: -236843071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_2
+      name: tilefloor level2_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 63
-        width: 50
-        height: 74
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7a2ff97eabe8ec290800000000000000
-      internalID: -7868194565568597337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chemicals_3
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 31
-        width: 82
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7fbb4e6f9147eec0800000000000000
-      internalID: -3537786829270171778
+      spriteID: 02ccc239e90541449a4cabe127cfb5be
+      internalID: 24603313
       vertices: []
       indices: 
       edges: []
@@ -213,7 +169,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 3b9b02baf9fa9914ab953ad21be7eeae
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +179,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chemicals_0: -9091904610946242982
-      chemicals_1: -4978169138938302313
-      chemicals_2: -7868194565568597337
-      chemicals_3: -3537786829270171778
+      tilefloor level2_0: 5724284522317804586
+      tilefloor level2_1: -236843071
+      tilefloor level2_2: 24603313
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

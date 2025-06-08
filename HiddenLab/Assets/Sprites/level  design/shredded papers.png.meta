@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: b1fc6600fbff91e42a739ccc1587b5f4
+guid: 01c71a383f03c1a4bbcd9ff09eac3ac2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9091904610946242982
-    second: chemicals_0
+      213: -8747115097516104651
+    second: shredded papers_0
   - first:
-      213: -4978169138938302313
-    second: chemicals_1
+      213: -7324328387313476436
+    second: shredded papers_1
   - first:
-      213: -7868194565568597337
-    second: chemicals_2
+      213: -5617536574293505182
+    second: shredded papers_2
   - first:
-      213: -3537786829270171778
-    second: chemicals_3
+      213: -1364711035907542110
+    second: shredded papers_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chemicals_0
+      name: shredded papers_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 167
-        width: 90
-        height: 74
+        x: 21
+        y: 74
+        width: 28
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5620d46de013d180800000000000000
-      internalID: -9091904610946242982
+      spriteID: 534a81bb9210c9680800000000000000
+      internalID: -8747115097516104651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_1
+      name: shredded papers_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 119
-        width: 98
-        height: 98
+        x: 76
+        y: 65
+        width: 35
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79035c92b8df9eab0800000000000000
-      internalID: -4978169138938302313
+      spriteID: cacdedf3322ca5a90800000000000000
+      internalID: -7324328387313476436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_2
+      name: shredded papers_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 63
-        width: 50
-        height: 74
+        x: 10
+        y: 3
+        width: 51
+        height: 56
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a2ff97eabe8ec290800000000000000
-      internalID: -7868194565568597337
+      spriteID: 26b8878af308a02b0800000000000000
+      internalID: -5617536574293505182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_3
+      name: shredded papers_3
       rect:
         serializedVersion: 2
-        x: 135
-        y: 31
-        width: 82
-        height: 74
+        x: 73
+        y: 8
+        width: 45
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7fbb4e6f9147eec0800000000000000
-      internalID: -3537786829270171778
+      spriteID: 2a3fcab1b829f0de0800000000000000
+      internalID: -1364711035907542110
       vertices: []
       indices: 
       edges: []
@@ -213,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 80a8c0c1d9c52694da84ff519ef5475f
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chemicals_0: -9091904610946242982
-      chemicals_1: -4978169138938302313
-      chemicals_2: -7868194565568597337
-      chemicals_3: -3537786829270171778
+      shredded papers_0: -8747115097516104651
+      shredded papers_1: -7324328387313476436
+      shredded papers_2: -5617536574293505182
+      shredded papers_3: -1364711035907542110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

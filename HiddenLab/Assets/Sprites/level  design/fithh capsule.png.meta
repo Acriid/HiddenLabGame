@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: b1fc6600fbff91e42a739ccc1587b5f4
+guid: 3f3d2fd16324955418b47e46efd30abd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9091904610946242982
-    second: chemicals_0
-  - first:
-      213: -4978169138938302313
-    second: chemicals_1
-  - first:
-      213: -7868194565568597337
-    second: chemicals_2
-  - first:
-      213: -3537786829270171778
-    second: chemicals_3
+      213: -4494450855839392553
+    second: fithh capsule_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chemicals_0
+      name: fithh capsule_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 167
-        width: 90
-        height: 74
+        x: 6
+        y: 61
+        width: 53
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5620d46de013d180800000000000000
-      internalID: -9091904610946242982
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chemicals_1
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 119
-        width: 98
-        height: 98
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 79035c92b8df9eab0800000000000000
-      internalID: -4978169138938302313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chemicals_2
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 63
-        width: 50
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7a2ff97eabe8ec290800000000000000
-      internalID: -7868194565568597337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: chemicals_3
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 31
-        width: 82
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e7fbb4e6f9147eec0800000000000000
-      internalID: -3537786829270171778
+      spriteID: 7dc1e3d52c080a1c0800000000000000
+      internalID: -4494450855839392553
       vertices: []
       indices: 
       edges: []
@@ -213,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1f400c387aba49546b1bbe4e2150d3cf
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chemicals_0: -9091904610946242982
-      chemicals_1: -4978169138938302313
-      chemicals_2: -7868194565568597337
-      chemicals_3: -3537786829270171778
+      fithh capsule_0: -4494450855839392553
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

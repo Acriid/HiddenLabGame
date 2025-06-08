@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: b1fc6600fbff91e42a739ccc1587b5f4
+guid: 4fde9068f7b46484ab3e21848f661d49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9091904610946242982
-    second: chemicals_0
+      213: 3302555604130735286
+    second: monitor and lights anim_0
   - first:
-      213: -4978169138938302313
-    second: chemicals_1
+      213: -9119670938367796053
+    second: monitor and lights anim_1
   - first:
-      213: -7868194565568597337
-    second: chemicals_2
+      213: 4519009937189265388
+    second: monitor and lights anim_2
   - first:
-      213: -3537786829270171778
-    second: chemicals_3
+      213: -1540303730585401521
+    second: monitor and lights anim_3
+  - first:
+      213: 5750388953258884101
+    second: monitor and lights anim_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,30 +108,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chemicals_0
+      name: monitor and lights anim_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 167
-        width: 90
-        height: 74
+        x: 2
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5620d46de013d180800000000000000
-      internalID: -9091904610946242982
+      spriteID: 6b4203303d805dd20800000000000000
+      internalID: 3302555604130735286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_1
+      name: monitor and lights anim_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 119
-        width: 98
-        height: 98
+        x: 126
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79035c92b8df9eab0800000000000000
-      internalID: -4978169138938302313
+      spriteID: bac5222899b607180800000000000000
+      internalID: -9119670938367796053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_2
+      name: monitor and lights anim_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 63
-        width: 50
-        height: 74
+        x: 250
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a2ff97eabe8ec290800000000000000
-      internalID: -7868194565568597337
+      spriteID: cef50aa589fb6be30800000000000000
+      internalID: 4519009937189265388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_3
+      name: monitor and lights anim_3
       rect:
         serializedVersion: 2
-        x: 135
-        y: 31
-        width: 82
-        height: 74
+        x: 374
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,8 +193,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7fbb4e6f9147eec0800000000000000
-      internalID: -3537786829270171778
+      spriteID: f478f3cfaedbf9ae0800000000000000
+      internalID: -1540303730585401521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monitor and lights anim_4
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 62
+        width: 57
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c735f394c7dcf40800000000000000
+      internalID: 5750388953258884101
       vertices: []
       indices: 
       edges: []
@@ -213,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d7011563069340948b9aad7d8b3aa0ab
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chemicals_0: -9091904610946242982
-      chemicals_1: -4978169138938302313
-      chemicals_2: -7868194565568597337
-      chemicals_3: -3537786829270171778
+      monitor and lights anim_0: 3302555604130735286
+      monitor and lights anim_1: -9119670938367796053
+      monitor and lights anim_2: 4519009937189265388
+      monitor and lights anim_3: -1540303730585401521
+      monitor and lights anim_4: 5750388953258884101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

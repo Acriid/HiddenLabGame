@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: b1fc6600fbff91e42a739ccc1587b5f4
+guid: a721fb97a3af8304ea6ccc5c25306541
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9091904610946242982
-    second: chemicals_0
+      213: 7996004517280420882
+    second: dried blood_0
   - first:
-      213: -4978169138938302313
-    second: chemicals_1
+      213: 1772833837010018800
+    second: dried blood_1
   - first:
-      213: -7868194565568597337
-    second: chemicals_2
+      213: 1674371390572351805
+    second: dried blood_2
   - first:
-      213: -3537786829270171778
-    second: chemicals_3
+      213: 8068041718294630831
+    second: dried blood_3
+  - first:
+      213: 7286467971998534419
+    second: dried blood_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -105,106 +108,115 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chemicals_0
+      name: dried blood_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 167
-        width: 90
-        height: 74
+        x: 0
+        y: 0
+        width: 124
+        height: 124
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5620d46de013d180800000000000000
-      internalID: -9091904610946242982
+      spriteID: 2141bea6eb387fe60800000000000000
+      internalID: 7996004517280420882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_1
+      name: dried blood_1
       rect:
         serializedVersion: 2
-        x: 127
-        y: 119
-        width: 98
-        height: 98
+        x: 0
+        y: 0
+        width: 63
+        height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79035c92b8df9eab0800000000000000
-      internalID: -4978169138938302313
+      spriteID: 0f166cc5bfe5a9810800000000000000
+      internalID: 1772833837010018800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_2
+      name: dried blood_2
       rect:
         serializedVersion: 2
-        x: 31
-        y: 63
-        width: 50
-        height: 74
+        x: 65
+        y: 59
+        width: 58
+        height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a2ff97eabe8ec290800000000000000
-      internalID: -7868194565568597337
+      spriteID: d31542598ef8c3710800000000000000
+      internalID: 1674371390572351805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chemicals_3
+      name: dried blood_3
       rect:
         serializedVersion: 2
-        x: 135
-        y: 31
-        width: 82
-        height: 74
+        x: 64
+        y: 0
+        width: 60
+        height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7fbb4e6f9147eec0800000000000000
-      internalID: -3537786829270171778
+      spriteID: fa1dbfb423177ff60800000000000000
+      internalID: 8068041718294630831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dried blood_4
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 14
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31bcb32e30cbe1560800000000000000
+      internalID: 7286467971998534419
       vertices: []
       indices: 
       edges: []
@@ -213,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d5cbd48366d94b44899f7681dd076776
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chemicals_0: -9091904610946242982
-      chemicals_1: -4978169138938302313
-      chemicals_2: -7868194565568597337
-      chemicals_3: -3537786829270171778
+      dried blood_0: 7996004517280420882
+      dried blood_1: 1772833837010018800
+      dried blood_2: 1674371390572351805
+      dried blood_3: 8068041718294630831
+      dried blood_4: 7286467971998534419
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

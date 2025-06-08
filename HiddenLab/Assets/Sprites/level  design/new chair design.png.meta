@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: 737272a20ab574249876a67a4544e983
+guid: cdbe8122bf108c74bbc4af15e4917adc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -120489637588828977
-    second: wall layout design_0
+      213: -106757372053087673
+    second: new chair design_0
   - first:
-      213: -4117629779423311915
-    second: wall layout design_1
+      213: 8561640858439554106
+    second: new chair design_1
   - first:
-      213: -7278693995423070139
-    second: wall layout design_2
-  - first:
-      213: -3485480116542787528
-    second: wall layout design_3
-  - first:
-      213: -1645296524547531380
-    second: wall layout design_4
+      213: 6499929733548117987
+    second: new chair design_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -87,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,30 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall layout design_0
+      name: new chair design_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 277
-        width: 138
-        height: 275
+        x: 10
+        y: 62
+        width: 44
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fccf660205fe35ef0800000000000000
-      internalID: -120489637588828977
+      spriteID: 74a1f995cb8b48ef0800000000000000
+      internalID: -106757372053087673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall layout design_1
+      name: new chair design_1
       rect:
         serializedVersion: 2
-        x: 147
-        y: 148
-        width: 2653
-        height: 627
+        x: 69
+        y: 67
+        width: 51
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d747e0288d3bd6c0800000000000000
-      internalID: -4117629779423311915
+      spriteID: a3492cdcffe01d670800000000000000
+      internalID: 8561640858439554106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall layout design_2
+      name: new chair design_2
       rect:
         serializedVersion: 2
-        x: 282
-        y: 146
-        width: 677
-        height: 260
+        x: 10
+        y: 1
+        width: 44
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,52 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5480a061062ecfa90800000000000000
-      internalID: -7278693995423070139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall layout design_3
-      rect:
-        serializedVersion: 2
-        x: 607
-        y: 87
-        width: 603
-        height: 302
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 830b7c50d4611afc0800000000000000
-      internalID: -3485480116542787528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall layout design_4
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 0
-        width: 2192
-        height: 348
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8dd820378bba29e0800000000000000
-      internalID: -1645296524547531380
+      spriteID: 3ef822197a3643a50800000000000000
+      internalID: 6499929733548117987
       vertices: []
       indices: 
       edges: []
@@ -238,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6b03f1ebc19e60c4789996e0b661bccb
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wall layout design_0: -120489637588828977
-      wall layout design_1: -4117629779423311915
-      wall layout design_2: -7278693995423070139
-      wall layout design_3: -3485480116542787528
-      wall layout design_4: -1645296524547531380
+      new chair design_0: -106757372053087673
+      new chair design_1: 8561640858439554106
+      new chair design_2: 6499929733548117987
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
