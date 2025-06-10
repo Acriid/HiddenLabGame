@@ -177,7 +177,10 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         }
         ClenupSlimeActions();
     }
-
+    public int GetHealth()
+    {
+        return _CurrentHealth;
+    }
     public void Death()
     {
         //TODO: show the death menu and pause the game
@@ -202,6 +205,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         if(collision.collider.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("ow");
             Vector2 direction = (collision.collider.gameObject.transform.position - SlimeRB.transform.position).normalized;
             Damage();
             EnemyImpulse(-direction);

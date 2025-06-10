@@ -14,7 +14,7 @@ public class EnemyDirectChase : EnemyChaseSOBase
     public override void DoUpdateLogic()
     {
         base.DoUpdateLogic();
-        enemy.MoveEnemy(enemy.player[1].transform.position);
+        enemy.ChasePlayer();
     }
     public override void DoFixedUpdateLogic()
     {
