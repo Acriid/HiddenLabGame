@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -51,7 +52,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         get => _Slime1Speed;
         set
         {
-            if (!Mathf.Approximately(_Slime1Speed,value))
+            if (!Mathf.Approximately(_Slime1Speed, value))
             {
                 _Slime1Speed = value;
                 OnSlime1SpeedChange?.Invoke(_Slime1Speed);
@@ -64,9 +65,9 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     public float Slime2Speed
     {
         get => _Slime2Speed;
-        set 
+        set
         {
-            if (!Mathf.Approximately(_Slime2Speed,value))
+            if (!Mathf.Approximately(_Slime2Speed, value))
             {
                 _Slime2Speed = value;
                 OnSlime2SpeedChange?.Invoke(_Slime2Speed);
@@ -111,7 +112,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         get => _impulseSpeed;
         set
         {
-            if (!Mathf.Approximately(_impulseSpeed,value))
+            if (!Mathf.Approximately(_impulseSpeed, value))
             {
                 _impulseSpeed = value;
                 OnImpulseSpeedChange?.Invoke(_impulseSpeed);
@@ -124,7 +125,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     public bool AddedImpulse
     {
         get => _addedImpulse;
-        set 
+        set
         {
             if (_addedImpulse != value)
             {
@@ -156,7 +157,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         get => _KeyCard1;
         set
         {
-            if(_KeyCard1 != value)
+            if (_KeyCard1 != value)
             {
                 _KeyCard1 = value;
                 OnKeyCard1Change?.Invoke(_KeyCard1);
@@ -170,7 +171,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         get => _KeyCard2;
         set
         {
-            if(_KeyCard2 != value)
+            if (_KeyCard2 != value)
             {
                 _KeyCard2 = value;
                 OnKeyCard2Change?.Invoke(_KeyCard2);
@@ -184,10 +185,38 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         get => _KeyCard3;
         set
         {
-            if(_KeyCard3 != value)
+            if (_KeyCard3 != value)
             {
                 _KeyCard3 = value;
                 OnKeyCard3Change?.Invoke(_KeyCard3);
+            }
+        }
+    }
+    public event Action<bool> OnInLightChange;
+    private bool _InLight;
+    public bool InLight
+    {
+        get => _InLight;
+        set
+        {
+            if (_InLight != value)
+            {
+                _InLight = value;
+                OnInLightChange?.Invoke(_InLight);
+            }
+        }
+    }
+    public event Action<bool> OnFlashlightGet;
+    private bool _HasFlashlight;
+    public bool HasFlashlight
+    {
+        get => _HasFlashlight;
+        set
+        {
+            if (_HasFlashlight != value)
+            {
+                _HasFlashlight = value;
+                OnFlashlightGet?.Invoke(_HasFlashlight);
             }
         }
     }
@@ -202,7 +231,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestSlime1SpeedChange(float newValue)
     {
-        if(!Mathf.Approximately(_Slime1Speed,newValue))
+        if (!Mathf.Approximately(_Slime1Speed, newValue))
         {
             _Slime1Speed = newValue;
             OnSlime1SpeedChange?.Invoke(_Slime1Speed);
@@ -210,7 +239,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestSlime2SpeedChange(float newValue)
     {
-        if(!Mathf.Approximately(_Slime2Speed,newValue))
+        if (!Mathf.Approximately(_Slime2Speed, newValue))
         {
             _Slime2Speed = newValue;
             OnSlime2SpeedChange?.Invoke(_Slime2Speed);
@@ -218,7 +247,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestIsStreachedChange(bool newValue)
     {
-        if(_isStreached != newValue)
+        if (_isStreached != newValue)
         {
             _isStreached = newValue;
             OnIsStreachedChange?.Invoke(_isStreached);
@@ -226,7 +255,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestIsSplitChange(bool newValue)
     {
-        if(_isSplit != newValue)
+        if (_isSplit != newValue)
         {
             _isSplit = newValue;
             OnIsSplitChange?.Invoke(_isSplit);
@@ -234,7 +263,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestImpulseSpeedChange(float newValue)
     {
-        if(!Mathf.Approximately(_impulseSpeed,newValue))
+        if (!Mathf.Approximately(_impulseSpeed, newValue))
         {
             _impulseSpeed = newValue;
             OnImpulseSpeedChange?.Invoke(_impulseSpeed);
@@ -242,7 +271,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestAddedImpulseChange(bool newValue)
     {
-        if(_addedImpulse != newValue)
+        if (_addedImpulse != newValue)
         {
             _addedImpulse = newValue;
             OnAddedImpulseChange?.Invoke(_addedImpulse);
@@ -250,7 +279,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestCarryItemChange(bool newValue)
     {
-        if(_carryItem != newValue)
+        if (_carryItem != newValue)
         {
             _carryItem = newValue;
             OnCarryItemChange?.Invoke(_carryItem);
@@ -258,7 +287,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestKeyCard1Change(bool newValue)
     {
-        if(_KeyCard1 != newValue)
+        if (_KeyCard1 != newValue)
         {
             _KeyCard1 = newValue;
             OnKeyCard1Change?.Invoke(_KeyCard1);
@@ -266,7 +295,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestKeyCard2Change(bool newValue)
     {
-        if(_KeyCard2 != newValue)
+        if (_KeyCard2 != newValue)
         {
             _KeyCard2 = newValue;
             OnKeyCard2Change?.Invoke(_KeyCard2);
@@ -274,10 +303,26 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestKeyCard3Change(bool newValue)
     {
-        if(_KeyCard3 != newValue)
+        if (_KeyCard3 != newValue)
         {
             _KeyCard3 = newValue;
             OnKeyCard3Change?.Invoke(_KeyCard3);
         }
+    }
+    public void RequestInLightChange(bool newValue)
+    {
+        if (_InLight != newValue)
+        {
+            _InLight = newValue;
+            OnInLightChange?.Invoke(_InLight);
+        }
+    }
+    public void RequestFlashLightGet(bool newValue)
+    {
+        if (_HasFlashlight != newValue)
+        {
+            _HasFlashlight = newValue;
+            OnFlashlightGet?.Invoke(_HasFlashlight);
+        }        
     }
 }

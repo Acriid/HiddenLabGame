@@ -5,6 +5,7 @@ public class ReloadSave : MonoBehaviour
 {
     public void OnClick()
     {
-        SceneManager.LoadScene("DemoLevel");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 }

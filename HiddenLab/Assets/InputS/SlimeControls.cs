@@ -687,6 +687,15 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""KillAction"",
+                    ""type"": ""Button"",
+                    ""id"": ""b5068ff2-fee2-4606-a416-7c417a60e336"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -847,7 +856,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5fbca930-0c80-4a3d-a11a-9809032dfbf5"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -874,6 +883,17 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Save"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4b6b2ec-095a-49cf-ae7e-93e3607bc18c"",
+                    ""path"": ""<Keyboard>/semicolon"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""KillAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1143,6 +1163,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         m_Slime_OpenMenu = m_Slime.FindAction("OpenMenu", throwIfNotFound: true);
         m_Slime_File = m_Slime.FindAction("File", throwIfNotFound: true);
         m_Slime_Save = m_Slime.FindAction("Save", throwIfNotFound: true);
+        m_Slime_KillAction = m_Slime.FindAction("KillAction", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MoveWASD = m_UI.FindAction("MoveWASD", throwIfNotFound: true);
@@ -1437,6 +1458,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_OpenMenu;
     private readonly InputAction m_Slime_File;
     private readonly InputAction m_Slime_Save;
+    private readonly InputAction m_Slime_KillAction;
     /// <summary>
     /// Provides access to input actions defined in input action map "Slime".
     /// </summary>
@@ -1484,6 +1506,10 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Slime/Save".
         /// </summary>
         public InputAction @Save => m_Wrapper.m_Slime_Save;
+        /// <summary>
+        /// Provides access to the underlying input action "Slime/KillAction".
+        /// </summary>
+        public InputAction @KillAction => m_Wrapper.m_Slime_KillAction;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1537,6 +1563,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @Save.started += instance.OnSave;
             @Save.performed += instance.OnSave;
             @Save.canceled += instance.OnSave;
+            @KillAction.started += instance.OnKillAction;
+            @KillAction.performed += instance.OnKillAction;
+            @KillAction.canceled += instance.OnKillAction;
         }
 
         /// <summary>
@@ -1575,6 +1604,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @Save.started -= instance.OnSave;
             @Save.performed -= instance.OnSave;
             @Save.canceled -= instance.OnSave;
+            @KillAction.started -= instance.OnKillAction;
+            @KillAction.performed -= instance.OnKillAction;
+            @KillAction.canceled -= instance.OnKillAction;
         }
 
         /// <summary>
@@ -1907,6 +1939,13 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSave(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "KillAction" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnKillAction(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

@@ -2,17 +2,18 @@ using System.Threading;
 using TMPro;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Chase-5s", menuName = "Enemy Logic/Chase Logic/5s")]
 public class Enemy5secondchase : EnemyChaseSOBase
 {
     private float timer = 5f;
-    private float distance = 0f;
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
-        timer = 5f;
+        Debug.Log("Chasing");
+        timer = 6.5f;
         //Set speed for the enemy to take 5 seconds to get to player
-        distance = Vector2.Distance(enemyAgent.transform.position, enemy.player[1].transform.position);
-        enemy.SetEnemySpeed(distance / timer);
+        enemy.ChasePlayer();
+        enemy.SetEnemySpeed(enemy.targetdistance / timer);
     }
     public override void DoExitLogic()
     {
@@ -22,19 +23,18 @@ public class Enemy5secondchase : EnemyChaseSOBase
     {
         base.DoUpdateLogic();
         timer -= Time.deltaTime;
-        distance = Vector2.Distance(enemyAgent.transform.position, enemy.player[1].transform.position);
         if (timer > 0f)
         {
-            enemy.SetEnemySpeed(distance / timer);
+            enemy.SetEnemySpeed(enemy.targetdistance / timer);
         }
         else
         {
             enemy.CanSeePlayer = false;
         }
-        
 
 
-        enemy.MoveEnemy(enemy.player[1].transform.position);
+
+        enemy.ChasePlayer();
     }
     public override void DoFixedUpdateLogic()
     {

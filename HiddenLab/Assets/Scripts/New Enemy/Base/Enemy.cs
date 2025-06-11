@@ -1,16 +1,21 @@
 using System;
 using System.Collections;
+using System.IO;
+using NavMeshPlus.Extensions;
+using UnityEditor.Analytics;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.U2D;
 
 public class Enemy : MonoBehaviour, IEnemyMovement, IEnemyTriggerCheck, IAttack
 {
     #region Enemy Attack
-    [SerializeField] public float AttackTimer { get; set; } = 5f;
+    public float AttackTimer { get; set; } = 5f;
     public float AttackRange { get; set; }
     #endregion
+    public float targetdistance = 0f;
     #region Yin and Yang
-    [SerializeField] public Vector2 BasePosition;
+    [SerializeField] public Vector3 BasePosition;
     [SerializeField] public float ChaseTimer;
     #endregion
     public Transform enemytransform;
@@ -37,7 +42,7 @@ public class Enemy : MonoBehaviour, IEnemyMovement, IEnemyTriggerCheck, IAttack
         EnemyIdleBaseInstance = Instantiate(EnemyIdleBase);
         EnemyChaseBaseInstance = Instantiate(EnemyChaseBase);
         //Initialize Enemy States
-        player = GameObject.FindGameObjectsWithTag("Player");
+        //player = GameObject.FindGameObjectsWithTag("Player");
         enemyStateMachine = new EnemyStateMachine();
         enemyIdleState = new EnemyIdleState(this, enemyStateMachine);
         enemyChaseState = new EnemyChaseState(this, enemyStateMachine);
@@ -54,7 +59,8 @@ public class Enemy : MonoBehaviour, IEnemyMovement, IEnemyTriggerCheck, IAttack
         EnemyIdleBaseInstance.Initialize(gameObject, this);
         EnemyChaseBaseInstance.Initialize(gameObject, this);
         //Initial state
-        enemyStateMachine.Initialize(enemyIdleState);
+        enemyStateMachine.Initialize(enemyChaseState);
+        setCanSeePlayer(true);
     }
     #endregion
     #region Update/FixedUpdate
@@ -67,9 +73,55 @@ public class Enemy : MonoBehaviour, IEnemyMovement, IEnemyTriggerCheck, IAttack
         enemyStateMachine.currentEnemyState.FixedUpdateState();
     }
     #endregion
+    public void ChasePlayer()
+    {
+        //Set to max for if statement
+        float shortestDistance = float.MaxValue;
+
+        NavMeshPath shortestPath = null;
+
+        foreach (GameObject gameObject in player)
+        {
+            if (gameObject == null)
+            {
+                continue;
+            }
+            Transform playertransform = gameObject.transform;
+            NavMeshPath navPath = new NavMeshPath();
+            if (enemyagent.CalculatePath(playertransform.position, navPath))
+            {
+                if (navPath.corners.Length > 0)
+                {
+                    targetdistance = Vector3.Distance(this.transform.position, navPath.corners[0]);
+                }
+                else
+                {
+                    targetdistance = Vector3.Distance(this.transform.position, playertransform.position);
+                }
+
+
+                for (int i = 1; i < navPath.corners.Length; i++)
+                {
+                    targetdistance += Vector3.Distance(navPath.corners[i - 1], navPath.corners[i]);
+                }
+
+                if (targetdistance < shortestDistance)
+                {
+                    shortestDistance = targetdistance;
+                    shortestPath = navPath;
+                }
+            }
+            
+        }
+        if (shortestPath != null)
+        {
+            enemyagent.SetPath(shortestPath);
+        }
+        
+    }
     public void MoveEnemy(Vector3 position)
     {
-        enemyagent.SetDestination(position);
+        Debug.Log(enemyagent.SetDestination(position));
     }
     public void setCanSeePlayer(bool newValue)
     {

@@ -12,6 +12,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     #region Menus
     public GameObject SaveMenu;
     public GameObject OptionsMenu;
+    public GameObject DeathMenu;
     #endregion
     #region Player Attributes
     //Player Attributes
@@ -55,6 +56,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     private InputAction FileAction;
     private InputAction SaveAction;
     private InputAction OptionsAction;
+    //REMOVE LATER
+    private InputAction KillAction;
+    //REMOVE LATER
     #endregion
     #region Start/Awake
     void Awake()
@@ -173,10 +177,14 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         }
         ClenupSlimeActions();
     }
-
+    public int GetHealth()
+    {
+        return _CurrentHealth;
+    }
     public void Death()
     {
         //TODO: show the death menu and pause the game
+        DeathMenu.SetActive(true);
     }
     public void Heal()
     {
@@ -197,6 +205,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         if(collision.collider.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("ow");
             Vector2 direction = (collision.collider.gameObject.transform.position - SlimeRB.transform.position).normalized;
             Damage();
             EnemyImpulse(-direction);
@@ -246,7 +255,15 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             SplitAction.Enable();
             SplitAction.performed += OnSplitAction;
         }
-        EnableStretchAction();
+        //Remove Later
+        if (KillAction == null)
+        {
+            KillAction = slimeControls.Slime.KillAction;
+            KillAction.Enable();
+            KillAction.performed += OnKillAction;
+        }
+        //Remove Later
+            EnableStretchAction();
 
 
     }
@@ -283,12 +300,21 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             OptionsAction.performed -= OnOptionsAction;
             OptionsAction = null;
         }
+        //remove later
+        if (KillAction != null)
+        {
+            KillAction.Disable();
+            KillAction.performed -= OnKillAction;
+            KillAction = null;
+        }
+        //remove later
         if (slimeControls != null)
         {
             slimeControls.Slime.Disable();
             slimeControls.Dispose();
             slimeControls = null;
         }
+
     }
     private void InitializePlayerAttributes()
     {
@@ -556,6 +582,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         OptionsMenu.SetActive(true);
         Time.timeScale = 0;
+    }
+    #endregion
+    #region Kill Action (Remove later)
+    public void OnKillAction(InputAction.CallbackContext ctx)
+    {
+        Death();
     }
     #endregion
     #region Joints

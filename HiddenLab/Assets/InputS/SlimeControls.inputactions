@@ -601,6 +601,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "KillAction",
+                    "type": "Button",
+                    "id": "b5068ff2-fee2-4606-a416-7c417a60e336",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -761,7 +770,7 @@
                 {
                     "name": "",
                     "id": "5fbca930-0c80-4a3d-a11a-9809032dfbf5",
-                    "path": "<Keyboard>/c",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -788,6 +797,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Save",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4b6b2ec-095a-49cf-ae7e-93e3607bc18c",
+                    "path": "<Keyboard>/semicolon",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "KillAction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
