@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class Doors : MonoBehaviour
 {
+    private Doorsound doorSound;
     private BoxCollider2D doorCollider;
     private Animator animator;
     public PlayerAttributes playerAttributes;
     private bool _KeyCard1;
     void Start()
     {
+        // Get the Doorsound component from the same GameObject
+        doorSound = GetComponent<Doorsound>();
+        if (doorSound == null)
+        {
+            Debug.LogWarning("Doorsound script missing on this object!");
+        }
 
     }
     void OnEnable()
@@ -29,11 +36,15 @@ public class Doors : MonoBehaviour
     {
         doorCollider.enabled = false;
         animator.GetComponent<Animator>().enabled = false;
+        doorSound?.PlayOpenSound(); // Play open sound
+
     }
     public void DoorClosed()
     {
         doorCollider.enabled = true;
         animator.GetComponent<Animator>().enabled = false;
+        doorSound?.PlayCloseSound(); // Play close sound
+
 
     }
     void OnTriggerEnter2D(Collider2D collision)
@@ -41,6 +52,7 @@ public class Doors : MonoBehaviour
         if (collision.CompareTag("Player") && _KeyCard1)
         {
             animator.GetComponent<Animator>().enabled = true;
+
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -55,3 +67,4 @@ public class Doors : MonoBehaviour
         _KeyCard1 = newValue;
     }
 }
+

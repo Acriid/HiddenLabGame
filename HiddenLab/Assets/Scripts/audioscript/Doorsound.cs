@@ -6,30 +6,48 @@ public class Doorsound : MonoBehaviour
     public AudioClip closeSound;
 
     private AudioSource audioSource;
-    private bool isOpen = false;
+    private Doors doorScript;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogWarning("No AudioSource found on this door!");
+        }
+
+        // Find and connect with the Doors script
+        doorScript = GetComponent<Doors>();
+        if (doorScript == null)
+        {
+            Debug.LogWarning("Doors script is missing on this GameObject!");
+        }
     }
 
-    void OnTriggerEnter(Collider other) // Detect when player enters trigger zone
+    public void PlayOpenSound()
     {
-        if (other.CompareTag("Player")) // Make sure it's the player
+        if (audioSource != null && openSound != null)
         {
-            // Toggle door state
-            isOpen = !isOpen;
+            audioSource.PlayOneShot(openSound);
+        }
+    }
 
-            // Play respective sound based on door state
-            if (isOpen)
-            {
-                audioSource.PlayOneShot(openSound);
-            }
-            else
-            {
-                audioSource.PlayOneShot(closeSound);
-            }
+    public void PlayCloseSound()
+    {
+        if (audioSource != null && closeSound != null)
+        {
+            audioSource.PlayOneShot(closeSound);
+        }
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            PlayOpenSound();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            PlayCloseSound();
         }
     }
 }

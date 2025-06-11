@@ -9,7 +9,7 @@ public class Flashlight : MonoBehaviour , iDataPersistence
         {
             this.gameObject.SetActive(false);
         }
-        SoundEffectManager.Play("flashlight");
+       
     }
     public void SaveData(ref GameData data)
     {
@@ -21,7 +21,8 @@ public class Flashlight : MonoBehaviour , iDataPersistence
         if (collision.gameObject.CompareTag("Player"))
         {
             this.gameObject.SetActive(false);
-            playerAttributes.RequestFlashLightGet(true);
+            playerAttributes.RequestFlashLightGet(true); ;
+            
         }
     }
 }
