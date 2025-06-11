@@ -9,6 +9,7 @@ public class Flashlight : MonoBehaviour , iDataPersistence
         {
             this.gameObject.SetActive(false);
         }
+        SoundEffectManager.Play("flashlight");
     }
     public void SaveData(ref GameData data)
     {
