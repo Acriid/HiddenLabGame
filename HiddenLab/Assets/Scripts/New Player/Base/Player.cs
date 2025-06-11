@@ -20,6 +20,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     private bool _isStreatched;
     private float _impulseSpeed;
     private bool _addedImpulse;
+    private bool _HasFlashlight;
     #endregion
     private SpringJoint2D slimeSJ;
     private GameObject fileobject = null;
