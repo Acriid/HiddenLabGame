@@ -24,7 +24,7 @@ public class ChasmCollision : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer < 0f)
         {
-            collision.gameObject.transform.position = new Vector3(0f, 0f, 0f);
+            collision.gameObject.transform.position = new Vector3(-18f, 0f, 0f);
             timer = 2f;
         }
 

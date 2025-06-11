@@ -251,7 +251,6 @@ GameObject:
   - component: {fileID: 262900158}
   - component: {fileID: 262900160}
   - component: {fileID: 262900159}
-  - component: {fileID: 262900161}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -321,19 +320,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262900157}
   m_CullTransparentMesh: 1
---- !u!114 &262900161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262900157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a832c97d4e124b47a458046f193b821, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputDelay: 0.1
 --- !u!1 &330547112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,6 +1718,7 @@ GameObject:
   - component: {fileID: 981035531}
   - component: {fileID: 981035530}
   - component: {fileID: 981035529}
+  - component: {fileID: 981035533}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1823,6 +1810,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &981035533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981035528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f562ce02081ad43a7bbc14b4d97695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHolder: {fileID: 0}
+  Selectables:
+  - {fileID: 384040664}
+  - {fileID: 767936495}
+  - {fileID: 61106812}
+  - {fileID: 444114634}
+  _firstSelected: {fileID: 384040664}
+  _navigateReference: {fileID: -8784545083839296357, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  _clickAction: {fileID: 7882477243882325209, guid: 1b4a6f11add2a644d83ba0e663ff8aa5, type: 3}
 --- !u!1 &1115351195
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,6 +1917,7 @@ MonoBehaviour:
     KeyCard1: 0
     KeyCard2: 0
     KeyCard3: 0
+    HasFlashlight: 0
 --- !u!1 &1429453230
 GameObject:
   m_ObjectHideFlags: 0

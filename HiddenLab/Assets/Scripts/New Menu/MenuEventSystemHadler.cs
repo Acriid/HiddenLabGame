@@ -29,7 +29,11 @@ public class MenuEventSystemHadler : MonoBehaviour
     public virtual void OnEnable()
     {
         Debug.Log("Opened Menu");
-        playerHolder.SetActive(false);
+        if (playerHolder != null)
+        {
+            playerHolder.SetActive(false);           
+        }
+
         _navigateReference.action.performed += OnNavigate;
         _clickAction.action.performed += OnClickAction;
         StartCoroutine(SelectAfterDelay());
@@ -40,7 +44,10 @@ public class MenuEventSystemHadler : MonoBehaviour
         if (this != null)
         {
             Debug.Log("Closed Menu");
-            playerHolder.SetActive(true);
+            if (playerHolder != null)
+            {  
+                playerHolder.SetActive(true);
+            }
             _navigateReference.action.performed -= OnNavigate;
             _clickAction.action.performed -= OnClickAction;
             Time.timeScale = 1;           
