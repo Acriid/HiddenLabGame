@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: a721fb97a3af8304ea6ccc5c25306541
+guid: de6ee41e8bfab464897d183fef42da00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7996004517280420882
-    second: dried blood_0
+      213: -419931124965917521
+    second: designs capsule-Recovered 1_0
   - first:
-      213: 1772833837010018800
-    second: dried blood_1
+      213: -5357355145253381250
+    second: designs capsule-Recovered 1_1
   - first:
-      213: 1674371390572351805
-    second: dried blood_2
+      213: 2291521646897800650
+    second: designs capsule-Recovered 1_2
   - first:
-      213: 8068041718294630831
-    second: dried blood_3
-  - first:
-      213: 7286467971998534419
-    second: dried blood_4
+      213: -3135653717695002555
+    second: designs capsule-Recovered 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 76
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,111 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dried blood_0
+      name: designs capsule-Recovered 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 124
-        height: 124
+        x: 3
+        y: 127
+        width: 114
+        height: 118
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2141bea6eb387fe60800000000000000
-      internalID: 7996004517280420882
+      spriteID: facb642edda1c2af0800000000000000
+      internalID: -419931124965917521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_1
+      name: designs capsule-Recovered 1_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 63
-        height: 60
+        x: 148
+        y: 140
+        width: 90
+        height: 108
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f166cc5bfe5a9810800000000000000
-      internalID: 1772833837010018800
+      spriteID: e7b9f8f31e9d6a5b0800000000000000
+      internalID: -5357355145253381250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_2
+      name: designs capsule-Recovered 1_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 59
-        width: 58
-        height: 65
+        x: 6
+        y: 6
+        width: 115
+        height: 117
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d31542598ef8c3710800000000000000
-      internalID: 1674371390572351805
+      spriteID: ac5267efbce1dcf10800000000000000
+      internalID: 2291521646897800650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_3
+      name: designs capsule-Recovered 1_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 60
-        height: 58
+        x: 138
+        y: 17
+        width: 98
+        height: 105
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa1dbfb423177ff60800000000000000
-      internalID: 8068041718294630831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dried blood_4
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 14
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31bcb32e30cbe1560800000000000000
-      internalID: 7286467971998534419
+      spriteID: 5480822ae8beb74d0800000000000000
+      internalID: -3135653717695002555
       vertices: []
       indices: 
       edges: []
@@ -225,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5cbd48366d94b44899f7681dd076776
+    spriteID: 0bbd022d23b68744899e313a913d283e
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dried blood_0: 7996004517280420882
-      dried blood_1: 1772833837010018800
-      dried blood_2: 1674371390572351805
-      dried blood_3: 8068041718294630831
-      dried blood_4: 7286467971998534419
+      designs capsule-Recovered 1_0: -419931124965917521
+      designs capsule-Recovered 1_1: -5357355145253381250
+      designs capsule-Recovered 1_2: 2291521646897800650
+      designs capsule-Recovered 1_3: -3135653717695002555
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

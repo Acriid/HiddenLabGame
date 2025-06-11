@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: a721fb97a3af8304ea6ccc5c25306541
+guid: 27f4de745d2ad1047ab8592ef4a76d18
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7996004517280420882
-    second: dried blood_0
+      213: 3545792481579744376
+    second: sewage an-sheet_0
   - first:
-      213: 1772833837010018800
-    second: dried blood_1
+      213: -284091906898890277
+    second: sewage an-sheet_1
   - first:
-      213: 1674371390572351805
-    second: dried blood_2
+      213: 6387993773605989871
+    second: sewage an-sheet_2
   - first:
-      213: 8068041718294630831
-    second: dried blood_3
+      213: -4894296515747316292
+    second: sewage an-sheet_3
   - first:
-      213: 7286467971998534419
-    second: dried blood_4
+      213: 5924075015575732673
+    second: sewage an-sheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 76
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,111 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dried blood_0
+      name: sewage an-sheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 124
-        height: 124
+        x: 45
+        y: 143
+        width: 43
+        height: 102
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2141bea6eb387fe60800000000000000
-      internalID: 7996004517280420882
+      spriteID: 87cbfcfb97f253130800000000000000
+      internalID: 3545792481579744376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_1
+      name: sewage an-sheet_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 63
-        height: 60
+        x: 293
+        y: 141
+        width: 43
+        height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f166cc5bfe5a9810800000000000000
-      internalID: 1772833837010018800
+      spriteID: bd17ab57ae3be0cf0800000000000000
+      internalID: -284091906898890277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_2
+      name: sewage an-sheet_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 59
-        width: 58
-        height: 65
+        x: 541
+        y: 142
+        width: 45
+        height: 103
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d31542598ef8c3710800000000000000
-      internalID: 1674371390572351805
+      spriteID: fed2137fd76b6a850800000000000000
+      internalID: 6387993773605989871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_3
+      name: sewage an-sheet_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 60
-        height: 58
+        x: 789
+        y: 141
+        width: 43
+        height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa1dbfb423177ff60800000000000000
-      internalID: 8068041718294630831
+      spriteID: cbdf2710047f31cb0800000000000000
+      internalID: -4894296515747316292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_4
+      name: sewage an-sheet_4
       rect:
         serializedVersion: 2
-        x: 119
-        y: 14
-        width: 5
-        height: 8
+        x: 1037
+        y: 139
+        width: 47
+        height: 106
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31bcb32e30cbe1560800000000000000
-      internalID: 7286467971998534419
+      spriteID: 1c1882ee6da863250800000000000000
+      internalID: 5924075015575732673
       vertices: []
       indices: 
       edges: []
@@ -225,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5cbd48366d94b44899f7681dd076776
+    spriteID: bfea6f7da8be95840b611be0ed617e3f
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dried blood_0: 7996004517280420882
-      dried blood_1: 1772833837010018800
-      dried blood_2: 1674371390572351805
-      dried blood_3: 8068041718294630831
-      dried blood_4: 7286467971998534419
+      sewage an-sheet_0: 3545792481579744376
+      sewage an-sheet_1: -284091906898890277
+      sewage an-sheet_2: 6387993773605989871
+      sewage an-sheet_3: -4894296515747316292
+      sewage an-sheet_4: 5924075015575732673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

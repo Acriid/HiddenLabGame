@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: a721fb97a3af8304ea6ccc5c25306541
+guid: 64fa960148167f44d98753db57ce5763
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7996004517280420882
-    second: dried blood_0
-  - first:
-      213: 1772833837010018800
-    second: dried blood_1
-  - first:
-      213: 1674371390572351805
-    second: dried blood_2
-  - first:
-      213: 8068041718294630831
-    second: dried blood_3
-  - first:
-      213: 7286467971998534419
-    second: dried blood_4
+      213: -8266377061466733604
+    second: dust ground_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 76
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,111 +100,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dried blood_0
+      name: dust ground_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd386d71cdde74d80800000000000000
+      internalID: -8266377061466733604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust ground_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 62
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34fdbeeb80675241ad8a78b1c61baeb
+      internalID: -2134148466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dust ground_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 124
-        height: 124
+        width: 62
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2141bea6eb387fe60800000000000000
-      internalID: 7996004517280420882
+      spriteID: 7fca4311872f8b648a751181eaa912aa
+      internalID: 1374249437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_1
+      name: dust ground_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 62
         y: 0
-        width: 63
-        height: 60
+        width: 62
+        height: 62
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0f166cc5bfe5a9810800000000000000
-      internalID: 1772833837010018800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dried blood_2
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 59
-        width: 58
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d31542598ef8c3710800000000000000
-      internalID: 1674371390572351805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dried blood_3
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 60
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa1dbfb423177ff60800000000000000
-      internalID: 8068041718294630831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dried blood_4
-      rect:
-        serializedVersion: 2
-        x: 119
-        y: 14
-        width: 5
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 31bcb32e30cbe1560800000000000000
-      internalID: 7286467971998534419
+      spriteID: 1dc5fd2ae6cb68648b7e1907a4d581c0
+      internalID: 823859945
       vertices: []
       indices: 
       edges: []
@@ -225,7 +191,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5cbd48366d94b44899f7681dd076776
+    spriteID: 7f5c7957cc948934186d73d3653ac6b0
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +201,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dried blood_0: 7996004517280420882
-      dried blood_1: 1772833837010018800
-      dried blood_2: 1674371390572351805
-      dried blood_3: 8068041718294630831
-      dried blood_4: 7286467971998534419
+      dust ground_0: -8266377061466733604
+      dust ground_1: -2134148466
+      dust ground_2: 1374249437
+      dust ground_3: 823859945
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

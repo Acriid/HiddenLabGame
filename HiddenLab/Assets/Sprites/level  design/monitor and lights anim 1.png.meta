@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: a721fb97a3af8304ea6ccc5c25306541
+guid: 2baa3bd6fbe220140947d908d4a1f191
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7996004517280420882
-    second: dried blood_0
+      213: 8672308570963842260
+    second: monitor and lights anim 1_0
   - first:
-      213: 1772833837010018800
-    second: dried blood_1
+      213: 1097923885310166385
+    second: monitor and lights anim 1_1
   - first:
-      213: 1674371390572351805
-    second: dried blood_2
+      213: 5679850081574316203
+    second: monitor and lights anim 1_2
   - first:
-      213: 8068041718294630831
-    second: dried blood_3
+      213: 6974454259863864775
+    second: monitor and lights anim 1_3
   - first:
-      213: 7286467971998534419
-    second: dried blood_4
+      213: 6886071921872548345
+    second: monitor and lights anim 1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 76
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,111 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dried blood_0
+      name: monitor and lights anim 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 124
-        height: 124
+        x: 2
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2141bea6eb387fe60800000000000000
-      internalID: 7996004517280420882
+      spriteID: 4d410ea82ba3a5870800000000000000
+      internalID: 8672308570963842260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_1
+      name: monitor and lights anim 1_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 63
-        height: 60
+        x: 126
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f166cc5bfe5a9810800000000000000
-      internalID: 1772833837010018800
+      spriteID: 1754456e4fb9c3f00800000000000000
+      internalID: 1097923885310166385
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_2
+      name: monitor and lights anim 1_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 59
-        width: 58
-        height: 65
+        x: 250
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d31542598ef8c3710800000000000000
-      internalID: 1674371390572351805
+      spriteID: ba8e5b95e81e2de40800000000000000
+      internalID: 5679850081574316203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_3
+      name: monitor and lights anim 1_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 60
-        height: 58
+        x: 374
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa1dbfb423177ff60800000000000000
-      internalID: 8068041718294630831
+      spriteID: 7c54565723d3ac060800000000000000
+      internalID: 6974454259863864775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_4
+      name: monitor and lights anim 1_4
       rect:
         serializedVersion: 2
-        x: 119
-        y: 14
-        width: 5
-        height: 8
+        x: 498
+        y: 62
+        width: 57
+        height: 61
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31bcb32e30cbe1560800000000000000
-      internalID: 7286467971998534419
+      spriteID: 9f13101dded309f50800000000000000
+      internalID: 6886071921872548345
       vertices: []
       indices: 
       edges: []
@@ -225,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5cbd48366d94b44899f7681dd076776
+    spriteID: 27bc26510e3c8f8468cecc7ec4d17237
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dried blood_0: 7996004517280420882
-      dried blood_1: 1772833837010018800
-      dried blood_2: 1674371390572351805
-      dried blood_3: 8068041718294630831
-      dried blood_4: 7286467971998534419
+      monitor and lights anim 1_0: 8672308570963842260
+      monitor and lights anim 1_1: 1097923885310166385
+      monitor and lights anim 1_2: 5679850081574316203
+      monitor and lights anim 1_3: 6974454259863864775
+      monitor and lights anim 1_4: 6886071921872548345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

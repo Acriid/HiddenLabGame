@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: a721fb97a3af8304ea6ccc5c25306541
+guid: b217e41beae9c4245a9f06234ec77f4f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7996004517280420882
-    second: dried blood_0
+      213: -6245679134230496486
+    second: objectsss_0
   - first:
-      213: 1772833837010018800
-    second: dried blood_1
+      213: 5267945877500045896
+    second: objectsss_1
   - first:
-      213: 1674371390572351805
-    second: dried blood_2
+      213: 723028032728787407
+    second: objectsss_2
   - first:
-      213: 8068041718294630831
-    second: dried blood_3
+      213: 8318889507696019192
+    second: objectsss_3
   - first:
-      213: 7286467971998534419
-    second: dried blood_4
+      213: 1190979471058883554
+    second: objectsss_4
+  - first:
+      213: -2948904598072486704
+    second: objectsss_5
+  - first:
+      213: -1590819460501116916
+    second: objectsss_6
+  - first:
+      213: -2833582496954901842
+    second: objectsss_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,111 +121,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dried blood_0
+      name: objectsss_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 124
-        height: 124
+        x: 7
+        y: 64
+        width: 46
+        height: 54
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2141bea6eb387fe60800000000000000
-      internalID: 7996004517280420882
+      spriteID: a1b3f1f1be3e259a0800000000000000
+      internalID: -6245679134230496486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 63
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0f166cc5bfe5a9810800000000000000
-      internalID: 1772833837010018800
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dried blood_2
+      name: objectsss_1
       rect:
         serializedVersion: 2
         x: 65
-        y: 59
-        width: 58
-        height: 65
+        y: 110
+        width: 27
+        height: 11
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d31542598ef8c3710800000000000000
-      internalID: 1674371390572351805
+      spriteID: 84aaf546dd08b1940800000000000000
+      internalID: 5267945877500045896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_3
+      name: objectsss_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 60
-        height: 58
+        x: 69
+        y: 99
+        width: 49
+        height: 17
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa1dbfb423177ff60800000000000000
-      internalID: 8068041718294630831
+      spriteID: fc9e27d3a26b80a00800000000000000
+      internalID: 723028032728787407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dried blood_4
+      name: objectsss_3
       rect:
         serializedVersion: 2
-        x: 119
-        y: 14
-        width: 5
+        x: 69
+        y: 69
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f602ff8ee1a27370800000000000000
+      internalID: 8318889507696019192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objectsss_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 67
+        width: 42
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e35f33d485378010800000000000000
+      internalID: 1190979471058883554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objectsss_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 9
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31bcb32e30cbe1560800000000000000
-      internalID: 7286467971998534419
+      spriteID: 0d49f5b54e26317d0800000000000000
+      internalID: -2948904598072486704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objectsss_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 61
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c086d0311264ce9e0800000000000000
+      internalID: -1590819460501116916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objectsss_7
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa1d336bb71da8d0800000000000000
+      internalID: -2833582496954901842
       vertices: []
       indices: 
       edges: []
@@ -225,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5cbd48366d94b44899f7681dd076776
+    spriteID: ded2ef766b94ffe49a85752797c7ec5b
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +310,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dried blood_0: 7996004517280420882
-      dried blood_1: 1772833837010018800
-      dried blood_2: 1674371390572351805
-      dried blood_3: 8068041718294630831
-      dried blood_4: 7286467971998534419
+      objectsss_0: -6245679134230496486
+      objectsss_1: 5267945877500045896
+      objectsss_2: 723028032728787407
+      objectsss_3: 8318889507696019192
+      objectsss_4: 1190979471058883554
+      objectsss_5: -2948904598072486704
+      objectsss_6: -1590819460501116916
+      objectsss_7: -2833582496954901842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
