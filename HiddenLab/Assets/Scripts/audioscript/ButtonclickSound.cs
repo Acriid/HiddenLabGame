@@ -11,7 +11,7 @@ public class ButtonSound : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(PlayClickSound);
     }
 
-    void PlayClickSound()
+    public void PlayClickSound()
     {
         audioSource.PlayOneShot(clickSound);
     }
