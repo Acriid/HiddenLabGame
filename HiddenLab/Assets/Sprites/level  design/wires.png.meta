@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 95f2b89138bb60d4d8f9d3d035d39a4b
+guid: a8d0544d8ca41cf4484900b6035c7546
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7677051617820418628
-    second: floor tile level3_0
+      213: 8670328546018703123
+    second: wires_0
+  - first:
+      213: -1405447397044946314
+    second: wires_1
+  - first:
+      213: -8580637365894634084
+    second: wires_2
+  - first:
+      213: -5109524299098009440
+    second: wires_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: floor tile level3_0
+      name: wires_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 62
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,30 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbdd9757a32a57590800000000000000
-      internalID: -7677051617820418628
+      spriteID: 317bf5f00e1335870800000000000000
+      internalID: 8670328546018703123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor tile level3_1
+      name: wires_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 62
+        y: 62
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a2540557f4214fb4b8332fd3224f8e47
-      internalID: 257376184
+      spriteID: 67a73ace909de7ce0800000000000000
+      internalID: -1405447397044946314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wires_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95286327c37be880800000000000000
+      internalID: -8580637365894634084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wires_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0590da8b25719b0800000000000000
+      internalID: -5109524299098009440
       vertices: []
       indices: 
       edges: []
@@ -160,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f131aa41230e94b44ab0f22cfb999ff7
+    spriteID: 7155936d90c64774a91960b5ac92cfa0
     internalID: 0
     vertices: []
     indices: 
@@ -170,8 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      floor tile level3_0: -7677051617820418628
-      floor tile level3_1: 257376184
+      wires_0: 8670328546018703123
+      wires_1: -1405447397044946314
+      wires_2: -8580637365894634084
+      wires_3: -5109524299098009440
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

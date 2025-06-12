@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 87839eb705da5f948ad12df7a39a8e77
+guid: a62dd5b5bfe8ff94a9bf115ccd7f92cb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1729044488589869867
-    second: floor layout level 1_0
+      213: -3401126934738427069
+    second: VINES and webs_0
+  - first:
+      213: 7559491714955369844
+    second: VINES and webs_1
+  - first:
+      213: 8646488718070084439
+    second: VINES and webs_2
+  - first:
+      213: 2269547998028546117
+    second: VINES and webs_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -96,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: floor layout level 1_0
+      name: VINES and webs_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 2800
-        height: 800
+        y: 62
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5dcf0c0d2333108e0800000000000000
-      internalID: -1729044488589869867
+      spriteID: 34327e2a215ccc0d0800000000000000
+      internalID: -3401126934738427069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VINES and webs_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 62
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d5c60b9a5b8e860800000000000000
+      internalID: 7559491714955369844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VINES and webs_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7537df29daf7ef770800000000000000
+      internalID: 8646488718070084439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VINES and webs_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540c03f21ed0f7f10800000000000000
+      internalID: 2269547998028546117
       vertices: []
       indices: 
       edges: []
@@ -138,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 83975da5107aff347ba7afe5b81ad958
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      floor layout level 1_0: -1729044488589869867
+      VINES and webs_0: -3401126934738427069
+      VINES and webs_1: 7559491714955369844
+      VINES and webs_2: 8646488718070084439
+      VINES and webs_3: 2269547998028546117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
