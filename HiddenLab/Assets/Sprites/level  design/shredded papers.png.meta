@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 8f13f06b1d2c64143945eea039012ab4
+guid: cccf5532848dfcf4791cf8e4c0ef98e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8066048999302011172
-    second: table,chairs and computer for lab_0
+      213: -8747115097516104651
+    second: shredded papers_0
   - first:
-      213: 788169860551156631
-    second: table,chairs and computer for lab_1
+      213: -7324328387313476436
+    second: shredded papers_1
   - first:
-      213: 519818289155791545
-    second: table,chairs and computer for lab_2
+      213: -5617536574293505182
+    second: shredded papers_2
+  - first:
+      213: -1364711035907542110
+    second: shredded papers_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 7
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: table,chairs and computer for lab_0
+      name: shredded papers_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 82
-        width: 63
-        height: 32
+        y: 62
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd665bfbb23af0090800000000000000
-      internalID: -8066048999302011172
+      spriteID: 534a81bb9210c9680800000000000000
+      internalID: -8747115097516104651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table,chairs and computer for lab_1
+      name: shredded papers_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 76
-        width: 24
-        height: 33
+        x: 62
+        y: 62
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79322d0ff4420fa00800000000000000
-      internalID: 788169860551156631
+      spriteID: cacdedf3322ca5a90800000000000000
+      internalID: -7324328387313476436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table,chairs and computer for lab_2
+      name: shredded papers_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 14
-        width: 63
-        height: 47
+        x: 0
+        y: 0
+        width: 62
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +168,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bad1e8daf3c63700800000000000000
-      internalID: 519818289155791545
+      spriteID: 26b8878af308a02b0800000000000000
+      internalID: -5617536574293505182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shredded papers_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3fcab1b829f0de0800000000000000
+      internalID: -1364711035907542110
       vertices: []
       indices: 
       edges: []
@@ -188,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 73faee553b924994487a3caf78713a91
     internalID: 0
     vertices: []
     indices: 
@@ -198,11 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wall layout design_0: -120489637588828977
-      wall layout design_1: -4117629779423311915
-      wall layout design_2: -7278693995423070139
-      wall layout design_3: -3485480116542787528
-      wall layout design_4: -1645296524547531380
+      shredded papers_0: -8747115097516104651
+      shredded papers_1: -7324328387313476436
+      shredded papers_2: -5617536574293505182
+      shredded papers_3: -1364711035907542110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 8f13f06b1d2c64143945eea039012ab4
+guid: 2150bbe434a77ef4eb5b741b37147989
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8066048999302011172
-    second: table,chairs and computer for lab_0
+      213: 7993424771136345581
+    second: lab object_0
   - first:
-      213: 788169860551156631
-    second: table,chairs and computer for lab_1
-  - first:
-      213: 519818289155791545
-    second: table,chairs and computer for lab_2
+      213: 7880937879625216233
+    second: lab object_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 7
+  spritePixelsToUnits: 10
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,29 +99,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: table,chairs and computer for lab_0
+      name: lab object_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 82
-        width: 63
+        y: 32
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -134,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd665bfbb23af0090800000000000000
-      internalID: -8066048999302011172
+      spriteID: de5d3667a795eee60800000000000000
+      internalID: 7993424771136345581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table,chairs and computer for lab_1
+      name: lab object_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 76
-        width: 24
-        height: 33
+        x: 35
+        y: 0
+        width: 29
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,30 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79322d0ff4420fa00800000000000000
-      internalID: 788169860551156631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: table,chairs and computer for lab_2
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 14
-        width: 63
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9bad1e8daf3c63700800000000000000
-      internalID: 519818289155791545
+      spriteID: 9e03bfb1f37be5d60800000000000000
+      internalID: 7880937879625216233
       vertices: []
       indices: 
       edges: []
@@ -188,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8e9dbece14d5f3c40b3736d48d83151c
     internalID: 0
     vertices: []
     indices: 
@@ -198,11 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wall layout design_0: -120489637588828977
-      wall layout design_1: -4117629779423311915
-      wall layout design_2: -7278693995423070139
-      wall layout design_3: -3485480116542787528
-      wall layout design_4: -1645296524547531380
+      lab object_0: 7993424771136345581
+      lab object_1: 7880937879625216233
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

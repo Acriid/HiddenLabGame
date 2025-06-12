@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 8f13f06b1d2c64143945eea039012ab4
+guid: 04998f99c129f15418ef119703c115ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8066048999302011172
-    second: table,chairs and computer for lab_0
+      213: 3608085684550157365
+    second: caboard broken_0
   - first:
-      213: 788169860551156631
-    second: table,chairs and computer for lab_1
+      213: 3423509618910817229
+    second: caboard broken_1
   - first:
-      213: 519818289155791545
-    second: table,chairs and computer for lab_2
+      213: -1597398975312883168
+    second: caboard broken_2
+  - first:
+      213: 6926295155941308618
+    second: caboard broken_3
+  - first:
+      213: -7643801150322947353
+    second: caboard broken_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 7
+  spritePixelsToUnits: 6
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,30 +108,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: table,chairs and computer for lab_0
+      name: caboard broken_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 82
-        width: 63
-        height: 32
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd665bfbb23af0090800000000000000
-      internalID: -8066048999302011172
+      spriteID: 534c8ca40de721230800000000000000
+      internalID: 3608085684550157365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table,chairs and computer for lab_1
+      name: caboard broken_1
       rect:
         serializedVersion: 2
-        x: 83
-        y: 76
-        width: 24
-        height: 33
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79322d0ff4420fa00800000000000000
-      internalID: 788169860551156631
+      spriteID: dcbef402cdfb28f20800000000000000
+      internalID: 3423509618910817229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table,chairs and computer for lab_2
+      name: caboard broken_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 14
-        width: 63
-        height: 47
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +171,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9bad1e8daf3c63700800000000000000
-      internalID: 519818289155791545
+      spriteID: 02217e76816e4d9e0800000000000000
+      internalID: -1597398975312883168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: caboard broken_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8f36b4fb42f1060800000000000000
+      internalID: 6926295155941308618
       vertices: []
       indices: 
       edges: []
@@ -188,7 +203,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cd6eda6619ba21f45b688a70757db7f6
     internalID: 0
     vertices: []
     indices: 
@@ -198,11 +213,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wall layout design_0: -120489637588828977
-      wall layout design_1: -4117629779423311915
-      wall layout design_2: -7278693995423070139
-      wall layout design_3: -3485480116542787528
-      wall layout design_4: -1645296524547531380
+      caboard broken_0: 3608085684550157365
+      caboard broken_1: 3423509618910817229
+      caboard broken_2: -1597398975312883168
+      caboard broken_3: 6926295155941308618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
