@@ -3,51 +3,62 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Handles organizing and playing sound effects in the game
 public class SoundEffectLibrary : MonoBehaviour
 {
-    [SerializeField] private SoundEffectGroup[] soundEffectGroup;
+    // Group of sound effects set in the Inspector
+    [SerializeField] private SoundEffectGroup[] soundEffectGroups;
+
+    // A dictionary to map group names to a list of audio clips
     private Dictionary<string, List<AudioClip>> soundDictionary;
-    private IEnumerable<SoundEffectGroup> soundEffectGroups;
 
     private void Awake()
     {
-        InitializeDictionary();
+        // Set up the dictionary when the object awakens
+        InitializeSoundDictionary();
     }
 
-
-    private void InitializeDictionary()
+    // Builds the dictionary from the serialized array
+    private void InitializeSoundDictionary()
     {
         soundDictionary = new Dictionary<string, List<AudioClip>>();
-        foreach (SoundEffectGroup soundEffectGroup in soundEffectGroup)
+
+        // Loop through each group and add it to the dictionary
+        foreach (SoundEffectGroup group in soundEffectGroups)
         {
-            soundDictionary[soundEffectGroup.name] = soundEffectGroup.audioClips;
+            soundDictionary[group.name] = group.audioClips;
         }
     }
 
-    public AudioClip GetRandomClip(string name)
+    // Returns a random audio clip from the group with the given name
+    public AudioClip GetRandomClip(string groupName)
     {
-        if (soundDictionary.ContainsKey(name))
+        // Check if the dictionary has the requested group
+        if (soundDictionary.TryGetValue(groupName, out List<AudioClip> clips))
         {
-           List<AudioClip> audioClips = soundDictionary[name];
-            if (audioClips.Count > 0)
+            // Return a random clip if the list is not empty
+            if (clips.Count > 0)
             {
-                return audioClips[UnityEngine.Random.Range(0, audioClips.Count)];
+                return clips[UnityEngine.Random.Range(0, clips.Count)];
             }
         }
+
+        // If the group doesn't exist or has no clips, return null
         return null;
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    // Called before the first frame update (optional in this case)
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
+    // Called once per frame (optional in this case)
     void Update()
     {
-        
     }
 }
+
+// A serializable struct to represent a named group of audio clips
 [System.Serializable]
 public struct SoundEffectGroup
 {

@@ -19,6 +19,7 @@ public class movementSound : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            Debug.Log("Left Arrow Pressed");
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
