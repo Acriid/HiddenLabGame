@@ -11,6 +11,10 @@ public class ShowInput : MonoBehaviour
         {
             Debug.Log("Canvas not found");
         }
+        if (canvas.activeSelf)
+        {
+            canvas.SetActive(false);
+        }
     }
     void OnTriggerEnter2D(Collider2D collision)
     {

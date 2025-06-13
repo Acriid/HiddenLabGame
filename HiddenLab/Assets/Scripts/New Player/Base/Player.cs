@@ -544,9 +544,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             specificHJtoadd.connectedBody = pickup.GetComponent<Rigidbody2D>();
             specificHJtoadd.enableCollision = true;
         }*/
-        string text;
-        text = "test";
-        popupmenuText.text = text;
+        string text;       
         if (itemTriggerCheck.collisionObject != null)
         {
             //KeyCard1 PickUp
@@ -556,24 +554,25 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
                 itemTriggerCheck.collisionObject.SetActive(false);
                 itemTriggerCheck.collisionObject = null;
                 text = "You got KeyCard1. Press esc to view current KeyCard.";
-                
+                popupmenuText.text = text;
+                PopupMenu.SetActive(true);
             }
             //KeyCard2 PickUp
-            if (itemTriggerCheck.collisionObject.name == "KeyCard2")
+            else if (itemTriggerCheck.collisionObject.name == "KeyCard2")
             {
                 playerAttributes.RequestKeyCard2Change(true);
                 itemTriggerCheck.collisionObject.SetActive(false);
                 itemTriggerCheck.collisionObject = null;
             }
             //KeyCard3 PickUp
-            if (itemTriggerCheck.collisionObject.name == "KeyCard3")
+            else if (itemTriggerCheck.collisionObject.name == "KeyCard3")
             {
                 playerAttributes.RequestKeyCard3Change(true);
                 itemTriggerCheck.collisionObject.SetActive(false);
                 itemTriggerCheck.collisionObject = null;
             }
             //Flashlight Pickup
-            if (itemTriggerCheck.collisionObject.name == "FlashLight")
+            else if (itemTriggerCheck.collisionObject.name == "FlashLight")
             {
                 playerAttributes.RequestFlashLightGet(true);
                 itemTriggerCheck.collisionObject.SetActive(false);
@@ -584,7 +583,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         {
             Debug.Log("Item Not Found");
         }
-        PopupMenu.SetActive(true);
     }
     #endregion
     #region File Action
