@@ -1,24 +1,16 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 
-public class Ccapsulesound : MonoBehaviour
+public class Capsulesound : MonoBehaviour
 {
-    [SerializeField] private string soundName = "Capsule";
-   
-
-    private void Start()
-    {
-        
-        
-      
-    }
+    [SerializeField] private AudioSource audioSource; // Attach an AudioSource to the capsule
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        
-            SoundEffectManager.Play("capsule");
-        
-
+        if (collision.CompareTag("Player"))
+        {
+            audioSource.PlayOneShot(audioSource.clip); // Play sound locally
+        }
     }
 }

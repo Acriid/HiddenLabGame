@@ -11,6 +11,7 @@ public class KeyCard1Pickup : MonoBehaviour
         if(playerAttributes.KeyCard1)
         {
             this.gameObject.SetActive(false);
+            
         }
 
     }
