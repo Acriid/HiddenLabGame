@@ -489,10 +489,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         if (flashlight.activeSelf)
         {
             flashlight.SetActive(false);
+            playerAttributes.RequestInLightChange(false);
         }
         else
         {
             flashlight.SetActive(true);
+            playerAttributes.RequestInLightChange(true);
         }
     }
     #endregion
