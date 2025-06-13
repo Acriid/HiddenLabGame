@@ -5,6 +5,8 @@ using UnityEngine.UIElements.Experimental;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using System.IO;
+using System.Runtime.CompilerServices;
+using TMPro;
 
 
 public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDataPersistence
@@ -12,6 +14,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     #region Menus
     public GameObject SaveMenu;
     public GameObject OptionsMenu;
+    public GameObject DeathMenu;
+    public GameObject PopupMenu;
+    public TextMeshProUGUI popupmenuText;
     #endregion
     #region Player Attributes
     //Player Attributes
@@ -19,6 +24,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     private bool _isStreatched;
     private float _impulseSpeed;
     private bool _addedImpulse;
+    private bool _HasFlashlight;
+    private ItemTriggerCheck itemTriggerCheck;
     #endregion
     private SpringJoint2D slimeSJ;
     private GameObject fileobject = null;
@@ -55,6 +62,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     private InputAction FileAction;
     private InputAction SaveAction;
     private InputAction OptionsAction;
+    //REMOVE LATER
+    private InputAction KillAction;
+    //REMOVE LATER
     #endregion
     #region Start/Awake
     void Awake()
@@ -103,7 +113,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
 
         //Controls
         ActionsInitialize();
-        
+
+        itemTriggerCheck = GetComponentInChildren<ItemTriggerCheck>();
+
         //Get RigidBody
         SlimeObjects = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject slime in SlimeObjects)
@@ -173,10 +185,14 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         }
         ClenupSlimeActions();
     }
-
+    public int GetHealth()
+    {
+        return _CurrentHealth;
+    }
     public void Death()
     {
         //TODO: show the death menu and pause the game
+        DeathMenu.SetActive(true);
     }
     public void Heal()
     {
@@ -197,6 +213,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         if(collision.collider.gameObject.CompareTag("Enemy"))
         {
+            Debug.Log("ow");
             Vector2 direction = (collision.collider.gameObject.transform.position - SlimeRB.transform.position).normalized;
             Damage();
             EnemyImpulse(-direction);
@@ -246,7 +263,15 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             SplitAction.Enable();
             SplitAction.performed += OnSplitAction;
         }
-        EnableStretchAction();
+        //Remove Later
+        if (KillAction == null)
+        {
+            KillAction = slimeControls.Slime.KillAction;
+            KillAction.Enable();
+            KillAction.performed += OnKillAction;
+        }
+        //Remove Later
+            EnableStretchAction();
 
 
     }
@@ -283,12 +308,21 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             OptionsAction.performed -= OnOptionsAction;
             OptionsAction = null;
         }
+        //remove later
+        if (KillAction != null)
+        {
+            KillAction.Disable();
+            KillAction.performed -= OnKillAction;
+            KillAction = null;
+        }
+        //remove later
         if (slimeControls != null)
         {
             slimeControls.Slime.Disable();
             slimeControls.Dispose();
             slimeControls = null;
         }
+
     }
     private void InitializePlayerAttributes()
     {
@@ -486,7 +520,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     #region PickUp Acion
     private void OnPickupAction(InputAction.CallbackContext ctx)
     {
-        HingeJoint2D specificHJtoadd = null;
+        /*HingeJoint2D specificHJtoadd = null;
         HingeJoint2D[] slimeHJs = this.GetComponents<HingeJoint2D>();
         if (slimeHJs.Length != 0)
         {
@@ -509,7 +543,48 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             }
             specificHJtoadd.connectedBody = pickup.GetComponent<Rigidbody2D>();
             specificHJtoadd.enableCollision = true;
+        }*/
+        string text;
+        text = "test";
+        popupmenuText.text = text;
+        if (itemTriggerCheck.collisionObject != null)
+        {
+            //KeyCard1 PickUp
+            if (itemTriggerCheck.collisionObject.name == "KeyCard1")
+            {
+                playerAttributes.RequestKeyCard1Change(true);
+                itemTriggerCheck.collisionObject.SetActive(false);
+                itemTriggerCheck.collisionObject = null;
+                text = "You got KeyCard1. Press esc to view current KeyCard.";
+                
+            }
+            //KeyCard2 PickUp
+            if (itemTriggerCheck.collisionObject.name == "KeyCard2")
+            {
+                playerAttributes.RequestKeyCard2Change(true);
+                itemTriggerCheck.collisionObject.SetActive(false);
+                itemTriggerCheck.collisionObject = null;
+            }
+            //KeyCard3 PickUp
+            if (itemTriggerCheck.collisionObject.name == "KeyCard3")
+            {
+                playerAttributes.RequestKeyCard3Change(true);
+                itemTriggerCheck.collisionObject.SetActive(false);
+                itemTriggerCheck.collisionObject = null;
+            }
+            //Flashlight Pickup
+            if (itemTriggerCheck.collisionObject.name == "FlashLight")
+            {
+                playerAttributes.RequestFlashLightGet(true);
+                itemTriggerCheck.collisionObject.SetActive(false);
+                itemTriggerCheck.collisionObject = null;
+            }
         }
+        else
+        {
+            Debug.Log("Item Not Found");
+        }
+        PopupMenu.SetActive(true);
     }
     #endregion
     #region File Action
@@ -556,6 +631,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         OptionsMenu.SetActive(true);
         Time.timeScale = 0;
+    }
+    #endregion
+    #region Kill Action (Remove later)
+    public void OnKillAction(InputAction.CallbackContext ctx)
+    {
+        Death();
     }
     #endregion
     #region Joints

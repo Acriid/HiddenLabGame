@@ -1,29 +1,29 @@
 using UnityEngine;
 
-public class capsulesound : MonoBehaviour
+[RequireComponent(typeof(AudioSource))]
+public class Ccapsulesound : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public Transform player;
-    public float triggerDistance = 5f;
+    [SerializeField] private string soundName = "Capsule";
+    private AudioSource source;
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-    }
+        source = GetComponent<AudioSource>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Vector3.Distance(transform.position, player.position) < triggerDistance)
+        AudioClip clip = SoundEffectManager.GetClip(soundName);
+        if (clip != null)
         {
-            audioSource.Play();
-        }
-        else
-        {
-            audioSource.Stop();
-        }
+            source.clip = clip;
+            source.loop = true;
+            source.playOnAwake = true;
 
+            // 3D Spatial sound setup
+            source.spatialBlend = 1f;       // Fully 3D
+            source.minDistance = 2f;        // Full volume within this distance
+            source.maxDistance = 15f;       // Fades out after this range
+            source.rolloffMode = AudioRolloffMode.Linear;
+
+            source.Play();
+        }
     }
 }

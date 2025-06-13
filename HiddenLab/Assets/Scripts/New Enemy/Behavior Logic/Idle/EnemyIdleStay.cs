@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 [CreateAssetMenu(fileName = "Idle-Stay", menuName = "Enemy Logic/Idle Logic/Stay")]
 public class EnemyIdleStay : EnemyIdleSOBase
 {
     private float timer = 0f;
+    bool wentback = false;
     public override void DoEnterLogic()
     {
         base.DoEnterLogic();
+        Debug.Log("Idle");
         timer = 0f;
-        enemy.MoveEnemy(enemy.BasePosition);
+        //enemy.MoveEnemy(enemy.BasePosition);
     }
     public override void DoExitLogic()
     {
@@ -17,6 +20,12 @@ public class EnemyIdleStay : EnemyIdleSOBase
     public override void DoUpdateLogic()
     {
         base.DoUpdateLogic();
+        if (!wentback)
+        {
+            enemy.MoveEnemy(enemy.BasePosition);
+            wentback = true;
+        }
+        
         if (enemy.CanSeePlayer)
         {
             timer += Time.deltaTime;

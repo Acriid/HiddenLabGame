@@ -11,13 +11,14 @@ public class GameData
     public bool KeyCard1;
     public bool KeyCard2;
     public bool KeyCard3;
+    public bool HasFlashlight;
 
     public GameData()
     {
         //Initial game data
-        playerPosition.z = 0;
-        playerPosition.y = 0;
-        playerPosition.x = 0;
+        playerPosition.z = 0f;
+        playerPosition.y = 0f;
+        playerPosition.x = -18f;
 
         PlayerHealth = 2;
         Slime1Speed = 20f;
@@ -27,5 +28,7 @@ public class GameData
         KeyCard1 = false;
         KeyCard2 = false;
         KeyCard3 = false;
+
+        HasFlashlight = false;
     }
 }

@@ -46,12 +46,16 @@ public class PlayerImpulseState : PlayerState
         Vector2 Slime1Velocity = player.GetSlime1Velocity();
         Vector2 Slime2Velocity = player.GetSlime2Velocity();
         base.FixedUpdateState();
-    
-        if(distance > 1f )
+
+        if (distance > 1f)
         {
             player.Slime2MoveDirection(player.directiontoSlime1());
         }
-        else if(impulseclock > 1f && distance < 1f && Slime1Velocity.magnitude <= Slime2Velocity.magnitude)
+        else if (impulseclock > 0.3f && distance < 1f && Slime1Velocity.magnitude <= Slime2Velocity.magnitude)
+        {
+            player.playerStateMachine.ChangeState(player.playerMoveState);
+        }
+        if (Slime1Velocity.magnitude == 0f && player.GetHealth() == 1)
         {
             player.playerStateMachine.ChangeState(player.playerMoveState);
         }

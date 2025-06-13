@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemTriggerCheck : MonoBehaviour
 {
     private Player player;
-    public static List<GameObject> pickupitems = new List<GameObject>();
+    public  GameObject collisionObject;
     void Awake()
     {
         player = GetComponentInParent<Player>();
@@ -13,18 +13,18 @@ public class ItemTriggerCheck : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Pickup"))
+        if (collision.CompareTag("PickUp"))
         {
             player.setisInPickuprange(true);
-            pickupitems.Add(collision.gameObject);
+            collisionObject = collision.gameObject;
         }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Pickup"))
+        if (collision.CompareTag("PickUp"))
         {
             player.setisInPickuprange(false);
-            pickupitems.Remove(collision.gameObject);
+            collisionObject = null;
         }
     }
 }

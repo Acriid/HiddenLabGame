@@ -22,6 +22,7 @@ public class PlayerMoveState : PlayerState
         player.MoveSlime2(Vector2.zero);
         //Initialize controls
         InitializeInputSystem();
+        player.MakeSlime1Kinematic(false);
     }
 
     public override void ExitState()
