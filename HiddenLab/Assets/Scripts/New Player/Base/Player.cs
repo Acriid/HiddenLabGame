@@ -5,6 +5,8 @@ using UnityEngine.UIElements.Experimental;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using System.IO;
+using System.Runtime.CompilerServices;
+using TMPro;
 
 
 public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDataPersistence
@@ -13,6 +15,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     public GameObject SaveMenu;
     public GameObject OptionsMenu;
     public GameObject DeathMenu;
+    public GameObject PopupMenu;
+    public TextMeshProUGUI popupmenuText;
     #endregion
     #region Player Attributes
     //Player Attributes
@@ -21,6 +25,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     private float _impulseSpeed;
     private bool _addedImpulse;
     private bool _HasFlashlight;
+    private ItemTriggerCheck itemTriggerCheck;
     #endregion
     private SpringJoint2D slimeSJ;
     private GameObject fileobject = null;
@@ -108,7 +113,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
 
         //Controls
         ActionsInitialize();
-        
+
+        itemTriggerCheck = GetComponentInChildren<ItemTriggerCheck>();
+
         //Get RigidBody
         SlimeObjects = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject slime in SlimeObjects)
@@ -513,7 +520,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     #region PickUp Acion
     private void OnPickupAction(InputAction.CallbackContext ctx)
     {
-        HingeJoint2D specificHJtoadd = null;
+        /*HingeJoint2D specificHJtoadd = null;
         HingeJoint2D[] slimeHJs = this.GetComponents<HingeJoint2D>();
         if (slimeHJs.Length != 0)
         {
@@ -536,7 +543,48 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             }
             specificHJtoadd.connectedBody = pickup.GetComponent<Rigidbody2D>();
             specificHJtoadd.enableCollision = true;
+        }*/
+        string text;
+        text = "test";
+        popupmenuText.text = text;
+        if (itemTriggerCheck.collisionObject != null)
+        {
+            //KeyCard1 PickUp
+            if (itemTriggerCheck.collisionObject.name == "KeyCard1")
+            {
+                playerAttributes.RequestKeyCard1Change(true);
+                itemTriggerCheck.collisionObject.SetActive(false);
+                itemTriggerCheck.collisionObject = null;
+                text = "You got KeyCard1. Press esc to view current KeyCard.";
+                
+            }
+            //KeyCard2 PickUp
+            if (itemTriggerCheck.collisionObject.name == "KeyCard2")
+            {
+                playerAttributes.RequestKeyCard2Change(true);
+                itemTriggerCheck.collisionObject.SetActive(false);
+                itemTriggerCheck.collisionObject = null;
+            }
+            //KeyCard3 PickUp
+            if (itemTriggerCheck.collisionObject.name == "KeyCard3")
+            {
+                playerAttributes.RequestKeyCard3Change(true);
+                itemTriggerCheck.collisionObject.SetActive(false);
+                itemTriggerCheck.collisionObject = null;
+            }
+            //Flashlight Pickup
+            if (itemTriggerCheck.collisionObject.name == "FlashLight")
+            {
+                playerAttributes.RequestFlashLightGet(true);
+                itemTriggerCheck.collisionObject.SetActive(false);
+                itemTriggerCheck.collisionObject = null;
+            }
         }
+        else
+        {
+            Debug.Log("Item Not Found");
+        }
+        PopupMenu.SetActive(true);
     }
     #endregion
     #region File Action

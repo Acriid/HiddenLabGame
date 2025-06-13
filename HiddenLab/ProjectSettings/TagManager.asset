@@ -9,6 +9,7 @@ TagManager:
   - Pickup
   - SavePoint
   - Chasm
+  - PickUp
   layers:
   - Default
   - TransparentFX

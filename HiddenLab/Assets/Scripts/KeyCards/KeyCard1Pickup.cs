@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 
 public class KeyCard1Pickup : MonoBehaviour
 {
@@ -12,13 +14,5 @@ public class KeyCard1Pickup : MonoBehaviour
         }
 
     }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        //Collects keycard
-        if(collision.collider.CompareTag("Player"))
-        {
-            playerAttributes.RequestKeyCard1Change(true);
-            this.gameObject.SetActive(false);
-        }
-    }
+
 }
