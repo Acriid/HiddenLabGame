@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-// Manages playing sound effects and adjusting their volume through a UI slider
+// Manages playing sound effects 
 public class SoundEffectManager : MonoBehaviour
 {
     // Singleton instance for global access
@@ -15,8 +15,7 @@ public class SoundEffectManager : MonoBehaviour
     // Reference to the sound effect library
     private static SoundEffectLibrary soundEffectLibrary;
 
-    // UI slider to control sound effect volume
-    [SerializeField] private Slider sfxSlider;
+    
 
     // Ensures only one instance persists across scenes
     private void Awake()
@@ -52,20 +51,13 @@ public class SoundEffectManager : MonoBehaviour
     // Setup volume listener on startup
     void Start()
     {
-        sfxSlider.onValueChanged.AddListener(delegate { OnValueChanged(); });
+        
     }
 
-    // Static method to set volume directly
-    public static void SetVolume(float volume)
-    {
-        audioSource.volume = volume;
-    }
-
-    // Called whenever the slider value changes
-    public void OnValueChanged()
-    {
-        SetVolume(sfxSlider.value);
-    }
+    
+    
+    
+    
 
     // Optional: logic to run every frame (not used here)
     void Update()

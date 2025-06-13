@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Doorsound : MonoBehaviour
 {
-    public AudioClip openSound;
-    public AudioClip closeSound;
+    public AudioClip DoorSound;
+   
 
     private AudioSource audioSource;
     private Doors doorScript;
@@ -24,30 +24,15 @@ public class Doorsound : MonoBehaviour
         }
     }
 
-    public void PlayOpenSound()
+    public void PlayDoorSound()
     {
-        if (audioSource != null && openSound != null)
-        {
-            audioSource.PlayOneShot(openSound);
-        }
+        SoundEffectManager.Play("Door");
+       
     }
 
-    public void PlayCloseSound()
-    {
-        if (audioSource != null && closeSound != null)
-        {
-            audioSource.PlayOneShot(closeSound);
-        }
-    }
+   
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            PlayOpenSound();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            PlayCloseSound();
-        }
+       
     }
 }
