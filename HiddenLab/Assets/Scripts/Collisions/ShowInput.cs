@@ -2,11 +2,10 @@ using UnityEngine;
 
 public class ShowInput : MonoBehaviour
 {
-    private GameObject canvas;
+    [SerializeField] private GameObject canvas;
 
     void OnEnable()
     {
-        canvas = GetComponentInChildren<Canvas>().gameObject;
         if (canvas == null)
         {
             Debug.Log("Canvas not found");

@@ -62,6 +62,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     private InputAction FileAction;
     private InputAction SaveAction;
     private InputAction OptionsAction;
+    private InputAction FlashLightAction;
     //REMOVE LATER
     private InputAction KillAction;
     //REMOVE LATER
@@ -544,7 +545,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             specificHJtoadd.connectedBody = pickup.GetComponent<Rigidbody2D>();
             specificHJtoadd.enableCollision = true;
         }*/
-        string text;       
+        string text;
         if (itemTriggerCheck.collisionObject != null)
         {
             //KeyCard1 PickUp
@@ -556,6 +557,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
                 text = "You got KeyCard1. Press esc to view current KeyCard.";
                 popupmenuText.text = text;
                 PopupMenu.SetActive(true);
+
             }
             //KeyCard2 PickUp
             else if (itemTriggerCheck.collisionObject.name == "KeyCard2")
@@ -563,6 +565,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
                 playerAttributes.RequestKeyCard2Change(true);
                 itemTriggerCheck.collisionObject.SetActive(false);
                 itemTriggerCheck.collisionObject = null;
+                text = "You got KeyCard2. Press esc to view current KeyCard.";
+                popupmenuText.text = text;
+                PopupMenu.SetActive(true);
             }
             //KeyCard3 PickUp
             else if (itemTriggerCheck.collisionObject.name == "KeyCard3")
@@ -570,6 +575,9 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
                 playerAttributes.RequestKeyCard3Change(true);
                 itemTriggerCheck.collisionObject.SetActive(false);
                 itemTriggerCheck.collisionObject = null;
+                text = "You got KeyCard3. Press esc to view current KeyCard.";
+                popupmenuText.text = text;
+                PopupMenu.SetActive(true);
             }
             //Flashlight Pickup
             else if (itemTriggerCheck.collisionObject.name == "FlashLight")
@@ -577,12 +585,17 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
                 playerAttributes.RequestFlashLightGet(true);
                 itemTriggerCheck.collisionObject.SetActive(false);
                 itemTriggerCheck.collisionObject = null;
+                text = "You got a flashlight. Press C to toggle.";
+                popupmenuText.text = text;
+                PopupMenu.SetActive(true);
             }
         }
         else
         {
             Debug.Log("Item Not Found");
         }
+
+
     }
     #endregion
     #region File Action
