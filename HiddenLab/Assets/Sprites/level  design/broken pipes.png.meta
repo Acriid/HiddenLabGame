@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 2150bbe434a77ef4eb5b741b37147989
+guid: c5b8b46b99c6387418edba53069f71a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7993424771136345581
-    second: lab object_0
+      213: -5594195950568580996
+    second: broken pipes_0
   - first:
-      213: 7880937879625216233
-    second: lab object_1
+      213: -5565166451817681869
+    second: broken pipes_1
+  - first:
+      213: 1847714770535694024
+    second: broken pipes_2
+  - first:
+      213: -670189632183389224
+    second: broken pipes_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,45 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lab object_0
+      name: broken pipes_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 37
+        y: 35
+        width: 6
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: de5d3667a795eee60800000000000000
-      internalID: 7993424771136345581
+      spriteID: c785e6a1c6c6d52b0800000000000000
+      internalID: -5594195950568580996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lab object_1
+      name: broken pipes_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 29
-        height: 29
+        x: 73
+        y: 35
+        width: 6
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e03bfb1f37be5d60800000000000000
-      internalID: 7880937879625216233
+      spriteID: 33c6c7bf89e84c2b0800000000000000
+      internalID: -5565166451817681869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken pipes_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 62
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ceb5005bc664a910800000000000000
+      internalID: 1847714770535694024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken pipes_3
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 36
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d33f81941203b6f0800000000000000
+      internalID: -670189632183389224
       vertices: []
       indices: 
       edges: []
@@ -150,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a9e64990fa8fd6b49b05deaeb59d094d
+    spriteID: e748f3f801629df45afefcb0c57dbfbb
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lab object_0: 7993424771136345581
-      lab object_1: 7880937879625216233
+      broken pipes_0: -5594195950568580996
+      broken pipes_1: -5565166451817681869
+      broken pipes_2: 1847714770535694024
+      broken pipes_3: -670189632183389224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

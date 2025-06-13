@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 2150bbe434a77ef4eb5b741b37147989
+guid: d9fbea1ffc4c7774f848517b3b50f59d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7993424771136345581
-    second: lab object_0
+      213: 1921053324792869636
+    second: gate_0
   - first:
-      213: 7880937879625216233
-    second: lab object_1
+      213: 4456625509452935546
+    second: gate_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 10
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,45 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lab object_0
+      name: gate_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
+        x: 24
+        y: 6
+        width: 41
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: de5d3667a795eee60800000000000000
-      internalID: 7993424771136345581
+      spriteID: 0d3c70dca4c177a47bdd1a540d93a62a
+      internalID: -756450255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lab object_1
+      name: gate_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 0
-        width: 29
-        height: 29
+        x: 81
+        y: 6
+        width: 37
+        height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9e03bfb1f37be5d60800000000000000
-      internalID: 7880937879625216233
+      spriteID: d58606b9e63e7e749a4df684fa571eb6
+      internalID: 1451554549
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a9e64990fa8fd6b49b05deaeb59d094d
+    spriteID: c69e4044d4bff224fa0273d34968820c
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lab object_0: 7993424771136345581
-      lab object_1: 7880937879625216233
+      gate_0: -756450255
+      gate_1: 1451554549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

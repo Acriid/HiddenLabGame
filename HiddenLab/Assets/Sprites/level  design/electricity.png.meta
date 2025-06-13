@@ -1,0 +1,375 @@
+fileFormatVersion: 2
+guid: 26749c608b7d86d4e84b99b09d8003b1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2032187774689554106
+    second: electricity_0
+  - first:
+      213: 413566885872102863
+    second: electricity_1
+  - first:
+      213: 1164646136541754117
+    second: electricity_2
+  - first:
+      213: 1863538775412509517
+    second: electricity_3
+  - first:
+      213: -5582531155199218620
+    second: electricity_4
+  - first:
+      213: 1788017561276255619
+    second: electricity_5
+  - first:
+      213: -9107040633145557214
+    second: electricity_6
+  - first:
+      213: 4482449476505602695
+    second: electricity_7
+  - first:
+      213: -7896218785705496055
+    second: electricity_8
+  - first:
+      213: 2000725494795217366
+    second: electricity_9
+  - first:
+      213: -6015961430066409827
+    second: electricity_10
+  - first:
+      213: -4206148714768212795
+    second: electricity_11
+  - first:
+      213: 8457024746290487176
+    second: electricity_12
+  - first:
+      213: -5669585301574812264
+    second: electricity_13
+  - first:
+      213: -6407963883560105930
+    second: electricity_14
+  - first:
+      213: -2376510593544879788
+    second: electricity_15
+  - first:
+      213: -2396813270113752236
+    second: electricity_16
+  - first:
+      213: -289509231540569291
+    second: electricity_17
+  - first:
+      213: 7000243967702835916
+    second: electricity_18
+  - first:
+      213: 3851339867257028048
+    second: electricity_19
+  - first:
+      213: 5852484153489802136
+    second: electricity_20
+  - first:
+      213: 4348403889610695841
+    second: electricity_21
+  - first:
+      213: -6318126128753524539
+    second: electricity_22
+  - first:
+      213: 2187586429913526319
+    second: electricity_23
+  - first:
+      213: -157294434691412117
+    second: electricity_24
+  - first:
+      213: -3963731458141736903
+    second: electricity_25
+  - first:
+      213: -6289326469952003400
+    second: electricity_26
+  - first:
+      213: 4656856718226510371
+    second: electricity_27
+  - first:
+      213: 5616721854438529917
+    second: electricity_28
+  - first:
+      213: -5035868995678815077
+    second: electricity_29
+  - first:
+      213: 1411723035273892231
+    second: electricity_30
+  - first:
+      213: -1274668966434844995
+    second: electricity_31
+  - first:
+      213: 542726503978194498
+    second: electricity_32
+  - first:
+      213: -7343840790441630006
+    second: electricity_33
+  - first:
+      213: -7181322138857119269
+    second: electricity_34
+  - first:
+      213: 2523375398124048076
+    second: electricity_35
+  - first:
+      213: 2644537786971367794
+    second: electricity_36
+  - first:
+      213: 6134042259803992464
+    second: electricity_37
+  - first:
+      213: -8993951574334160341
+    second: electricity_38
+  - first:
+      213: -8694676294973879340
+    second: electricity_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: electricity_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641dcb46cf73cc3e0800000000000000
+      internalID: -2032187774689554106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcd654b34e84db500800000000000000
+      internalID: 413566885872102863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_2
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5033a999d77a92010800000000000000
+      internalID: 1164646136541754117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_3
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b01ad84ae9cd910800000000000000
+      internalID: 1863538775412509517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_4
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44caccaed7dd682b0800000000000000
+      internalID: -5582531155199218620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: electricity_5
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 0
+        width: 124
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d0808af7050d810800000000000000
+      internalID: 1788017561276255619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a3b345c39a9e9f346915d8537a494540
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      electricity_0: -2032187774689554106
+      electricity_1: 413566885872102863
+      electricity_2: 1164646136541754117
+      electricity_3: 1863538775412509517
+      electricity_4: -5582531155199218620
+      electricity_5: 1788017561276255619
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
