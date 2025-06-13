@@ -23,17 +23,16 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     public PlayerAttributes playerAttributes;
     private bool _isStreatched;
     private float _impulseSpeed;
-    private bool _addedImpulse;
-    private bool _HasFlashlight;
     private ItemTriggerCheck itemTriggerCheck;
     #endregion
     private SpringJoint2D slimeSJ;
     private GameObject fileobject = null;
     //Implementation of the IHealth interface
     public int _CurrentHealth { get; set; }
-    
+
+    [SerializeField] private GameObject flashlight;
     #region  Movement Variables
-    public Rigidbody2D SlimeRB {get; set;}
+    public Rigidbody2D SlimeRB { get; set; }
     public float _SlimeSpeed {get; set;}
 
     public Rigidbody2D Slime2RB {get; set;}
@@ -156,10 +155,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     void OnDisable()
     {
         InitiateCleanup();
+        DisableFlashLightAction();
     }
     void OnDestroy()
     {
         InitiateCleanup();
+        DisableFlashLightAction();
     }
     #endregion
     #region Save/load
@@ -272,7 +273,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             KillAction.performed += OnKillAction;
         }
         //Remove Later
-            EnableStretchAction();
+
+        EnableStretchAction();
+        if (playerAttributes.HasFlashlight)
+        {
+            EnableFlashLightAction();
+        }
 
 
     }
@@ -337,9 +343,10 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         playerAttributes.OnSlime2SpeedChange += HandleSlime2SpeedChange;
         //Impulse
         _impulseSpeed = playerAttributes.ImpulseSpeed;
-        _addedImpulse = playerAttributes.AddedImpulse;
-        playerAttributes.OnAddedImpulseChange += HandleAddedImpulseChange;
         playerAttributes.OnImpulseSpeedChange += HandleImpulseSpeedChange;
+
+        //FlashLight
+        playerAttributes.OnFlashlightGet += HandleFlashLightGet;
     }
     private void CleanUpPlayerAttributes()
     {
@@ -364,6 +371,24 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             StretchAction.Disable();
             StretchAction.performed -= OnStretchAction;
             StretchAction = null;
+        }
+    }
+    private void EnableFlashLightAction()
+    {
+        if (FlashLightAction == null)
+        {
+            FlashLightAction = slimeControls.Slime.FlashLight;
+            FlashLightAction.performed += OnFlashLightAction;
+            FlashLightAction.Enable();
+        }
+    }
+    private void DisableFlashLightAction()
+    {
+        if (FlashLightAction != null)
+        {
+            FlashLightAction.Disable();
+            FlashLightAction.performed -= OnFlashLightAction;
+            FlashLightAction = null;
         }
     }
     #endregion
@@ -456,6 +481,19 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
 
         }
         isInSaverange = value;
+    }
+    #endregion
+    #region FlashLight Action
+    private void OnFlashLightAction(InputAction.CallbackContext ctx)
+    {
+        if (flashlight.activeSelf)
+        {
+            flashlight.SetActive(false);
+        }
+        else
+        {
+            flashlight.SetActive(true);
+        }
     }
     #endregion
     #region Split Action
@@ -741,10 +779,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         _impulseSpeed = newValue;
     }
-    private void HandleAddedImpulseChange(bool newValue)
-    {
-        _addedImpulse = newValue;
-    }
     #endregion
     #region misc
     public void Slime2MoveDirection(Vector2 direction)
@@ -758,6 +792,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     public Vector2 GetSlime2Velocity()
     {
         return Slime2RB.linearVelocity;
+    }
+    public void HandleFlashLightGet(bool newValue)
+    {
+        if (newValue)
+        {
+            EnableFlashLightAction();
+        }
     }
     #endregion
     #region Animation

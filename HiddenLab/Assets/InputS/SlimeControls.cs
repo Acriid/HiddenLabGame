@@ -696,6 +696,15 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FlashLight"",
+                    ""type"": ""Button"",
+                    ""id"": ""13ffe9d3-118d-432e-affb-b90248a9cf88"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -894,6 +903,17 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""KillAction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f732b050-6f12-4fba-be8f-e3be5f1b5242"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlashLight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1164,6 +1184,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         m_Slime_File = m_Slime.FindAction("File", throwIfNotFound: true);
         m_Slime_Save = m_Slime.FindAction("Save", throwIfNotFound: true);
         m_Slime_KillAction = m_Slime.FindAction("KillAction", throwIfNotFound: true);
+        m_Slime_FlashLight = m_Slime.FindAction("FlashLight", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MoveWASD = m_UI.FindAction("MoveWASD", throwIfNotFound: true);
@@ -1459,6 +1480,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_File;
     private readonly InputAction m_Slime_Save;
     private readonly InputAction m_Slime_KillAction;
+    private readonly InputAction m_Slime_FlashLight;
     /// <summary>
     /// Provides access to input actions defined in input action map "Slime".
     /// </summary>
@@ -1510,6 +1532,10 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Slime/KillAction".
         /// </summary>
         public InputAction @KillAction => m_Wrapper.m_Slime_KillAction;
+        /// <summary>
+        /// Provides access to the underlying input action "Slime/FlashLight".
+        /// </summary>
+        public InputAction @FlashLight => m_Wrapper.m_Slime_FlashLight;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1566,6 +1592,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @KillAction.started += instance.OnKillAction;
             @KillAction.performed += instance.OnKillAction;
             @KillAction.canceled += instance.OnKillAction;
+            @FlashLight.started += instance.OnFlashLight;
+            @FlashLight.performed += instance.OnFlashLight;
+            @FlashLight.canceled += instance.OnFlashLight;
         }
 
         /// <summary>
@@ -1607,6 +1636,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @KillAction.started -= instance.OnKillAction;
             @KillAction.performed -= instance.OnKillAction;
             @KillAction.canceled -= instance.OnKillAction;
+            @FlashLight.started -= instance.OnFlashLight;
+            @FlashLight.performed -= instance.OnFlashLight;
+            @FlashLight.canceled -= instance.OnFlashLight;
         }
 
         /// <summary>
@@ -1946,6 +1978,13 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnKillAction(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "FlashLight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFlashLight(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.
