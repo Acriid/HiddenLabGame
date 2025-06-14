@@ -1,5 +1,4 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
 guid: 2baa3bbd521dcf540a47e66fb3ebb31a
 TextureImporter:
   internalIDToNameTable:
@@ -27,35 +26,6 @@ TextureImporter:
   - first:
       213: 4584165903647699095
     second: Plants _7
-========
-guid: f12e7c8a956735e4ba7eef78b3189244
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -8599014132340825182
-    second: default slime trail_0
-  - first:
-      213: -4456134345710956900
-    second: default slime trail_1
-  - first:
-      213: 3356348185376320427
-    second: default slime trail_2
-  - first:
-      213: 9020847839468112811
-    second: default slime trail_3
-  - first:
-      213: -6975214792804525492
-    second: default slime trail_4
-  - first:
-      213: 1173088060356467535
-    second: default slime trail_5
-  - first:
-      213: -810431170566354946
-    second: default slime trail_6
-  - first:
-      213: -3323269249037932347
-    second: default slime trail_7
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -88,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -102,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,7 +96,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,7 +134,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       name: Plants _0
       rect:
         serializedVersion: 2
@@ -172,15 +141,6 @@ TextureImporter:
         y: 767
         width: 226
         height: 226
-========
-      name: default slime trail_0
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 4
-        width: 55
-        height: 36
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,19 +149,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       spriteID: 0c328df46d3fd3ad0800000000000000
       internalID: -2720750498073795648
-========
-      spriteID: 2a3e247c43a2aa880800000000000000
-      internalID: -8599014132340825182
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       name: Plants _1
       rect:
         serializedVersion: 2
@@ -209,15 +163,6 @@ TextureImporter:
         y: 751
         width: 178
         height: 138
-========
-      name: default slime trail_1
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 0
-        width: 71
-        height: 40
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,19 +171,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       spriteID: 3fe8d79cb765c1800800000000000000
       internalID: 584437141312737011
-========
-      spriteID: c9e0b741c61a822c0800000000000000
-      internalID: -4456134345710956900
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       name: Plants _2
       rect:
         serializedVersion: 2
@@ -246,15 +185,6 @@ TextureImporter:
         y: 567
         width: 138
         height: 98
-========
-      name: default slime trail_2
-      rect:
-        serializedVersion: 2
-        x: 218
-        y: 0
-        width: 218
-        height: 40
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,19 +193,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       spriteID: 5ae4b696bf1355ac0800000000000000
       internalID: -3867129749152510299
-========
-      spriteID: babe1e354e4249e20800000000000000
-      internalID: 3356348185376320427
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       name: Plants _3
       rect:
         serializedVersion: 2
@@ -283,15 +207,6 @@ TextureImporter:
         y: 575
         width: 106
         height: 162
-========
-      name: default slime trail_3
-      rect:
-        serializedVersion: 2
-        x: 435
-        y: 0
-        width: 110
-        height: 40
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -300,19 +215,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       spriteID: 4e17e1d5a993640e0800000000000000
       internalID: -2286076425693924892
-========
-      spriteID: babc854c05d703d70800000000000000
-      internalID: 9020847839468112811
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       name: Plants _4
       rect:
         serializedVersion: 2
@@ -320,15 +229,6 @@ TextureImporter:
         y: 271
         width: 386
         height: 314
-========
-      name: default slime trail_4
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 0
-        width: 110
-        height: 40
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,19 +237,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       spriteID: fb14da31580c854e0800000000000000
       internalID: -1992631157318139457
-========
-      spriteID: c4a16da2a1f033f90800000000000000
-      internalID: -6975214792804525492
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       name: Plants _5
       rect:
         serializedVersion: 2
@@ -357,15 +251,6 @@ TextureImporter:
         y: 303
         width: 258
         height: 178
-========
-      name: default slime trail_5
-      rect:
-        serializedVersion: 2
-        x: 653
-        y: 0
-        width: 110
-        height: 40
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,19 +259,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       spriteID: cb012c96446127c60800000000000000
       internalID: 7814332786529145020
-========
-      spriteID: f4b9cc72065a74010800000000000000
-      internalID: 1173088060356467535
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       name: Plants _6
       rect:
         serializedVersion: 2
@@ -394,15 +273,6 @@ TextureImporter:
         y: 55
         width: 290
         height: 250
-========
-      name: default slime trail_6
-      rect:
-        serializedVersion: 2
-        x: 762
-        y: 0
-        width: 110
-        height: 40
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,19 +281,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       spriteID: c6eb8d58653ad49e0800000000000000
       internalID: -1635471497657532820
-========
-      spriteID: ef70d7be425c0c4f0800000000000000
-      internalID: -810431170566354946
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       name: Plants _7
       rect:
         serializedVersion: 2
@@ -431,15 +295,6 @@ TextureImporter:
         y: 71
         width: 426
         height: 186
-========
-      name: default slime trail_7
-      rect:
-        serializedVersion: 2
-        x: 925
-        y: 4
-        width: 56
-        height: 36
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,13 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       spriteID: 790f066f99a3e9f30800000000000000
       internalID: 4584165903647699095
-========
-      spriteID: 5c86d16b93061e1d0800000000000000
-      internalID: -3323269249037932347
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
       vertices: []
       indices: 
       edges: []
@@ -473,7 +323,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Plants .png.meta
       Plants _0: -2720750498073795648
       Plants _1: 584437141312737011
       Plants _2: -3867129749152510299
@@ -482,16 +331,6 @@ TextureImporter:
       Plants _5: 7814332786529145020
       Plants _6: -1635471497657532820
       Plants _7: 4584165903647699095
-========
-      default slime trail_0: -8599014132340825182
-      default slime trail_1: -4456134345710956900
-      default slime trail_2: 3356348185376320427
-      default slime trail_3: 9020847839468112811
-      default slime trail_4: -6975214792804525492
-      default slime trail_5: 1173088060356467535
-      default slime trail_6: -810431170566354946
-      default slime trail_7: -3323269249037932347
->>>>>>>> Level2:HiddenLab/Assets/animations/default slime trail.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

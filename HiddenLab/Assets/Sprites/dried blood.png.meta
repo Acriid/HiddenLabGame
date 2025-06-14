@@ -1,5 +1,4 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/dried blood.png.meta
 guid: a799f431be3efbb4f84d06ea6b9252da
 TextureImporter:
   internalIDToNameTable:
@@ -18,26 +17,6 @@ TextureImporter:
   - first:
       213: 7286467971998534419
     second: dried blood_4
-========
-guid: 31e61bedc5a194e4fac67c1049074b1f
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -5490528578562666740
-    second: lights anim_0
-  - first:
-      213: 4816931226043881726
-    second: lights anim_1
-  - first:
-      213: -845186745681892597
-    second: lights anim_2
-  - first:
-      213: -8156315086537180334
-    second: lights anim_3
-  - first:
-      213: -2299011263622093286
-    second: lights anim_4
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/lights anim.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,11 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/dried blood.png.meta
   spritePixelsToUnits: 25
-========
-  spritePixelsToUnits: 10
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/lights anim.png.meta
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -137,7 +112,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/dried blood.png.meta
       name: dried blood_0
       rect:
         serializedVersion: 2
@@ -145,15 +119,6 @@ TextureImporter:
         y: 60
         width: 65
         height: 61
-========
-      name: lights anim_0
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 113
-        width: 50
-        height: 10
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/lights anim.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,19 +127,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/dried blood.png.meta
       spriteID: 2141bea6eb387fe60800000000000000
       internalID: 7996004517280420882
-========
-      spriteID: c0f44ad0959bdc3b0800000000000000
-      internalID: -5490528578562666740
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/lights anim.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/dried blood.png.meta
       name: dried blood_1
       rect:
         serializedVersion: 2
@@ -182,14 +141,6 @@ TextureImporter:
         y: 0
         width: 63
         height: 60
-========
-      name: lights anim_1
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 61
-        width: 60
-        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,74 +149,6 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef815dbcd6d29d240800000000000000
-      internalID: 4816931226043881726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lights anim_2
-      rect:
-        serializedVersion: 2
-        x: 317
-        y: 113
-        width: 50
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b0b23cef12b4544f0800000000000000
-      internalID: -845186745681892597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lights anim_3
-      rect:
-        serializedVersion: 2
-        x: 436
-        y: 61
-        width: 60
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25bbace84a2fece80800000000000000
-      internalID: -8156315086537180334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lights anim_4
-      rect:
-        serializedVersion: 2
-        x: 565
-        y: 113
-        width: 50
-        height: 10
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/lights anim.png.meta
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/dried blood.png.meta
       spriteID: 0f166cc5bfe5a9810800000000000000
       internalID: 1772833837010018800
       vertices: []
@@ -334,10 +217,6 @@ TextureImporter:
       bones: []
       spriteID: 31bcb32e30cbe1560800000000000000
       internalID: 7286467971998534419
-========
-      spriteID: a16ee29bf654810e0800000000000000
-      internalID: -2299011263622093286
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/lights anim.png.meta
       vertices: []
       indices: 
       edges: []
@@ -346,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a66bcb787e0993840a3a29e37494ee0c
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -356,19 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/dried blood.png.meta
       dried blood_0: 7996004517280420882
       dried blood_1: 1772833837010018800
       dried blood_2: 1674371390572351805
       dried blood_3: 8068041718294630831
       dried blood_4: 7286467971998534419
-========
-      lights anim_0: -5490528578562666740
-      lights anim_1: 4816931226043881726
-      lights anim_2: -845186745681892597
-      lights anim_3: -8156315086537180334
-      lights anim_4: -2299011263622093286
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/lights anim.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

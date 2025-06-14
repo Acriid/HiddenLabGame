@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Main Menu/character selection.png.meta
 guid: 650ecb8bd4cc2d94db31c218b3a6c947
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -5416463912500112209
     second: character selection_0
-========
-guid: 3f3d2fd16324955418b47e46efd30abd
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -4494450855839392553
-    second: fithh capsule_0
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/fithh capsule.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 12
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,7 +100,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Main Menu/character selection.png.meta
       name: character selection_0
       rect:
         serializedVersion: 2
@@ -117,15 +107,6 @@ TextureImporter:
         y: 0
         width: 256
         height: 256
-========
-      name: fithh capsule_0
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 61
-        width: 53
-        height: 60
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/fithh capsule.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,13 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Main Menu/character selection.png.meta
       spriteID: fa455bce4cad4d4b0800000000000000
       internalID: -5416463912500112209
-========
-      spriteID: 7dc1e3d52c080a1c0800000000000000
-      internalID: -4494450855839392553
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/fithh capsule.png.meta
       vertices: []
       indices: 
       edges: []
@@ -149,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1f400c387aba49546b1bbe4e2150d3cf
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -159,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/Main Menu/character selection.png.meta
       character selection_0: -5416463912500112209
-========
-      fithh capsule_0: -4494450855839392553
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/fithh capsule.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
