@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-guid: 9f3e34a446bcb8b42b7515b1cc32b2f0
+guid: f4d647c54441d694c8669be794774c79
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7443756053782179069
-    second: background_0
-========
-guid: 8e92e36f88c4e6047bdcf445cf4d4859
-TextureImporter:
-  internalIDToNameTable:
+      213: 7519619562245108257
+    second: dead military men_0
   - first:
-      213: -1402243512736200290
-    second: file1_0
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      213: -3413975399325028648
+    second: dead military men_1
+  - first:
+      213: 1224038998743117140
+    second: dead military men_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,11 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-  spritePixelsToUnits: 10
-========
-  spritePixelsToUnits: 128
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,40 +102,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      name: background_0
+      name: dead military men_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 248
-        height: 248
-========
-      name: file1_0
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 111
-        width: 130
-        height: 114
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+        x: 2
+        y: 66
+        width: 60
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,13 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      spriteID: 30356abce4772b890800000000000000
-      internalID: -7443756053782179069
-========
-      spriteID: e9943ce54fa3a8ce0800000000000000
-      internalID: -1402243512736200290
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      spriteID: 122b2b5b62e0b5860800000000000000
+      internalID: 7519619562245108257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead military men_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 84
+        width: 48
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de2f4b567f1f90d0800000000000000
+      internalID: -3413975399325028648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead military men_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 61
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45dee4febf8acf010800000000000000
+      internalID: 1224038998743117140
       vertices: []
       indices: 
       edges: []
@@ -166,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 09f58b4def3c98f428248e40f5e19f38
     internalID: 0
     vertices: []
     indices: 
@@ -176,11 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      background_0: -7443756053782179069
-========
-      file1_0: -1402243512736200290
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      dead military men_0: 7519619562245108257
+      dead military men_1: -3413975399325028648
+      dead military men_2: 1224038998743117140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

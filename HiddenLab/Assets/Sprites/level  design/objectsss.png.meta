@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
 guid: b217e41beae9c4245a9f06234ec77f4f
 TextureImporter:
   internalIDToNameTable:
@@ -26,6 +27,38 @@ TextureImporter:
   - first:
       213: -2833582496954901842
     second: objectsss_7
+========
+guid: c0c1d9d2a64f7ae4d9f1047cfe427b14
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4594274849228886550
+    second: skeletons_0
+  - first:
+      213: 6380628624945961585
+    second: skeletons_1
+  - first:
+      213: 7666252896568499027
+    second: skeletons_2
+  - first:
+      213: 2090663768908118286
+    second: skeletons_3
+  - first:
+      213: 5752915144060936927
+    second: skeletons_4
+  - first:
+      213: -6068942732775109535
+    second: skeletons_5
+  - first:
+      213: 6344314544863343619
+    second: skeletons_6
+  - first:
+      213: -3501019811816586758
+    second: skeletons_7
+  - first:
+      213: -3260702045074042055
+    second: skeletons_8
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,6 +154,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       name: objectsss_0
       rect:
         serializedVersion: 2
@@ -128,6 +162,15 @@ TextureImporter:
         y: 64
         width: 46
         height: 54
+========
+      name: skeletons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 62
+        height: 62
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,13 +179,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       spriteID: a1b3f1f1be3e259a0800000000000000
       internalID: -6245679134230496486
+========
+      spriteID: 6129cc442a422cf30800000000000000
+      internalID: 4594274849228886550
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       name: objectsss_1
       rect:
         serializedVersion: 2
@@ -150,6 +199,15 @@ TextureImporter:
         y: 110
         width: 27
         height: 11
+========
+      name: skeletons_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 62
+        width: 62
+        height: 62
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,13 +216,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       spriteID: 84aaf546dd08b1940800000000000000
       internalID: 5267945877500045896
+========
+      spriteID: 17ad799adeb8c8850800000000000000
+      internalID: 6380628624945961585
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       name: objectsss_2
       rect:
         serializedVersion: 2
@@ -172,6 +236,15 @@ TextureImporter:
         y: 99
         width: 49
         height: 17
+========
+      name: skeletons_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 62
+        height: 62
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,13 +253,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       spriteID: fc9e27d3a26b80a00800000000000000
       internalID: 723028032728787407
+========
+      spriteID: 35b56425460046a60800000000000000
+      internalID: 7666252896568499027
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       name: objectsss_3
       rect:
         serializedVersion: 2
@@ -194,6 +273,15 @@ TextureImporter:
         y: 69
         width: 17
         height: 21
+========
+      name: skeletons_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 62
+        height: 62
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,6 +290,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       spriteID: 8f602ff8ee1a27370800000000000000
       internalID: 8318889507696019192
       vertices: []
@@ -292,6 +381,10 @@ TextureImporter:
       bones: []
       spriteID: eaa1d336bb71da8d0800000000000000
       internalID: -2833582496954901842
+========
+      spriteID: e093c8afe97830d10800000000000000
+      internalID: 2090663768908118286
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
       vertices: []
       indices: 
       edges: []
@@ -300,7 +393,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
     spriteID: ded2ef766b94ffe49a85752797c7ec5b
+========
+    spriteID: 40ab300ccbdaa66449c9d46dde0f37d4
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
     internalID: 0
     vertices: []
     indices: 
@@ -310,6 +407,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/objectsss.png.meta
       objectsss_0: -6245679134230496486
       objectsss_1: 5267945877500045896
       objectsss_2: 723028032728787407
@@ -318,6 +416,12 @@ TextureImporter:
       objectsss_5: -2948904598072486704
       objectsss_6: -1590819460501116916
       objectsss_7: -2833582496954901842
+========
+      skeletons_0: 4594274849228886550
+      skeletons_1: 6380628624945961585
+      skeletons_2: 7666252896568499027
+      skeletons_3: 2090663768908118286
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/skeletons.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

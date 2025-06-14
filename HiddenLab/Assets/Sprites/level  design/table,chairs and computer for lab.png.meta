@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-guid: 9f3e34a446bcb8b42b7515b1cc32b2f0
+guid: 8f13f06b1d2c64143945eea039012ab4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7443756053782179069
-    second: background_0
-========
-guid: 8e92e36f88c4e6047bdcf445cf4d4859
-TextureImporter:
-  internalIDToNameTable:
+      213: -8066048999302011172
+    second: table,chairs and computer for lab_0
   - first:
-      213: -1402243512736200290
-    second: file1_0
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      213: 788169860551156631
+    second: table,chairs and computer for lab_1
+  - first:
+      213: 519818289155791545
+    second: table,chairs and computer for lab_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,11 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-  spritePixelsToUnits: 10
-========
-  spritePixelsToUnits: 128
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+  spritePixelsToUnits: 7
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,23 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      name: background_0
+      name: table,chairs and computer for lab_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 248
-        height: 248
-========
-      name: file1_0
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 111
-        width: 130
-        height: 114
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+        y: 82
+        width: 63
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,13 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      spriteID: 30356abce4772b890800000000000000
-      internalID: -7443756053782179069
-========
-      spriteID: e9943ce54fa3a8ce0800000000000000
-      internalID: -1402243512736200290
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      spriteID: cd665bfbb23af0090800000000000000
+      internalID: -8066048999302011172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table,chairs and computer for lab_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 76
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79322d0ff4420fa00800000000000000
+      internalID: 788169860551156631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table,chairs and computer for lab_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 14
+        width: 63
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bad1e8daf3c63700800000000000000
+      internalID: 519818289155791545
       vertices: []
       indices: 
       edges: []
@@ -176,11 +198,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      background_0: -7443756053782179069
-========
-      file1_0: -1402243512736200290
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      wall layout design_0: -120489637588828977
+      wall layout design_1: -4117629779423311915
+      wall layout design_2: -7278693995423070139
+      wall layout design_3: -3485480116542787528
+      wall layout design_4: -1645296524547531380
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

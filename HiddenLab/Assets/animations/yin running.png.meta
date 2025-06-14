@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
 guid: f180a5e8d46d2cf408075106e226ae57
 TextureImporter:
   internalIDToNameTable:
@@ -14,6 +15,14 @@ TextureImporter:
   - first:
       213: -8780181227076496321
     second: yin running_3
+========
+guid: f59e39c5f5058554bba3f28d4ebf5fa1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1066913249555555180
+    second: door opening an-sheet_0
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +118,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       name: yin running_0
+========
+      name: door opening an-sheet_0
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       rect:
         serializedVersion: 2
         x: 0
         y: 0
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
         width: 59
         height: 40
+========
+        width: 44
+        height: 26
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,13 +142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       spriteID: b20ce55d453c963d0800000000000000
       internalID: -3212822090027712469
+========
+      spriteID: c63aaed92ff6ece00800000000000000
+      internalID: 1066913249555555180
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       name: yin running_1
       rect:
         serializedVersion: 2
@@ -138,21 +162,36 @@ TextureImporter:
         y: 2
         width: 54
         height: 40
+========
+      name: door opening an-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 0
+        width: 44
+        height: 26
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       spriteID: 079f659a8dc757ea0800000000000000
       internalID: -5875652868839114384
+========
+      spriteID: 0d05ef4cc37bafe46a489c3c6e3c3e97
+      internalID: 1997293748
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       name: yin running_2
       rect:
         serializedVersion: 2
@@ -160,21 +199,36 @@ TextureImporter:
         y: 3
         width: 49
         height: 37
+========
+      name: door opening an-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 44
+        height: 26
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       spriteID: 7a2199ff504387430800000000000000
       internalID: 3780829087545234087
+========
+      spriteID: f38adb8c914f1de4e93f2481114fff3c
+      internalID: -933314531
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       name: yin running_3
       rect:
         serializedVersion: 2
@@ -182,16 +236,30 @@ TextureImporter:
         y: 3
         width: 49
         height: 39
+========
+      name: door opening an-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 0
+        width: 44
+        height: 26
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       spriteID: f345d8081b7862680800000000000000
       internalID: -8780181227076496321
+========
+      spriteID: de918f870c69e16468f61773cb6976cf
+      internalID: 801546027
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       vertices: []
       indices: 
       edges: []
@@ -200,7 +268,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0904a9ee79af19644811daab439530bb
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +278,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:HiddenLab/Assets/animations/yin running.png.meta
       yin running_0: -3212822090027712469
       yin running_1: -5875652868839114384
       yin running_2: 3780829087545234087
       yin running_3: -8780181227076496321
+========
+      door opening an-sheet_0: 1066913249555555180
+      door opening an-sheet_1: 1997293748
+      door opening an-sheet_2: -933314531
+      door opening an-sheet_3: 801546027
+>>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

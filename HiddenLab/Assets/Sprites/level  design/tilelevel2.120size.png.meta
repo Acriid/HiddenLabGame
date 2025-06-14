@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-guid: 9f3e34a446bcb8b42b7515b1cc32b2f0
+guid: 3fa28bfd6a569224aaadc892e235a023
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7443756053782179069
-    second: background_0
-========
-guid: 8e92e36f88c4e6047bdcf445cf4d4859
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -1402243512736200290
-    second: file1_0
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      213: -6064837215359106653
+    second: tilelevel2.120size_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,11 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-  spritePixelsToUnits: 10
-========
-  spritePixelsToUnits: 128
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+  spritePixelsToUnits: 7
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,38 +113,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      name: background_0
+      name: tilelevel2.120size_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 248
-        height: 248
-========
-      name: file1_0
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 111
-        width: 130
-        height: 114
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+        x: 34
+        y: 68
+        width: 34
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      spriteID: 30356abce4772b890800000000000000
-      internalID: -7443756053782179069
-========
-      spriteID: e9943ce54fa3a8ce0800000000000000
-      internalID: -1402243512736200290
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      spriteID: 3a183fd7fae55dba0800000000000000
+      internalID: -6064837215359106653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilelevel2.120size_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ecce5ca097aef4e96faa6a98833ecb
+      internalID: -112606549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilelevel2.120size_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70045dd81d0549e4493f7a0a1185fcda
+      internalID: 583717903
       vertices: []
       indices: 
       edges: []
@@ -166,7 +182,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 26215aa23b5a47d41bba396dc0943b1e
     internalID: 0
     vertices: []
     indices: 
@@ -176,11 +192,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/characters game/background.png.meta
-      background_0: -7443756053782179069
-========
-      file1_0: -1402243512736200290
->>>>>>>> origin/Level3:HiddenLab/Assets/Sprites/level  design/file1.png.meta
+      tilelevel2.120size_0: -6064837215359106653
+      tilelevel2.120size_1: -112606549
+      tilelevel2.120size_2: 583717903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
