@@ -223,17 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/wires.png.meta
       wires_0: 8670328546018703123
       wires_1: -1405447397044946314
       wires_2: -8580637365894634084
       wires_3: -5109524299098009440
-========
-      floor2 layout_0: -761101649202346906
-      floor2 layout_1: -2937356174104699790
-      floor2 layout_2: 696233528764890917
-      floor2 layout_3: -2376386785718537830
->>>>>>>> Level2:HiddenLab/Assets/Sprites/level  design/floor2 layout.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
