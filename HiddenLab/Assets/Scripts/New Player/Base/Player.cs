@@ -16,6 +16,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     public GameObject OptionsMenu;
     public GameObject DeathMenu;
     public GameObject PopupMenu;
+    public GameObject SceneMenu;
     public TextMeshProUGUI popupmenuText;
     #endregion
     #region Player Attributes
@@ -62,6 +63,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     private InputAction SaveAction;
     private InputAction OptionsAction;
     private InputAction FlashLightAction;
+    private InputAction SceneSwitchAction;
     //REMOVE LATER
     private InputAction KillAction;
     //REMOVE LATER
@@ -315,13 +317,19 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             OptionsAction.performed -= OnOptionsAction;
             OptionsAction = null;
         }
-        //remove later
-        if (KillAction != null)
+        if (SceneSwitchAction != null)
         {
-            KillAction.Disable();
-            KillAction.performed -= OnKillAction;
-            KillAction = null;
+            SceneSwitchAction.Disable();
+            SceneSwitchAction.performed -= OnSceneSwitchAction;
+            SceneSwitchAction = null;
         }
+        //remove later
+            if (KillAction != null)
+            {
+                KillAction.Disable();
+                KillAction.performed -= OnKillAction;
+                KillAction = null;
+            }
         //remove later
         if (slimeControls != null)
         {
@@ -481,6 +489,29 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
 
         }
         isInSaverange = value;
+    }
+    public void SetInSceneChangerange(bool value)
+    {
+        if (value)
+        {
+            DisableStretchAction();
+            if (SceneSwitchAction == null)
+            {
+                SceneSwitchAction = slimeControls.Slime.SceneSwitch;
+                SceneSwitchAction.Enable();
+                SceneSwitchAction.performed += OnSceneSwitchAction;
+            }
+        }
+        else
+        {
+            EnableStretchAction();
+            if (SceneSwitchAction != null)
+            {
+                SceneSwitchAction.Disable();
+                SceneSwitchAction.performed -= OnSceneSwitchAction;
+                SceneSwitchAction = null;
+            }
+        }
     }
     #endregion
     #region FlashLight Action
@@ -688,6 +719,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     public void OnKillAction(InputAction.CallbackContext ctx)
     {
         Death();
+    }
+    #endregion
+    #region Scene Switch
+    public void OnSceneSwitchAction(InputAction.CallbackContext ctx)
+    {
+        SceneMenu.SetActive(true);
+        Time.timeScale = 0;
     }
     #endregion
     #region Joints
