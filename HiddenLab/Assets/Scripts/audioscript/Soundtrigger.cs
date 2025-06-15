@@ -35,5 +35,6 @@ public class Soundtrigger : MonoBehaviour
             SoundEffectManager.Play("pickup");
             Debug.Log("Playedsound");
         }
+        
     }
 }
