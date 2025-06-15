@@ -9,10 +9,17 @@ public class SceneTriggerCheck : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-
+        if (collision.CompareTag("SceneCheck"))
+        {
+            player.SetInSceneChangerange(true);
+        }
+        
     }
     void OnTriggerExit2D(Collider2D collision)
-    {
+    {   if (collision.CompareTag("SceneCheck"))
+        {
+            player.SetInSceneChangerange(false);
+        }
         
     }
 }
