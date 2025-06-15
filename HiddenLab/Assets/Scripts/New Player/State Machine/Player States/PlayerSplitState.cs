@@ -21,6 +21,7 @@ public class PlayerSplitState : PlayerState
         base.EnterState();
         player.EnableSlime2(true);
         //Make Player Stand Still
+        player.MakeSlime2OnSlime1();
         player.MoveSlime(Vector2.zero);
         player.MoveSlime2(Vector2.zero);
 
