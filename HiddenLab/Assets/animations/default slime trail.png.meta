@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
 guid: e1055c4f1efa98848b16d95b922f7e34
 TextureImporter:
   internalIDToNameTable:
@@ -26,6 +27,35 @@ TextureImporter:
   - first:
       213: -3323269249037932347
     second: default slime trail_7
+========
+guid: 4de13150e6148b740ab3b39d532b2f0a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2631402288472412721
+    second: broken objects_0
+  - first:
+      213: -5050598404553866130
+    second: broken objects_1
+  - first:
+      213: -2255893886300377591
+    second: broken objects_2
+  - first:
+      213: 8291602245084604718
+    second: broken objects_3
+  - first:
+      213: -8122932407544357794
+    second: broken objects_4
+  - first:
+      213: -2662499179533066723
+    second: broken objects_5
+  - first:
+      213: 1063822809451850864
+    second: broken objects_6
+  - first:
+      213: 8002388543498872478
+    second: broken objects_7
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,6 +151,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       name: default slime trail_0
       rect:
         serializedVersion: 2
@@ -128,6 +159,15 @@ TextureImporter:
         y: 4
         width: 55
         height: 36
+========
+      name: broken objects_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 62
+        width: 57
+        height: 61
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,13 +176,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       spriteID: 2a3e247c43a2aa880800000000000000
       internalID: -8599014132340825182
+========
+      spriteID: fcda3767f816b7bd0800000000000000
+      internalID: -2631402288472412721
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       name: default slime trail_1
       rect:
         serializedVersion: 2
@@ -150,6 +196,15 @@ TextureImporter:
         y: 0
         width: 71
         height: 40
+========
+      name: broken objects_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 103
+        width: 6
+        height: 8
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,13 +213,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       spriteID: c9e0b741c61a822c0800000000000000
       internalID: -4456134345710956900
+========
+      spriteID: e648961a28ba8e9b0800000000000000
+      internalID: -5050598404553866130
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       name: default slime trail_2
       rect:
         serializedVersion: 2
@@ -172,6 +233,15 @@ TextureImporter:
         y: 0
         width: 218
         height: 40
+========
+      name: broken objects_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 61
+        width: 63
+        height: 37
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,13 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       spriteID: babe1e354e4249e20800000000000000
       internalID: 3356348185376320427
+========
+      spriteID: 90e2710767471b0e0800000000000000
+      internalID: -2255893886300377591
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       name: default slime trail_3
       rect:
         serializedVersion: 2
@@ -194,6 +270,15 @@ TextureImporter:
         y: 0
         width: 110
         height: 40
+========
+      name: broken objects_3
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 74
+        width: 8
+        height: 14
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,13 +287,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       spriteID: babc854c05d703d70800000000000000
       internalID: 9020847839468112811
+========
+      spriteID: e296915af40b11370800000000000000
+      internalID: 8291602245084604718
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       name: default slime trail_4
       rect:
         serializedVersion: 2
@@ -216,6 +307,15 @@ TextureImporter:
         y: 0
         width: 110
         height: 40
+========
+      name: broken objects_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 23
+        height: 32
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,13 +324,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       spriteID: c4a16da2a1f033f90800000000000000
       internalID: -6975214792804525492
+========
+      spriteID: e5c5fc1330c854f80800000000000000
+      internalID: -8122932407544357794
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       name: default slime trail_5
       rect:
         serializedVersion: 2
@@ -238,6 +344,15 @@ TextureImporter:
         y: 0
         width: 110
         height: 40
+========
+      name: broken objects_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 62
+        height: 34
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,13 +361,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       spriteID: f4b9cc72065a74010800000000000000
       internalID: 1173088060356467535
+========
+      spriteID: d1e992d4a17ec0bd0800000000000000
+      internalID: -2662499179533066723
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       name: default slime trail_6
       rect:
         serializedVersion: 2
@@ -260,6 +381,15 @@ TextureImporter:
         y: 0
         width: 110
         height: 40
+========
+      name: broken objects_6
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 26
+        width: 44
+        height: 32
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,13 +398,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       spriteID: ef70d7be425c0c4f0800000000000000
       internalID: -810431170566354946
+========
+      spriteID: 07ce555753573ce00800000000000000
+      internalID: 1063822809451850864
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       name: default slime trail_7
       rect:
         serializedVersion: 2
@@ -282,6 +418,15 @@ TextureImporter:
         y: 4
         width: 56
         height: 36
+========
+      name: broken objects_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 12
+        height: 10
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,8 +435,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       spriteID: 5c86d16b93061e1d0800000000000000
       internalID: -3323269249037932347
+========
+      spriteID: e96e7e95bf13e0f60800000000000000
+      internalID: 8002388543498872478
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
       vertices: []
       indices: 
       edges: []
@@ -310,6 +460,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:HiddenLab/Assets/animations/default slime trail.png.meta
       default slime trail_0: -8599014132340825182
       default slime trail_1: -4456134345710956900
       default slime trail_2: 3356348185376320427
@@ -318,6 +469,16 @@ TextureImporter:
       default slime trail_5: 1173088060356467535
       default slime trail_6: -810431170566354946
       default slime trail_7: -3323269249037932347
+========
+      broken objects_0: -2631402288472412721
+      broken objects_1: -5050598404553866130
+      broken objects_2: -2255893886300377591
+      broken objects_3: 8291602245084604718
+      broken objects_4: -8122932407544357794
+      broken objects_5: -2662499179533066723
+      broken objects_6: 1063822809451850864
+      broken objects_7: 8002388543498872478
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/broken objects.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

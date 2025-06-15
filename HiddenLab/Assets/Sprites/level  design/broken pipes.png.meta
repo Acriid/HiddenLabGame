@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: a8d0544d8ca41cf4484900b6035c7546
+guid: c5b8b46b99c6387418edba53069f71a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8670328546018703123
-    second: wires_0
+      213: -5594195950568580996
+    second: broken pipes_0
   - first:
-      213: -1405447397044946314
-    second: wires_1
+      213: -5565166451817681869
+    second: broken pipes_1
   - first:
-      213: -8580637365894634084
-    second: wires_2
+      213: 1847714770535694024
+    second: broken pipes_2
   - first:
-      213: -5109524299098009440
-    second: wires_3
+      213: -670189632183389224
+    second: broken pipes_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,89 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wires_0
+      name: broken pipes_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 37
+        y: 35
+        width: 6
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c785e6a1c6c6d52b0800000000000000
+      internalID: -5594195950568580996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken pipes_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 35
+        width: 6
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c6c7bf89e84c2b0800000000000000
+      internalID: -5565166451817681869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: broken pipes_2
+      rect:
+        serializedVersion: 2
+        x: 92
         y: 62
-        width: 62
-        height: 62
+        width: 6
+        height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 317bf5f00e1335870800000000000000
-      internalID: 8670328546018703123
+      spriteID: 8ceb5005bc664a910800000000000000
+      internalID: 1847714770535694024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wires_1
+      name: broken pipes_3
       rect:
         serializedVersion: 2
-        x: 62
-        y: 62
-        width: 62
-        height: 62
+        x: 18
+        y: 36
+        width: 6
+        height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67a73ace909de7ce0800000000000000
-      internalID: -1405447397044946314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wires_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c95286327c37be880800000000000000
-      internalID: -8580637365894634084
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wires_3
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 0
-        width: 62
-        height: 62
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a0590da8b25719b0800000000000000
-      internalID: -5109524299098009440
+      spriteID: 8d33f81941203b6f0800000000000000
+      internalID: -670189632183389224
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7155936d90c64774a91960b5ac92cfa0
+    spriteID: e748f3f801629df45afefcb0c57dbfbb
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wires_0: 8670328546018703123
-      wires_1: -1405447397044946314
-      wires_2: -8580637365894634084
-      wires_3: -5109524299098009440
+      broken pipes_0: -5594195950568580996
+      broken pipes_1: -5565166451817681869
+      broken pipes_2: 1847714770535694024
+      broken pipes_3: -670189632183389224
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

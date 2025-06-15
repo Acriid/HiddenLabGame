@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
 guid: 27f4de745d2ad1047ab8592ef4a76d18
 TextureImporter:
   internalIDToNameTable:
@@ -17,6 +18,23 @@ TextureImporter:
   - first:
       213: 5924075015575732673
     second: sewage an-sheet_4
+========
+guid: a62dd5b5bfe8ff94a9bf115ccd7f92cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3401126934738427069
+    second: VINES and webs_0
+  - first:
+      213: 7559491714955369844
+    second: VINES and webs_1
+  - first:
+      213: 8646488718070084439
+    second: VINES and webs_2
+  - first:
+      213: 2269547998028546117
+    second: VINES and webs_3
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,6 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
       name: sewage an-sheet_0
       rect:
         serializedVersion: 2
@@ -119,6 +138,15 @@ TextureImporter:
         y: 143
         width: 43
         height: 102
+========
+      name: VINES and webs_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 62
+        width: 62
+        height: 62
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,13 +155,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
       spriteID: 87cbfcfb97f253130800000000000000
       internalID: 3545792481579744376
+========
+      spriteID: 34327e2a215ccc0d0800000000000000
+      internalID: -3401126934738427069
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
       name: sewage an-sheet_1
       rect:
         serializedVersion: 2
@@ -141,6 +175,15 @@ TextureImporter:
         y: 141
         width: 43
         height: 104
+========
+      name: VINES and webs_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 62
+        width: 62
+        height: 62
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,13 +192,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
       spriteID: bd17ab57ae3be0cf0800000000000000
       internalID: -284091906898890277
+========
+      spriteID: 47d5c60b9a5b8e860800000000000000
+      internalID: 7559491714955369844
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
       name: sewage an-sheet_2
       rect:
         serializedVersion: 2
@@ -207,6 +256,15 @@ TextureImporter:
         y: 139
         width: 47
         height: 106
+========
+      name: VINES and webs_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 62
+        height: 62
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +273,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
       spriteID: 1c1882ee6da863250800000000000000
       internalID: 5924075015575732673
+========
+      spriteID: 7537df29daf7ef770800000000000000
+      internalID: 8646488718070084439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VINES and webs_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 540c03f21ed0f7f10800000000000000
+      internalID: 2269547998028546117
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
       vertices: []
       indices: 
       edges: []
@@ -225,7 +310,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
     spriteID: bfea6f7da8be95840b611be0ed617e3f
+========
+    spriteID: 83975da5107aff347ba7afe5b81ad958
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +324,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/level  design/sewage an-sheet.png.meta
       sewage an-sheet_0: 3545792481579744376
       sewage an-sheet_1: -284091906898890277
       sewage an-sheet_2: 6387993773605989871
       sewage an-sheet_3: -4894296515747316292
       sewage an-sheet_4: 5924075015575732673
+========
+      VINES and webs_0: -3401126934738427069
+      VINES and webs_1: 7559491714955369844
+      VINES and webs_2: 8646488718070084439
+      VINES and webs_3: 2269547998028546117
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/VINES and webs.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,22 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
 guid: f59e39c5f5058554bba3f28d4ebf5fa1
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: 1066913249555555180
     second: door opening an-sheet_0
+========
+guid: 2150bbe434a77ef4eb5b741b37147989
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7993424771136345581
+    second: lab object_0
+  - first:
+      213: 7880937879625216233
+    second: lab object_1
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/lab object.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,11 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
   spritePixelsToUnits: 20
+========
+  spritePixelsToUnits: 10
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/lab object.png.meta
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +91,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,6 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       name: door opening an-sheet_0
       rect:
         serializedVersion: 2
@@ -107,6 +124,15 @@ TextureImporter:
         y: 0
         width: 176
         height: 26
+========
+      name: lab object_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/lab object.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       spriteID: c63aaed92ff6ece00800000000000000
       internalID: 1066913249555555180
+========
+      spriteID: de5d3667a795eee60800000000000000
+      internalID: 7993424771136345581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lab object_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 0
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e03bfb1f37be5d60800000000000000
+      internalID: 7880937879625216233
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/lab object.png.meta
       vertices: []
       indices: 
       edges: []
@@ -125,7 +178,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
     spriteID: e53701995f7ff3c4cbe5fd06c63fd960
+========
+    spriteID: a9e64990fa8fd6b49b05deaeb59d094d
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/lab object.png.meta
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +192,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:HiddenLab/Assets/Sprites/door opening an-sheet.png.meta
       door opening an-sheet_0: 1066913249555555180
+========
+      lab object_0: 7993424771136345581
+      lab object_1: 7880937879625216233
+>>>>>>>> Level4:HiddenLab/Assets/Sprites/level  design/lab object.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
