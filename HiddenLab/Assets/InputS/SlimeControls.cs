@@ -705,6 +705,15 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SceneSwitch"",
+                    ""type"": ""Button"",
+                    ""id"": ""f57d2ea8-dcc0-481d-ac07-cc29a41509d6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -914,6 +923,17 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""FlashLight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34743ccf-e9ac-4724-827b-c2db3ba4915c"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SceneSwitch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1185,6 +1205,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         m_Slime_Save = m_Slime.FindAction("Save", throwIfNotFound: true);
         m_Slime_KillAction = m_Slime.FindAction("KillAction", throwIfNotFound: true);
         m_Slime_FlashLight = m_Slime.FindAction("FlashLight", throwIfNotFound: true);
+        m_Slime_SceneSwitch = m_Slime.FindAction("SceneSwitch", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_MoveWASD = m_UI.FindAction("MoveWASD", throwIfNotFound: true);
@@ -1481,6 +1502,7 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Slime_Save;
     private readonly InputAction m_Slime_KillAction;
     private readonly InputAction m_Slime_FlashLight;
+    private readonly InputAction m_Slime_SceneSwitch;
     /// <summary>
     /// Provides access to input actions defined in input action map "Slime".
     /// </summary>
@@ -1536,6 +1558,10 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Slime/FlashLight".
         /// </summary>
         public InputAction @FlashLight => m_Wrapper.m_Slime_FlashLight;
+        /// <summary>
+        /// Provides access to the underlying input action "Slime/SceneSwitch".
+        /// </summary>
+        public InputAction @SceneSwitch => m_Wrapper.m_Slime_SceneSwitch;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -1595,6 +1621,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @FlashLight.started += instance.OnFlashLight;
             @FlashLight.performed += instance.OnFlashLight;
             @FlashLight.canceled += instance.OnFlashLight;
+            @SceneSwitch.started += instance.OnSceneSwitch;
+            @SceneSwitch.performed += instance.OnSceneSwitch;
+            @SceneSwitch.canceled += instance.OnSceneSwitch;
         }
 
         /// <summary>
@@ -1639,6 +1668,9 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
             @FlashLight.started -= instance.OnFlashLight;
             @FlashLight.performed -= instance.OnFlashLight;
             @FlashLight.canceled -= instance.OnFlashLight;
+            @SceneSwitch.started -= instance.OnSceneSwitch;
+            @SceneSwitch.performed -= instance.OnSceneSwitch;
+            @SceneSwitch.canceled -= instance.OnSceneSwitch;
         }
 
         /// <summary>
@@ -1985,6 +2017,13 @@ public partial class @SlimeControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnFlashLight(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "SceneSwitch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSceneSwitch(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

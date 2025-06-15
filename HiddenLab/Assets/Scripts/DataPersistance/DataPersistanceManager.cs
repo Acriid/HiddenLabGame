@@ -60,6 +60,20 @@ public class DataPersistanceManager : MonoBehaviour
 
         dataHandler.Save(gameData);
     }
+    //Used to save different playerlocations to allow player to successfully move from scenes.
+    public void SceneSave(Vector3 savePosition)
+    {
+        //Saves data to file
+        foreach (iDataPersistence dataPersistenceObj in dataPersistenceObjects)
+        {
+            dataPersistenceObj.SaveData(ref gameData);
+        }
+
+        gameData.playerPosition = savePosition;
+        dataHandler.Save(gameData);
+    }
+
+
     //Gets all scripts that use the save/load system
     private List<iDataPersistence> FindAllDataPersistenceObjects()
     {
