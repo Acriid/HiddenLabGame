@@ -114,8 +114,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 59
-        height: 40
+        width: 58
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: yang running_1
       rect:
         serializedVersion: 2
-        x: 62
-        y: 2
-        width: 54
-        height: 40
+        x: 63
+        y: 3
+        width: 52
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,10 +156,10 @@ TextureImporter:
       name: yang running_2
       rect:
         serializedVersion: 2
-        x: 124
-        y: 3
-        width: 49
-        height: 37
+        x: 125
+        y: 4
+        width: 47
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: yang running_3
       rect:
         serializedVersion: 2
-        x: 182
-        y: 3
-        width: 49
-        height: 39
+        x: 183
+        y: 4
+        width: 47
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2f46fb9052084044896889f3f598e8b2
     internalID: 0
     vertices: []
     indices: 
