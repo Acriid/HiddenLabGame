@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: be2df97bdb8318945a0edfde17b6c731
+guid: 46c9c9846955952408fea4cdd5374dd3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1552018386250305428
-    second: barrels_0
+      213: 3545792481579744376
+    second: sewage an-sheet_0
   - first:
-      213: 4787827351846855272
-    second: barrels_1
+      213: -284091906898890277
+    second: sewage an-sheet_1
   - first:
-      213: -1051576060183992645
-    second: barrels_2
+      213: 6387993773605989871
+    second: sewage an-sheet_2
+  - first:
+      213: -4894296515747316292
+    second: sewage an-sheet_3
+  - first:
+      213: 5924075015575732673
+    second: sewage an-sheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 6
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,30 +108,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barrels_0
+      name: sewage an-sheet_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 76
-        width: 26
-        height: 39
+        x: 45
+        y: 143
+        width: 43
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49f0355df70e98510800000000000000
-      internalID: 1552018386250305428
+      spriteID: 87cbfcfb97f253130800000000000000
+      internalID: 3545792481579744376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barrels_1
+      name: sewage an-sheet_1
       rect:
         serializedVersion: 2
-        x: 68
-        y: 71
-        width: 48
-        height: 45
+        x: 293
+        y: 141
+        width: 43
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8622bb80c97c17240800000000000000
-      internalID: 4787827351846855272
+      spriteID: bd17ab57ae3be0cf0800000000000000
+      internalID: -284091906898890277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: barrels_2
+      name: sewage an-sheet_2
       rect:
         serializedVersion: 2
-        x: 8
-        y: 27
-        width: 39
-        height: 26
+        x: 541
+        y: 142
+        width: 45
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,8 +171,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb6ad6e052d0861f0800000000000000
-      internalID: -1051576060183992645
+      spriteID: fed2137fd76b6a850800000000000000
+      internalID: 6387993773605989871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sewage an-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 141
+        width: 43
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbdf2710047f31cb0800000000000000
+      internalID: -4894296515747316292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sewage an-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 139
+        width: 47
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1882ee6da863250800000000000000
+      internalID: 5924075015575732673
       vertices: []
       indices: 
       edges: []
@@ -188,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a26f7a8baf08a854f895186da5c5046a
+    spriteID: 514d231c3318aaf479a7f0e391befd00
     internalID: 0
     vertices: []
     indices: 
@@ -198,9 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      barrels_0: 1552018386250305428
-      barrels_1: 4787827351846855272
-      barrels_2: -1051576060183992645
+      sewage an-sheet_0: 3545792481579744376
+      sewage an-sheet_1: -284091906898890277
+      sewage an-sheet_2: 6387993773605989871
+      sewage an-sheet_3: -4894296515747316292
+      sewage an-sheet_4: 5924075015575732673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
