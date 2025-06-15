@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Handles organizing and playing sound effects in the game
+// https://www.youtube.com/watch?v=rAX_r0yBwzQ
 public class SoundEffectLibrary : MonoBehaviour
 {
     // Group of sound effects set in the Inspector

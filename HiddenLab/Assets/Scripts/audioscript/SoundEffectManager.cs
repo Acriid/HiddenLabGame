@@ -4,18 +4,16 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 
 // Manages playing sound effects 
+//https://www.youtube.com/watch?v=rAX_r0yBwzQ
 public class SoundEffectManager : MonoBehaviour
 {
-    // Singleton instance for global access
-    private static SoundEffectManager instance;
-
-    // AudioSource for playing sounds
-    private static AudioSource audioSource;
-
-    // Reference to the sound effect library
-    private static SoundEffectLibrary soundEffectLibrary;
-
     
+    private static SoundEffectManager instance; // makes sure there's only one copy of a class in your entire game, and that you can access it from anywhere.
+    private static AudioSource audioSource; // AudioSource for playing sounds
+
+    private static SoundEffectLibrary soundEffectLibrary;  // Reference to the sound effect library
+
+
 
     // Ensures only one instance persists across scenes
     private void Awake()
