@@ -38,6 +38,14 @@ public class PlayerMoveState : PlayerState
         if (MoveArrows != null)
         {
             MoveArrowsValue = MoveArrows.ReadValue<Vector2>();
+            if (MoveArrowsValue.x > 0f)
+            {
+                player.SlimeRB.gameObject.transform.localEulerAngles = new Vector3(0f, 180f, 0f);
+            }
+            else if (MoveArrowsValue.x < 0f)
+            {
+                player.SlimeRB.gameObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+            }
         }
         
     }
