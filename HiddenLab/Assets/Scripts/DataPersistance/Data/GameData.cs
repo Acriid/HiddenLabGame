@@ -15,6 +15,7 @@ public class GameData
     public bool HasFlashlight;
     public bool CanSplit;
     public bool ReactorOff;
+    public int CurrentScene;
 
     public GameData()
     {
@@ -35,5 +36,7 @@ public class GameData
         HasFlashlight = false;
         CanSplit = false;
         ReactorOff = false;
+
+        CurrentScene = 2;
     }
 }

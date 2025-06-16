@@ -7,6 +7,7 @@ using Unity.VisualScripting;
 using System.IO;
 using System.Runtime.CompilerServices;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDataPersistence
@@ -176,6 +177,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         data.playerPosition = this.transform.position;
         data.ReactorOff = this.ReactorOff;
+        data.CurrentScene = SceneManager.GetActiveScene().buildIndex;
     }
     #endregion
     #region Health Functions
