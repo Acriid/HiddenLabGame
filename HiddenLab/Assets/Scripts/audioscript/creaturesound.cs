@@ -1,14 +1,30 @@
 using UnityEngine;
+using System.Collections;
 
 public class Creaturesound : MonoBehaviour
 {
-    public AudioSource approachSound;
+    
+    
+    private bool isActive = false;
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnEnable()
     {
-        if (other.CompareTag("Player") && !approachSound.isPlaying)
-        {
-            approachSound.Play();
-        }
+        isActive = true;
+        SoundEffectManager.Play("CreatureSound");
     }
+
+    void OnDisable()
+    {
+        isActive = false;
+        SoundEffectManager.Stop("CreatureSound");
+    }
+
+   
+    private void PlayRandomSound()
+    {
+
+        SoundEffectManager.Play("CreatureSound");  // Play chosen sound
+    }
+
+   
 }
