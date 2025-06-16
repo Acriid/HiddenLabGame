@@ -11,11 +11,9 @@ public class SetForwardorBackward : MonoBehaviour
         {
             case 0:
                 playerAttributes.RequestForwardChange(false);
-                Debug.Log(playerAttributes.Forward);
                 break;
             case 1:
                 playerAttributes.RequestForwardChange(true);
-                Debug.Log(playerAttributes.Forward);
                 break;
         }
     

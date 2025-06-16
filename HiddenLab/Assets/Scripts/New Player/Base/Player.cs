@@ -31,6 +31,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     //Implementation of the IHealth interface
     public int _CurrentHealth { get; set; }
     public float SlimeSize = 1.5f;
+    private bool CanSplit;
     [SerializeField] private GameObject flashlight;
     #region  Movement Variables
     public Rigidbody2D SlimeRB { get; set; }
@@ -267,12 +268,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             OptionsAction.Enable();
             OptionsAction.performed += OnOptionsAction;
         }
-        if (SplitAction == null)
-        {
-            SplitAction = slimeControls.Slime.Split;
-            SplitAction.Enable();
-            SplitAction.performed += OnSplitAction;
-        }
         //Remove Later
         if (KillAction == null)
         {
@@ -286,6 +281,10 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         if (playerAttributes.HasFlashlight)
         {
             EnableFlashLightAction();
+        }
+        if (playerAttributes.CanSplit)
+        {
+            EnableSplitAction();
         }
 
 
@@ -311,12 +310,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             FileAction = null;
         }
         DisableStretchAction();
-        if (SplitAction != null)
-        {
-            SplitAction.Disable();
-            SplitAction.performed -= OnSplitAction;
-            SplitAction = null;
-        }
+        DisableSplitAction();
         if (OptionsAction != null)
         {
             OptionsAction.Disable();
@@ -355,12 +349,18 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
 
         //FlashLight
         playerAttributes.OnFlashlightGet += HandleFlashLightGet;
+
+        //Split
+        playerAttributes.OnCanSplitChange += HandleSplitGet;
     }
     private void CleanUpPlayerAttributes()
     {
         playerAttributes.OnPlayerHealthChange -= HandleHealthChange;
         playerAttributes.OnSlime1SpeedChange -= HandleSlime1SpeedChange;
         playerAttributes.OnSlime2SpeedChange -= HandleSlime2SpeedChange;
+        playerAttributes.OnImpulseSpeedChange -= HandleImpulseSpeedChange;
+        playerAttributes.OnFlashlightGet -= HandleFlashLightGet;
+        playerAttributes.OnCanSplitChange -= HandleSplitGet;
     }
     #region StretchAction enable/disable
     private void EnableStretchAction()
@@ -397,6 +397,24 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             FlashLightAction.Disable();
             FlashLightAction.performed -= OnFlashLightAction;
             FlashLightAction = null;
+        }
+    }
+    private void EnableSplitAction()
+    {
+        if (SplitAction == null)
+        {
+            SplitAction = slimeControls.Slime.Split;
+            SplitAction.Enable();
+            SplitAction.performed += OnSplitAction;
+        }
+    }
+    private void DisableSplitAction()
+    {
+        if (SplitAction != null)
+        {
+            SplitAction.Disable();
+            SplitAction.performed -= OnSplitAction;
+            SplitAction = null;
         }
     }
     #endregion
@@ -601,30 +619,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     #region PickUp Acion
     private void OnPickupAction(InputAction.CallbackContext ctx)
     {
-        /*HingeJoint2D specificHJtoadd = null;
-        HingeJoint2D[] slimeHJs = this.GetComponents<HingeJoint2D>();
-        if (slimeHJs.Length != 0)
-        {
-            foreach (HingeJoint2D specificHJ in slimeHJs)
-            {
-                Destroy(specificHJ);
-            }
-        }
-        foreach (GameObject pickup in ItemTriggerCheck.pickupitems)
-        {
-            this.AddComponent<HingeJoint2D>();
-            slimeHJs = this.GetComponents<HingeJoint2D>();
-            foreach (HingeJoint2D specificHJ in slimeHJs)
-            {
-                if (specificHJ.connectedBody == null)
-                {
-                    specificHJtoadd = specificHJ;
-                    break;
-                }
-            }
-            specificHJtoadd.connectedBody = pickup.GetComponent<Rigidbody2D>();
-            specificHJtoadd.enableCollision = true;
-        }*/
         string text;
         if (itemTriggerCheck.collisionObject != null)
         {
@@ -666,6 +660,14 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
                 itemTriggerCheck.collisionObject.SetActive(false);
                 itemTriggerCheck.collisionObject = null;
                 text = "You got a flashlight. Press C to toggle.";
+                popupmenuText.text = text;
+                PopupMenu.SetActive(true);
+            }
+            else if (itemTriggerCheck.collisionObject.name == "Laser")
+            {
+                playerAttributes.RequestCanSplitChange(true);
+                itemTriggerCheck.collisionObject = null;
+                text = "You got cut in half. Press x to toggle second slime. Use WASD to move second slime.";
                 popupmenuText.text = text;
                 PopupMenu.SetActive(true);
             }
@@ -847,6 +849,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         if (newValue)
         {
             EnableFlashLightAction();
+        }
+    }
+    public void HandleSplitGet(bool newValue)
+    {
+        if (newValue)
+        {
+            EnableSplitAction();
         }
     }
     #endregion

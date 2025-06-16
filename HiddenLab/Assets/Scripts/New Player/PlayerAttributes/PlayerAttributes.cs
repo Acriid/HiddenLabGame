@@ -16,8 +16,9 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         this.KeyCard2 = data.KeyCard2;
         this.KeyCard3 = data.KeyCard3;
         this.HasFlashlight = data.HasFlashlight;
-        this._InLight = false;
-        this._Forward = true;
+        this.InLight = false;
+        this.Forward = true;
+        this.CanSplit = data.CanSplit;
     }
     //Load Data
     public void SaveData(ref GameData data)
@@ -30,6 +31,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         data.KeyCard2 = this.KeyCard2;
         data.KeyCard3 = this.KeyCard3;
         data.HasFlashlight = this.HasFlashlight;
+        data.CanSplit = this.CanSplit;
     }
 
 
@@ -238,6 +240,20 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
             }
         }
     }
+    public event Action<bool> OnCanSplitChange;
+    private bool _CanSplit;
+    public bool CanSplit
+    {
+        get => _CanSplit;
+        set
+        {
+            if (_CanSplit != value)
+            {
+                _CanSplit = value;
+                OnCanSplitChange?.Invoke(_CanSplit);
+            }
+        }
+    }
     //Request functions for if you want to change and read the same value
     public void RequestPlayerHealthChange(int newValue)
     {
@@ -350,5 +366,9 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
             _Forward = newValue;
             OnForwardChange?.Invoke(_Forward);
         }
+    }
+    public void RequestCanSplitChange(bool newValue)
+    {
+
     }
 }

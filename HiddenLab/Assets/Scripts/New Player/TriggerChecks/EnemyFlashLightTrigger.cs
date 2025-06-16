@@ -1,33 +1,42 @@
 using System.Collections;
+using System.Threading;
 using UnityEngine;
 
 public class EnemyFlashLightTrigger : MonoBehaviour
 {
-    [SerializeField] private Enemy enemy;
+    [SerializeField] private Enemy[] enemys;
     public GameObject fakeFlashlight;
+    private float timer = 0f;
+    private bool isChasing = false;
     void Update()
     {
-        if (enemy.enemyStateMachine.currentEnemyState == enemy.enemyChaseState)
+        isChasing = false;
+        foreach (Enemy enemy in enemys)
         {
-            StartCoroutine(FlashFlashlight());
-        }
-    }
-    private IEnumerator FlashFlashlight()
-    {
-        int counter = 0;
-        while (counter < 4)
-        {
-            if (counter % 2 != 0)
+            if (enemy.enemyStateMachine.currentEnemyState == enemy.enemyChaseState)
             {
-                fakeFlashlight.SetActive(true);
+                isChasing = true;
             }
-            else
+        }
+        if (isChasing)
+        {
+            timer += Time.deltaTime;
+        }
+        else if(fakeFlashlight.activeSelf)
+        {
+            fakeFlashlight.SetActive(false);
+        }
+        if (timer > 0.4f)
+        {
+            if (fakeFlashlight.activeSelf)
             {
                 fakeFlashlight.SetActive(false);
             }
-            yield return new WaitForSecondsRealtime(0.2f);
-            counter++;
+            else
+            {
+                fakeFlashlight.SetActive(true);
+            }
+            timer = 0f;
         }
-
     }
 }

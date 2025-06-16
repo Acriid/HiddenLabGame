@@ -11,6 +11,7 @@ public class EnemyIdleStay : EnemyIdleSOBase
         base.DoEnterLogic();
         Debug.Log("Idle");
         timer = 0f;
+        wentback = false;
         //enemy.MoveEnemy(enemy.BasePosition);
     }
     public override void DoExitLogic()
@@ -20,6 +21,7 @@ public class EnemyIdleStay : EnemyIdleSOBase
     public override void DoUpdateLogic()
     {
         base.DoUpdateLogic();
+        enemy.MoveEnemy(enemy.BasePosition);
         if (!wentback)
         {
             enemy.MoveEnemy(enemy.BasePosition);

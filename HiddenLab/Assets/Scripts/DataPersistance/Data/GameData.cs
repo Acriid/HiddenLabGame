@@ -13,6 +13,7 @@ public class GameData
     public bool KeyCard2;
     public bool KeyCard3;
     public bool HasFlashlight;
+    public bool CanSplit;
 
     public GameData()
     {
@@ -31,5 +32,6 @@ public class GameData
         KeyCard3 = false;
 
         HasFlashlight = false;
+        CanSplit = false;
     }
 }
