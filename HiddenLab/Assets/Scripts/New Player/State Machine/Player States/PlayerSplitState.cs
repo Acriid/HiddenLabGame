@@ -47,7 +47,24 @@ public class PlayerSplitState : PlayerState
         base.UpdateState();
         //Get movearrows value
         MoveArrowsValue = MoveArrows.ReadValue<Vector2>();
+        if (MoveArrowsValue.x > 0f)
+        {
+            player.SlimeRB.gameObject.transform.localEulerAngles = new Vector3(0f, 180f, 0f);
+        }
+        else if (MoveArrowsValue.x < 0f)
+        {
+            player.SlimeRB.gameObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+        }
+
         MoveWasdValue = MoveWasd.ReadValue<Vector2>();
+        if (MoveWasdValue.x > 0f)
+        {
+            player.Slime2RB.gameObject.transform.localEulerAngles = new Vector3(0f, 180f, 0f);
+        }
+        else if (MoveWasdValue.x < 0f)
+        {
+            player.Slime2RB.gameObject.transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+        }
     }
     public override void FixedUpdateState()
     {
