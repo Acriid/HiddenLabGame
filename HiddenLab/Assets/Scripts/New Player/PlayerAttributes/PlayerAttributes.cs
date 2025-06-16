@@ -16,7 +16,8 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         this.KeyCard2 = data.KeyCard2;
         this.KeyCard3 = data.KeyCard3;
         this.HasFlashlight = data.HasFlashlight;
-        _InLight = false;
+        this._InLight = false;
+        this._Forward = true;
     }
     //Load Data
     public void SaveData(ref GameData data)
@@ -223,6 +224,20 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
             }
         }
     }
+    public event Action<bool> OnForwardChange;
+    private bool _Forward;
+    public bool Forward
+    {
+        get => _Forward;
+        set
+        {
+            if (_Forward != value)
+            {
+                _Forward = value;
+                OnForwardChange?.Invoke(_Forward);
+            }
+        }
+    }
     //Request functions for if you want to change and read the same value
     public void RequestPlayerHealthChange(int newValue)
     {
@@ -326,6 +341,14 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         {
             _HasFlashlight = newValue;
             OnFlashlightGet?.Invoke(_HasFlashlight);
-        }        
+        }
+    }
+    public void RequestForwardChange(bool newValue)
+    {
+        if (_Forward != newValue)
+        {
+            _Forward = newValue;
+            OnForwardChange?.Invoke(_Forward);
+        }
     }
 }
