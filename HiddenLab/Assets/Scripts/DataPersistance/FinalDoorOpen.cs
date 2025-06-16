@@ -1,16 +1,18 @@
 using UnityEngine;
 
-public class FinalDoorOpen : MonoBehaviour
+public class FinalDoorOpen : MonoBehaviour, iDataPersistence
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private Sprite OpenDoor;
+    public void LoadData(GameData data)
     {
-        
+        if (data.ReactorOff)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = OpenDoor;
+            this.GetComponent<BoxCollider2D>().enabled = false;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
+    public void SaveData(ref GameData data)
     {
-        
+
     }
 }
