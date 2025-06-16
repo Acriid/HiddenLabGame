@@ -1,3 +1,4 @@
+using Unity.Multiplayer.Center.Common;
 using UnityEngine;
 //System.Serializable allow you to save the data to/from a string
 [System.Serializable]

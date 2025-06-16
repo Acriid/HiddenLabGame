@@ -21,9 +21,11 @@ public class PlayerSplitState : PlayerState
         base.EnterState();
         player.EnableSlime2(true);
         //Make Player Stand Still
+        player.MakeSlime2OnSlime1();
         player.MoveSlime(Vector2.zero);
         player.MoveSlime2(Vector2.zero);
 
+        player.SetSlimeSize(player.SlimeSize/2);
         //Initialize controls
         slimeControls = new SlimeControls();
         slimeControls.Slime.Enable();
@@ -35,6 +37,7 @@ public class PlayerSplitState : PlayerState
     public override void ExitState()
     {
         base.ExitState();
+        player.SetSlimeSize(player.SlimeSize);
         player.EnableSlime2(false);
         CleanupInputSystem();
     }

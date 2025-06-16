@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Doors : MonoBehaviour
@@ -84,9 +85,9 @@ public class Doors : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") || collision.CompareTag("Enemy"))
         {
-            if (_KeyCard1 || _KeyCard2 || _KeyCard3) 
+            if (_KeyCard1 || _KeyCard2 || _KeyCard3 || collision.CompareTag("Enemy")) 
             {
                 animator.GetComponent<Animator>().enabled = true;
             }
@@ -94,9 +95,9 @@ public class Doors : MonoBehaviour
     }
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") || collision.CompareTag("Enemy"))
         {
-            if (_KeyCard1 || _KeyCard2 || _KeyCard3) 
+            if (_KeyCard1 || _KeyCard2 || _KeyCard3 || collision.CompareTag("Enemy")) 
             {
                 animator.GetComponent<Animator>().enabled = false;
             }

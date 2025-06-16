@@ -887,9 +887,10 @@ GameObject:
   - component: {fileID: 180814194}
   - component: {fileID: 180814195}
   - component: {fileID: 180814196}
+  - component: {fileID: 180814197}
   m_Layer: 0
   m_Name: Yang
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -975,9 +976,9 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: Infinity
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: Infinity
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -993,20 +994,58 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180814192}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ff354de054d37c4793a33302c4bc7ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   targetdistance: 0
   BasePosition: {x: 0, y: 0, z: 0}
-  ChaseTimer: 0
+  ChaseTimer: 5
   enemytransform: {fileID: 180814193}
-  player: []
+  player:
+  - {fileID: 588530355}
   IdleRadius: 5
   EnemyIdleBase: {fileID: 11400000, guid: 0cbcd771f30d37d42aa1d53322ed202d, type: 2}
   EnemyChaseBase: {fileID: 11400000, guid: fd57ea240f2142943b3fe03ceca25957, type: 2}
   playerAttributes: {fileID: 1427489362}
+--- !u!70 &180814197
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180814192}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
 --- !u!1 &182153885
 GameObject:
   m_ObjectHideFlags: 0
@@ -13677,7 +13716,7 @@ Transform:
   m_GameObject: {fileID: 457506996}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -144.8, y: -77.4, z: 0}
+  m_LocalPosition: {x: -140.31, y: -77.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14161,7 +14200,11 @@ MonoBehaviour:
   SaveMenu: {fileID: 798862589}
   OptionsMenu: {fileID: 353201994}
   DeathMenu: {fileID: 1564154003}
+  PopupMenu: {fileID: 0}
+  SceneMenu: {fileID: 0}
+  popupmenuText: {fileID: 0}
   playerAttributes: {fileID: 1427489362}
+  flashlight: {fileID: 0}
 --- !u!50 &588530361
 Rigidbody2D:
   serializedVersion: 5
@@ -15558,6 +15601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835c81adf929062439f222fc8653d09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 474773048}
 --- !u!58 &874370415
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15719,6 +15763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7b2c6d81f4ff6478f317b7d23cc594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorLevel: 0
   playerAttributes: {fileID: 0}
 --- !u!61 &889454416
 BoxCollider2D:
@@ -39055,6 +39100,7 @@ MonoBehaviour:
     KeyCard1: 0
     KeyCard2: 0
     KeyCard3: 0
+    HasFlashlight: 0
 --- !u!4 &1195133544
 Transform:
   m_ObjectHideFlags: 0

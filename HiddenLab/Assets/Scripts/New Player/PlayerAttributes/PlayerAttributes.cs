@@ -16,6 +16,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         this.KeyCard2 = data.KeyCard2;
         this.KeyCard3 = data.KeyCard3;
         this.HasFlashlight = data.HasFlashlight;
+        _InLight = false;
     }
     //Load Data
     public void SaveData(ref GameData data)
