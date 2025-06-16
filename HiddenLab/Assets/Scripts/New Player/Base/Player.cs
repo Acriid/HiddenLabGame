@@ -29,7 +29,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     #endregion
     private SpringJoint2D slimeSJ;
     private GameObject fileobject = null;
-    private bool ReactorOff = false;
     //Implementation of the IHealth interface
     public int _CurrentHealth { get; set; }
     public float SlimeSize = 1.5f;
@@ -51,6 +50,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     #endregion
     #region SlimeObjects
     private GameObject[] SlimeObjects;
+    [SerializeField] public GameObject middleSlime;
+    public Vector3 InitialScale;
     #endregion
     #region Trigger Checks
     public bool isInPickuprange { get; set; }
@@ -80,6 +81,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         playerSplitState = new PlayerSplitState(this, playerStateMachine);
         playerStretchState = new PlayerStretchState(this, playerStateMachine);
         playerImpulseState = new PlayerImpulseState(this, playerStateMachine);
+
+        InitialScale = middleSlime.transform.localScale;
         
     }
     void Start()
@@ -176,7 +179,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     public void SaveData(ref GameData data)
     {
         data.playerPosition = this.transform.position;
-        data.ReactorOff = this.ReactorOff;
         data.CurrentScene = SceneManager.GetActiveScene().buildIndex;
     }
     #endregion
@@ -669,7 +671,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             else if (itemTriggerCheck.collisionObject.name == "Reactor")
             {
                 itemTriggerCheck.collisionObject = null;
-                ReactorOff = true;
+                playerAttributes.ReactorOff = true;
                 text = "Reactor Turned off. Exit door in lvl 1 unlocked.";
                 popupmenuText.text = text;
                 PopupMenu.SetActive(true);

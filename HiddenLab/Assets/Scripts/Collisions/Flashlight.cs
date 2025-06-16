@@ -15,14 +15,5 @@ public class Flashlight : MonoBehaviour , iDataPersistence
     {
 
     }
-    
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            this.gameObject.SetActive(false);
-            playerAttributes.RequestFlashLightGet(true); ;
-            
-        }
-    }
+
 }

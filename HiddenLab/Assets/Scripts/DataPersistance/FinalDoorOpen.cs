@@ -1,18 +1,16 @@
 using UnityEngine;
 
-public class FinalDoorOpen : MonoBehaviour, iDataPersistence
+public class FinalDoorOpen : MonoBehaviour
 {
     [SerializeField] private Sprite OpenDoor;
-    public void LoadData(GameData data)
+    [SerializeField] private PlayerAttributes playerAttributes;
+    void Start()
     {
-        if (data.ReactorOff)
+        Debug.Log(playerAttributes.ReactorOff);
+        if (playerAttributes.ReactorOff)
         {
             this.GetComponent<SpriteRenderer>().sprite = OpenDoor;
             this.GetComponent<BoxCollider2D>().enabled = false;
         }
-    }
-    public void SaveData(ref GameData data)
-    {
-
     }
 }
