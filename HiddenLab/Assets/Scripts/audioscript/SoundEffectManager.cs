@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System;
 
 // Manages playing sound effects 
 //https://www.youtube.com/watch?v=rAX_r0yBwzQ
@@ -37,7 +38,7 @@ public class SoundEffectManager : MonoBehaviour
     }
 
     // Static method to play a sound effect by name
-    public static void Play(string soundName)
+    public static void Play(string soundName, bool loop)
     {
         AudioClip clip = soundEffectLibrary.GetRandomClip(soundName);
         if (clip != null)
@@ -66,5 +67,15 @@ public class SoundEffectManager : MonoBehaviour
     public static AudioClip GetClip(string soundName)
     {
         return soundEffectLibrary.GetRandomClip(soundName);
+    }
+
+    internal static void Play(string v)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal static void Stop(string v)
+    {
+        throw new NotImplementedException();
     }
 }
