@@ -25,7 +25,7 @@ public class PlayerSplitState : PlayerState
         player.MoveSlime(Vector2.zero);
         player.MoveSlime2(Vector2.zero);
 
-        player.SetSlimeSize(player.SlimeSize/2);
+        player.SetSlimeSize((player.SlimeSize*2)/3);
         //Initialize controls
         slimeControls = new SlimeControls();
         slimeControls.Slime.Enable();

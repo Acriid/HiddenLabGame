@@ -268,15 +268,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             OptionsAction.Enable();
             OptionsAction.performed += OnOptionsAction;
         }
-        //Remove Later
-        if (KillAction == null)
-        {
-            KillAction = slimeControls.Slime.KillAction;
-            KillAction.Enable();
-            KillAction.performed += OnKillAction;
-        }
-        //Remove Later
-
         EnableStretchAction();
         if (playerAttributes.HasFlashlight)
         {
@@ -286,7 +277,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         {
             EnableSplitAction();
         }
-
 
     }
     private void ClenupSlimeActions()
@@ -569,7 +559,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
 
     private IEnumerator ReenableSplitAction()
     {
-        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+        yield return new WaitForSeconds(1f); 
         SplitAction.Enable();
     }
     public void SetSlimeSize(float value)
@@ -579,6 +569,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         NewScale.y = value;
         NewScale.z = value;
         SlimeRB.gameObject.transform.localScale = NewScale;
+        Slime2RB.gameObject.transform.localScale = NewScale;
     
     }
     #endregion

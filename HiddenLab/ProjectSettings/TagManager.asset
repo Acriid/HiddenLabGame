@@ -6,7 +6,6 @@ TagManager:
   tags:
   - File
   - Enemy
-  - Pickup
   - SavePoint
   - Chasm
   - PickUp

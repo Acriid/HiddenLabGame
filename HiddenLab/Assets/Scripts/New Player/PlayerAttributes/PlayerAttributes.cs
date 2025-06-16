@@ -369,6 +369,10 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     }
     public void RequestCanSplitChange(bool newValue)
     {
-
+        if (_CanSplit != newValue)
+        {
+            _CanSplit = newValue;
+            OnCanSplitChange?.Invoke(_CanSplit);
+        }
     }
 }
