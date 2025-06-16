@@ -8,7 +8,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
     //Save data
     public void LoadData(GameData data)
     {
-        this.PlayerHealth = data.PlayerHealth;
+        this.PlayerHealth = 2;
         this.Slime1Speed = data.Slime1Speed;
         this.Slime2Speed = data.Slime2Speed;
         this.ImpulseSpeed = data.ImpulseSpeed;
@@ -19,11 +19,12 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         this.InLight = false;
         this.Forward = true;
         this.CanSplit = data.CanSplit;
+        this.ReactorOff = data.ReactorOff;
     }
     //Load Data
     public void SaveData(ref GameData data)
     {
-        data.PlayerHealth = this.PlayerHealth;
+        data.PlayerHealth = 2;
         data.Slime1Speed = this.Slime1Speed;
         data.Slime2Speed = this.Slime2Speed;
         data.ImpulseSpeed = this.ImpulseSpeed;
@@ -32,6 +33,7 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
         data.KeyCard3 = this.KeyCard3;
         data.HasFlashlight = this.HasFlashlight;
         data.CanSplit = this.CanSplit;
+        data.ReactorOff = this.ReactorOff;
     }
 
 
@@ -251,6 +253,20 @@ public class PlayerAttributes : MonoBehaviour, iDataPersistence
             {
                 _CanSplit = value;
                 OnCanSplitChange?.Invoke(_CanSplit);
+            }
+        }
+    }
+    public event Action<bool> OnReactorOff;
+    private bool _ReactorOff;
+    public bool ReactorOff
+    {
+        get => _ReactorOff;
+        set
+        {
+            if (_ReactorOff != value)
+            {
+                _ReactorOff = value;
+                OnReactorOff?.Invoke(_ReactorOff);
             }
         }
     }
