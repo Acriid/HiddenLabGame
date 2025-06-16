@@ -30,7 +30,7 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     private GameObject fileobject = null;
     //Implementation of the IHealth interface
     public int _CurrentHealth { get; set; }
-
+    public float SlimeSize = 1.5f;
     [SerializeField] private GameObject flashlight;
     #region  Movement Variables
     public Rigidbody2D SlimeRB { get; set; }
@@ -247,6 +247,12 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         ClenupSlimeActions();
         CleanUpPlayerAttributes();
+        if (slimeControls != null)
+        {
+            slimeControls.Slime.Disable();
+            slimeControls.Dispose();
+            slimeControls = null;
+        }
     }
     private void ActionsInitialize()
     {
@@ -331,12 +337,6 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
                 KillAction = null;
             }
         //remove later
-        if (slimeControls != null)
-        {
-            slimeControls.Slime.Disable();
-            slimeControls.Dispose();
-            slimeControls = null;
-        }
 
     }
     private void InitializePlayerAttributes()
@@ -553,6 +553,15 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     {
         yield return new WaitForSeconds(1f); // Adjust the delay as needed
         SplitAction.Enable();
+    }
+    public void SetSlimeSize(float value)
+    {
+        Vector3 NewScale = Vector3.zero;
+        NewScale.x = value;
+        NewScale.y = value;
+        NewScale.z = value;
+        SlimeRB.gameObject.transform.localScale = NewScale;
+    
     }
     #endregion
     #region Streatch Action

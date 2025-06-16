@@ -59,8 +59,7 @@ public class Enemy : MonoBehaviour, IEnemyMovement, IEnemyTriggerCheck, IAttack
         EnemyIdleBaseInstance.Initialize(gameObject, this);
         EnemyChaseBaseInstance.Initialize(gameObject, this);
         //Initial state
-        enemyStateMachine.Initialize(enemyChaseState);
-        setCanSeePlayer(true);
+        enemyStateMachine.Initialize(enemyIdleState);
     }
     #endregion
     #region Update/FixedUpdate
@@ -121,7 +120,7 @@ public class Enemy : MonoBehaviour, IEnemyMovement, IEnemyTriggerCheck, IAttack
     }
     public void MoveEnemy(Vector3 position)
     {
-        Debug.Log(enemyagent.SetDestination(position));
+        enemyagent.SetDestination(position);
     }
     public void setCanSeePlayer(bool newValue)
     {

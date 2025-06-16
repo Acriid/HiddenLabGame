@@ -50,7 +50,7 @@ public class EnemyIdleRandomWalk : EnemyIdleSOBase
         Vector3 randomPosition = enemy.transform.position + (Vector3)Random.insideUnitCircle * enemy.IdleRadius;
         randomPosition.z = 0;
         Vector2 targetdirection = (randomPosition-enemy.enemytransform.position).normalized;
-        enemy.enemytransform.up = targetdirection;
+        //enemy.enemytransform.forward = targetdirection;
         return randomPosition;
     }
 }

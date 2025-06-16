@@ -48,7 +48,7 @@ public class CanSeePlayer : MonoBehaviour
                 if(!Physics2D.Raycast(enemy.enemytransform.position,targetDirection,targetDistance, obstacleMask))
                 {
                     enemy.setCanSeePlayer(true);
-                    enemy.enemytransform.up = targetDirection;
+                    //enemy.enemytransform.forward = targetDirection;
                 }
                 else
                 {

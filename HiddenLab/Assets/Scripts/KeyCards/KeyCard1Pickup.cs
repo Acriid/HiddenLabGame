@@ -10,10 +10,8 @@ public class KeyCard1Pickup : MonoBehaviour
         //Makes keycard dissapear if already collected
         if(playerAttributes.KeyCard1)
         {
-            this.gameObject.SetActive(false);
-            
+            this.gameObject.SetActive(false);  
         }
-
     }
 
 }
