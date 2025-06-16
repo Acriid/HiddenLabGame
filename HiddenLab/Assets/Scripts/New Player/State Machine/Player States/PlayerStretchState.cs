@@ -34,12 +34,15 @@ public class PlayerStretchState : PlayerState
         MoveArrows = slimeControls.Slime.MoveArrows;
         StretchAction = slimeControls.Slime.Stretch;
 
+        player.middleSlime.SetActive(true);
+
     }
 
     public override void ExitState()
     {
         base.ExitState();
         //CleanupInputSystem();
+        player.middleSlime.SetActive(false);
 
     }
 
@@ -52,15 +55,16 @@ public class PlayerStretchState : PlayerState
         isOntop = player.GetSlimeDistance() < 1f;
         zValue = StretchAction.ReadValue<float>();
         isPressed = zValue != 0f;
+        updatetransformscale();
 
-        
+
     }
     public override void FixedUpdateState()
     {
         base.FixedUpdateState();
         //Move the player
         player.MoveSlime2(MoveArrowsValue);
- 
+
         if (!isPressed)
         {
             player.playerStateMachine.ChangeState(player.playerMoveState);
@@ -78,5 +82,20 @@ public class PlayerStretchState : PlayerState
             slimeControls.Dispose();
             slimeControls = null;
         }
+    }
+    
+    void updatetransformscale()
+    {
+        //Gets distance between objects
+        float distance = Vector2.Distance(player.SlimeRB.transform.position,player.Slime2RB.transform.position);
+        player.middleSlime.transform.localScale = new Vector3(player.InitialScale.x,distance,player.InitialScale.z);
+
+        //Scales accordingly
+        Vector3 middlepoint = (player.SlimeRB.transform.position + player.Slime2RB.transform.position)/2f;
+        player.middleSlime.transform.position = middlepoint;
+
+        //Rotates accordingly
+        Vector3 rotationDirection = player.Slime2RB.transform.position - player.SlimeRB.transform.position;
+        player.middleSlime.transform.up = rotationDirection;
     }
 }

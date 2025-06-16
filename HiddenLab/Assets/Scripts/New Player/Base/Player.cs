@@ -50,6 +50,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
     #endregion
     #region SlimeObjects
     private GameObject[] SlimeObjects;
+    [SerializeField] public GameObject middleSlime;
+    public Vector3 InitialScale;
     #endregion
     #region Trigger Checks
     public bool isInPickuprange { get; set; }
@@ -79,6 +81,8 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
         playerSplitState = new PlayerSplitState(this, playerStateMachine);
         playerStretchState = new PlayerStretchState(this, playerStateMachine);
         playerImpulseState = new PlayerImpulseState(this, playerStateMachine);
+
+        InitialScale = middleSlime.transform.localScale;
         
     }
     void Start()
