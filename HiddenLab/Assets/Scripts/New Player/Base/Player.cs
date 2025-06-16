@@ -662,6 +662,13 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
                 popupmenuText.text = text;
                 PopupMenu.SetActive(true);
             }
+            else if (itemTriggerCheck.collisionObject.name == "Reactor")
+            {
+                itemTriggerCheck.collisionObject = null;
+                text = "Reactor Turned off. Exit door in lvl 1 unlocked.";
+                popupmenuText.text = text;
+                PopupMenu.SetActive(true);
+            }
         }
         else
         {
