@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rotated signs_0: 2570129731985237365
+      rotated signs_1: -2256834815639184828
+      rotated signs_2: 8820412227362354885
+      rotated signs_3: 4298858755536284666
+      rotated signs_4: -5855594927279963981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
