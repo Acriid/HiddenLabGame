@@ -708,13 +708,15 @@ public class Player : MonoBehaviour , IHealth , IMovement , ITriggerChecks , iDa
             if (canvas[0].enabled == true)
             {
                 canvas[0].enabled = false;
+                Time.timeScale = 1;
+                
             }
             else
             {
                 canvas[0].enabled = true;
+                Time.timeScale = 0;
             }
-        }
-        
+        }    
     }
     #endregion
     #region Save Action
