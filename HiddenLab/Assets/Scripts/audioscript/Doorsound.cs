@@ -26,7 +26,7 @@ public class Doorsound : MonoBehaviour
 
     public void PlayDoorSound()
     {
-        SoundEffectManager.Play("Door");
+       audioSource.Play();
        
     }
 
