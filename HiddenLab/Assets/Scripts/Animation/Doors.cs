@@ -76,7 +76,7 @@ public class Doors : MonoBehaviour
     {
         doorCollider.enabled = false;
         animator.GetComponent<Animator>().enabled = false;
-        doorSound?.PlayDoorSound(); // Play Door sound
+        doorSound.PlayDoorSound(); // Play Door sound
     }
     public void DoorClosed()
     {
